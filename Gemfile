@@ -37,10 +37,7 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 gem "unicorn", ">= 4.3.1"
-gem "slim", ">= 2.0.0.pre.6"
-gem "haml2slim", ">= 0.4.6", :group => :development
-gem "haml-rails", ">= 0.4", :group => :development
-gem "html2haml", ">= 1.0.1", :group => :development
+gem "skim"
 gem "rspec-rails", ">= 2.12.2", :group => [:development, :test]
 gem "capybara", ">= 2.0.3", :group => :test
 gem "database_cleaner", ">= 1.0.0.RC1", :group => :test

@@ -4,3 +4,6 @@
 
 $(document).ready ->
   $('h1').addClass('red')
+
+  template = JST["templates/test-template"]( name: 'The Iron Yard')
+  $('.test-div').html template
