@@ -7,10 +7,6 @@ $(document).ready ->
 
   template = JST["templates/test-template"]
     name: 'The Iron Yard'
-    description: 'A really hard class'
+    description: 'something'
 
-  array = [1,3,4,5]
-
-  $.each array, (index, value) -> 
-
-    $('.test-div').html template
+  $('.test-div').html template
