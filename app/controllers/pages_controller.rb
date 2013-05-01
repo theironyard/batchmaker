@@ -1,4 +1,9 @@
 class PagesController < ApplicationController
   def test
   end
-end
+
+
+  def recipe_preview
+  end def recipe_preview
+  
+end end

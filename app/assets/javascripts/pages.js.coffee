@@ -5,5 +5,12 @@
 $(document).ready ->
   $('h1').addClass('red')
 
-  template = JST["templates/test-template"]( name: 'The Iron Yard')
-  $('.test-div').html template
+  template = JST["templates/test-template"]
+    name: 'The Iron Yard'
+    description: 'A really hard class'
+
+  array = [1,3,4,5]
+
+  $.each array, (index, value) -> 
+
+    $('.test-div').html template
