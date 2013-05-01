@@ -1,0 +1,60 @@
+// ______          _       
+// |  ___|        | |      
+// | |_ ___  _ __ | |_ ___ 
+// |  _/ _ \| '_ \| __/ __|
+// | || (_) | | | | |_\__ \
+// \_| \___/|_| |_|\__|___/
+//                         
+//---------------------
+//
+// Global Font Styles & Attachments
+//
+//---------------------
+
+// DEFAULT-------------
+
+body {
+  font-family: 'Noticia Text',Georgia,'New Times Roman',serif;
+  color: $slate;
+  font-size: 16px;
+}
+
+// HEADINGS Large-------------
+
+h1, h2 {
+  color: $midnight;
+  letter-spacing: -0.04em;
+  font-family: 'Source Sans Pro';
+  font-weight: 200;
+}
+h1 {
+  font-size: 96px;
+}
+h2 {
+  font-size: 70px;
+  padding-bottom: 10px;
+}
+
+// HEADINGS Small-------------
+
+h3,h4,h5 {
+  color: $midnight;
+  font-family: 'Noticia Text',Georgia,'New Times Roman',serif;
+}
+h3 {
+  font-size: 34px;
+  font-weight: bold;
+  padding-bottom: 14px;
+  font-weight: normal;
+}
+h4 {
+  font-size: 24px;
+  padding-bottom: 14px;
+  font-weight: 700;
+}
+h5 {
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 8px;
+  font-weight: 700;
+}
