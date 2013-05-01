@@ -37,7 +37,6 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 gem "unicorn", ">= 4.3.1"
-gem "pg", ">= 0.15.0"
 gem "slim", ">= 2.0.0.pre.6"
 gem "haml2slim", ">= 0.4.6", :group => :development
 gem "haml-rails", ">= 0.4", :group => :development
@@ -53,3 +52,7 @@ gem "rb-inotify", ">= 0.9.0", :group => :development, :require => false
 gem "rb-fsevent", ">= 0.9.3", :group => :development, :require => false
 gem "rb-fchange", ">= 0.0.6", :group => :development, :require => false
 gem "factory_girl_rails", ">= 4.2.0", :group => [:development, :test]
+gem "quiet_assets", ">= 1.0.2", :group => :development
+gem "figaro", ">= 0.6.3"
+gem "better_errors", ">= 0.7.2", :group => :development
+gem "binding_of_caller", ">= 0.7.1", :group => :development, :platforms => [:mri_19, :rbx]
