@@ -13,6 +13,22 @@
 
 // DEFAULT-------------
 
+$ff-head: 'Source Sans Pro',Helvetica,Arial,sans-serif;
+$ff-body: 'Noticia Text',Georgia,'New Times Roman',serif;
+
+@mixin large-heading-styles {
+  color: $midnight;
+  letter-spacing: -0.04em;
+  font-family: $ff-head;
+  font-weight: 200;
+}
+
+@mixin small-heading-styles {
+  color: $midnight;
+  font-family: $ff-body;
+}
+
+
 body {
   font-family: 'Noticia Text',Georgia,'New Times Roman',serif;
   color: $slate;
@@ -21,15 +37,10 @@ body {
 
 // HEADINGS Large-------------
 
-h1, h2 {
-  color: $midnight;
-  letter-spacing: -0.04em;
-  font-family: 'Source Sans Pro';
-  font-weight: 200;
-}
 h1 {
   font-size: 96px;
 }
+
 h2 {
   font-size: 70px;
   padding-bottom: 10px;
@@ -37,21 +48,18 @@ h2 {
 
 // HEADINGS Small-------------
 
-h3,h4,h5 {
-  color: $midnight;
-  font-family: 'Noticia Text',Georgia,'New Times Roman',serif;
-}
 h3 {
   font-size: 34px;
-  font-weight: bold;
   padding-bottom: 14px;
   font-weight: normal;
 }
+
 h4 {
   font-size: 24px;
   padding-bottom: 14px;
   font-weight: 700;
 }
+
 h5 {
   font-size: 18px;
   font-weight: bold;
