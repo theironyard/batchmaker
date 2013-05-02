@@ -1,27 +1,55 @@
 doctype html
 html
-head
-  title
-    Batchmaker
-  = stylesheet_link_tag    "application", :media => "all"
-  = javascript_include_tag "application"
-  = csrf_meta_tags
-  javascript:
-    console.log("Look! Stuff is working!");
-body
+  head
+    title
+      Batchmaker
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
 
-  input.input-xxlarge
+  body
+    .container
+      .heading Basic Info
 
-  input.input-xlarge
+      .basic-info-box
+      
+        .photo 
+          .add.photo add photo
+        .main-recipe-info 
+          input.input-large placeholder="Recipe Name"
+          input.input-large placeholder="By"
+        .checkboxes
+          input.input-checkbox type="checkbox" Make it Public 
+          input.input-checkbox type="checkbox" Keep it Private 
 
-  input.input-large
+      .recipe-time-input-box
+        input.input-medium-small placeholder="Recipe Type"
+        //placeholder for recipe type dropdown
+        input.input-small placeholder="Prep Time"
+        input.input-small placeholder="Cook Time" 
+        input.input-medium-small placeholder="Cook Temp" 
+        /placeholder for cook temp dropdown
 
-  input.input-medium
+      .recipe-will-yield-box
+        h4 This Recipe Will Make
+        input.input-small placeholder="Amount"
+        input.input-medium placeholder="cookies, loaves, etc"
+        /placeholder for cook temp
 
-  input.input-medium-small
+      .heading Step 1
 
-  input.input-small
+      .recipe-steps-box
+        input.input-small placeholder="2" 
+        input.input-small placeholder="cups" 
+        input.input-medium placeholder="bread flour"
 
-  input.input-xsmall 
+      .recipe-steps-box
+        input.input-small placeholder="2" 
+        input.input-small placeholder="cups" 
+        input.input-medium placeholder="bread flour"
+        input.input-xlarge placeholder="What directions go with this step?"
 
-= yield
+      .heading Personal Notes
+      input.input-xlarge placeholder="(notes go here)"
+
+      button.buttonDescription placeholder="Save this recipe"
