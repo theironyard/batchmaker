@@ -5,25 +5,37 @@
   background-color: #f9f5eb;
   color: #232323;
 
-  li {
-  list-style: none;
-  padding: 40px;
-  text-align: center;
-  margin-left: -40px;
+  ul{
+    width: 160px;
+    margin: 0 auto;
 
-    a {
-    text-decoration: none;
-    color: gray;
-    border-bottom:1px dashed #333;
+    li {
+    list-style: none;
+    padding: 40px 0 0 0;
+    text-align: center;
+    width: 125px;
+    margin: auto;
 
-      &:nth-child(last) {
+      &:after {
+        content: "";
+        display: block;
+        width: 50px;
+        padding: 40px 0 0 0;
+        border-bottom: 1px solid #333;
+        margin: auto;
+      }
+
+      &:last-child:after {
         border-bottom: none;
       }
 
+      a {
+      text-decoration: none;
+      color: gray;
+      }
+
     }
-
   }
-
 }
 
 
