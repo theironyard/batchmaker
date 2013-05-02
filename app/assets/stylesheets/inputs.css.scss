@@ -34,45 +34,113 @@ $input-width: 700px;
 // ------------------------
 
 
-input {
-  background-color: $input-bg;
-  border-radius: $input-borderradius;
-  margin: 20px;
-  border: $input-border;
-  box-shadow: $input-boxshadow;
-}
+// input {
+//   background-color: $input-bg;
+//   border-radius: $input-borderradius;
+//   margin: 20px;
+//   border: $input-border;
+//   box-shadow: $input-boxshadow;
+// }
 
-.input-xxlarge {
-  width: 100%;
-  height: 185px;
-}  
+// .input-xxlarge {
+//   width: 100%;
+//   height: 185px;
+// }  
 
-.input-xlarge {
-  width: 100%;
+// .input-xlarge {
+//   width: 100%;
+//   height: 150px;
+// }
+
+// .input-large {
+//   width: 68%;
+//   height: 62px;
+// }
+
+// .input-medium {
+//   width: 59%;
+//   height: $input-height;
+// }
+
+// .input-medium-small {
+//   width: 31%;
+//   height: $input-height;
+// }
+
+// .input-small {
+//   width: 18%;
+//   height: $input-height;
+// }
+
+// .input-xsmall {
+//   width: 13%;
+//   height: $input-height;
+// }
+
+.addphoto {
+  width: 150px;
   height: 150px;
+  background: #bfbfbf;
+  border-radius: 4px;
+  margin: 20px;
 }
 
 .input-large {
-  width: 68%;
-  height: 62px;
+  background: #f1f1f1;
+  width: 475px;
+  height: 60px;
+  border: 0px;
+  border-radius: 4px;
+  box-shadow: inset 1px 2px 3px 2px #d9d9d9;
 }
 
-.input-medium {
-  width: 59%;
-  height: $input-height;
+.input-large {
+  background: #f1f1f1;
+  width: 475px;
+  height: 60px;
+  border: 0px;
+  border-radius: 4px;
+  box-shadow: inset 1px 2px 3px 2px #d9d9d9;
 }
 
-.input-medium-small {
-  width: 31%;
-  height: $input-height;
+.buttonplus {
+  height: 50px;
+  width: 55px;
+  border-radius: 4px;
+  border: 1px #bfbfbf;
+  background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(242,242,242,1) 0%,rgba(234,234,234,1) 100%);
 }
 
-.input-small {
-  width: 18%;
-  height: $input-height;
+.stepbutton {
+  height: 45px;
+  width: 200px;
+  border-radius: 4px;
+  background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(244,244,244,1) 0%,rgba(234,234,234,1) 100%);
+  border: 1px #bfbfbf;
 }
 
-.input-xsmall {
-  width: 13%;
-  height: $input-height;
+.savebutton {
+  height: 50px;
+  width: 225px;
+  border-radius: 4px;
+  background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(170,170,170,1) 0%,rgba(145,145,145,1) 100%);
+  border: 1px #bfbfbf;
+  color: rgb(237, 237, 237);
+}
+
+hr {
+  background: #bfbfbf;
+  border: 0px;
+}
+
+h1 {
+  color: #555555;
+  font-size: 20px;
+  font-family: Georgia, Helvetica;
+}
+
+p {
+  color: #555555;
+  font-size: 16px;
+  font-family: Georgia, Helvetica
 }
