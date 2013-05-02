@@ -1,14 +1,27 @@
-h5 Basic Info
+doctype html
+html
+head
+  title
+    Batchmaker
+  = stylesheet_link_tag    "application", :media => "all"
+  = javascript_include_tag "application"
+  = csrf_meta_tags
+  javascript:
+    console.log("Look! Stuff is working!");
+body
 
-.add-photo
-  h5 Add Photo
+  input.input-xxlarge
 
-input.recipe-name placeholder="Recipe Name"
+  input.input-xlarge
 
-input.byline placeholder="By"
+  input.input-large
 
-input type="checkbox"
-  .checkbox-text Make It Public
+  input.input-medium
 
-input type="checkbox"
-  .checkbox-text Keep It Private
+  input.input-medium-small
+
+  input.input-small
+
+  input.input-xsmall 
+
+= yield
