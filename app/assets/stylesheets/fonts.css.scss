@@ -36,12 +36,10 @@ h1, h2 {
 }
 
 h2 {
-  @include large-heading-styles;
   font-size: 96px;
 }
 
 h3 {
-  @include large-heading-styles;
   font-size: 70px;
   padding-bottom: 10px;
 }
@@ -54,21 +52,18 @@ h4, h5, h6 {
 }
 
 h4 {
-  @include small-heading-styles;
   font-size: 34px;
   padding-bottom: 14px;
   font-weight: normal;
 }
 
 h5 {
-  @include small-heading-styles;
   font-size: 24px;
   padding-bottom: 14px;
   font-weight: 700;
 }
 
 h6 {
-  @include small-heading-styles;
   font-size: 18px;
   font-weight: bold;
   padding-bottom: 8px;
