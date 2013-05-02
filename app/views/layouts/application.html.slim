@@ -8,6 +8,7 @@ head
   = csrf_meta_tags
 head
 body
+
   div.global-header
     h2 The Kitchen Is Yours Chef!
     h1
@@ -19,6 +20,7 @@ body
         a.settings Settings
       li
         a.user User
+
   div.global-sidebar
     ul.nav-app
       li
@@ -36,8 +38,8 @@ body
       li
         a My Pantry
 
-
-= yield
+  div.global-container
+    = yield
 
 body
 html
