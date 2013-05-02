@@ -3,10 +3,3 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 $(document).ready ->
-  $('h1').addClass('red')
-
-  template = JST["templates/test-template"]
-    name: 'The Iron Yard'
-    description: 'something'
-
-  $('.test-div').html template

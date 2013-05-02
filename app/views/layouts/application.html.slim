@@ -12,31 +12,30 @@ body
   div.global-header
     h2 The Kitchen Is Yours Chef!
     h1
-      a.logo.seo BatchMaker
+      a.logo.seo
+      | BatchMaker
+      img src="http://placehold.it/165x34"
+
     ul.nav-user
       li
-        a.add Add
+        a.add.ss-icon href="#" Add
       li
-        a.settings Settings
+        a.settings href="#" Settings
       li
-        a.user User
+        a.user href="#" User
 
   div.global-sidebar
     ul.nav-app
       li
-        a My Recipes
-      .line
+        a href="#" My Recipes
       li
-        a Public Recipes
-      .line
+        a href="#" Public Recipes
       li
-        a Popular Recipes
-      .line
+        a href="#" Popular Recipes
       li
-        a My Favorite Recipes
-      .line
+        a href="#" My Favorite Recipes
       li
-        a My Pantry
+        a href="#" My Pantry
 
   div.global-container
     = yield

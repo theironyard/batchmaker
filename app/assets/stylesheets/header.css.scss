@@ -16,5 +16,30 @@
 
 .global-header {
   padding: 20px 30px;
+  background: lighten($c-slate, 80%);
+  text-align: center;
+
+  h2 {
+    font-style: italic;
+    font-size: 30px;
+    float: left;
+  }
+
+  h1 {
+    margin: auto;
+    display: inline-block;
+  }
+
+  .nav-user {
+    float: right;
+    width: 300px;
+    text-align: right;
+
+    li {
+      display: inline-block;
+      margin: 0 10px 0 0;
+    }
+
+  }
 
 }
