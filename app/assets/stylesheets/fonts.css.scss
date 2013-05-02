@@ -17,14 +17,14 @@ $ff-head: 'Source Sans Pro',Helvetica,Arial,sans-serif;
 $ff-body: 'Noticia Text',Georgia,'New Times Roman',serif;
 
 @mixin large-heading-styles {
-  color: $midnight;
+  color: $c-midnight;
   letter-spacing: -0.04em;
   font-family: $ff-head;
   font-weight: 200;
 }
 
 @mixin small-heading-styles {
-  color: $midnight;
+  color: $c-midnight;
   font-family: $ff-body;
 }
 
@@ -32,7 +32,7 @@ $ff-body: 'Noticia Text',Georgia,'New Times Roman',serif;
 
 body {
   font-family: 'Noticia Text',Georgia,'New Times Roman',serif;
-  color: $slate;
+  color: $c-slate;
   font-size: 16px;
 }
 

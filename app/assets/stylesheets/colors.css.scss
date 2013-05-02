@@ -1,25 +1,31 @@
-  _____      _                
- / ____|    | |               
-| |     ___ | | ___  _ __ ___ 
-| |    / _ \| |/ _ \| '__/ __|
-| |___| (_) | | (_) | |  \__ \
- \_____\___/|_|\___/|_|  |___/  
-
+//   _____      _                
+//  / ____|    | |               
+// | |     ___ | | ___  _ __ ___ 
+// | |    / _ \| |/ _ \| '__/ __|
+// | |___| (_) | | (_) | |  \__ \
+//  \_____\___/|_|\___/|_|  |___/  
+//
  //Sorry, Tyler - I changed the names!
 
-.slate { color: #232323; }
-.slate-bg { background-color: #4F575C; }
+$c-slate: #232323;
+$c-midnight: #254a5d;
+$c-aqua: #76c7a5;
+$c-ivory: #f9f5eb;
+$c-marigold: #efb968; //Great color name, Jen!
 
-.midnight { color: #254a5d; }
-.midnight-bg { background-color: #254a5d; }
+.slate { color: $c-slate; }
+.slate-bg { background-color: $c-slate; }
 
-.aqua { color: #76c7a5; }
-.aqua-bg { background-color: #76c7a5; }
+.midnight { color: $c-midnight; }
+.midnight-bg { background-color: $c-midnight; }
 
-.ivory { color: #f9f5eb; }
-.ivory-bg { background-color: #f9f5eb; }
+.aqua { color: $c-aqua; }
+.aqua-bg { background-color: $c-aqua; }
 
-.marigold { color: #efb968; }
-.marigold-bg { background-color: #efb968; }
+.ivory { color: $c-ivory; }
+.ivory-bg { background-color: $c-ivory; }
+
+.marigold { color: $c-marigold; }
+.marigold-bg { background-color: $c-marigold; }
 
 
