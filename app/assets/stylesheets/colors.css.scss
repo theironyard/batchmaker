@@ -1,3 +1,8 @@
+@import 'variables';
+
+
+
+
 //   _____      _                
 //  / ____|    | |               
 // | |     ___ | | ___  _ __ ___ 
@@ -5,13 +10,13 @@
 // | |___| (_) | | (_) | |  \__ \
 //  \_____\___/|_|\___/|_|  |___/  
 //
- //Sorry, Tyler - I changed the names!
+//Sorry, Tyler - I changed the names!
 
-$c-slate: #232323;
-$c-midnight: #254a5d;
-$c-aqua: #76c7a5;
-$c-ivory: #f9f5eb;
-$c-marigold: #efb968; //Great color name, Jen!
+// VARIABLES-------------
+
+
+
+// COLOR CLASSES-------------
 
 .slate { color: $c-slate; }
 .slate-bg { background-color: $c-slate; }

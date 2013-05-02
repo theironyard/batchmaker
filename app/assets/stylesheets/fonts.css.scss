@@ -1,3 +1,6 @@
+@import 'variables';
+
+
 // ______          _       
 // |  ___|        | |      
 // | |_ ___  _ __ | |_ ___ 
@@ -18,8 +21,6 @@
 
 // VARIABLES-------------
 
-$ff-head: 'Source Sans Pro',Helvetica,Arial,sans-serif;
-$ff-body: 'Noticia Text',Georgia,'New Times Roman',serif;
 
 @mixin large-heading-styles {
   color: $c-midnight;

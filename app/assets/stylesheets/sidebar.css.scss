@@ -5,22 +5,21 @@
   background-color: #f9f5eb;
   color: #232323;
 
-  &li {
+  li {
   list-style: none;
   padding: 40px;
   text-align: center;
   margin-left: -40px;
 
-    &a {
+    a {
     text-decoration: none;
     color: gray;
-    }
+    border-bottom:1px dashed #333;
 
-    &.line {
-    width: 40px;
-    height: 1px;
-    background-color: gray;
-    margin-left: 35px;
+      &:nth-child(last) {
+        border-bottom: none;
+      }
+
     }
 
   }
