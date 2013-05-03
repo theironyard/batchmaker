@@ -14,22 +14,30 @@ html
       .basic-info-box
       
         .addphoto add photo
+
         .main-recipe-input-area 
+
           input.input-large placeholder="Recipe Name"
           input.input-large placeholder="By"
+
           .main-recipe-checkboxes
-            input.input-checkbox type="checkbox" Make it Public 
-            input.input-checkbox type="checkbox" Keep it Private 
+
+            form
+
+              input type="checkbox" 
+                p Make it Public 
+              input type="checkbox" 
+                p Keep it Private 
 
       .recipe-time-input-box
-        input.input-medium-small placeholder="Recipe Type"
+        
         .dropdown
 
           ul
 
             li 
               a href="#" Recipe Types
-              .ss-navigatedown
+              / .ss-navigatedown
 
               ul
 
@@ -47,11 +55,11 @@ html
         input.input-medium-small placeholder="Cook Temp" 
         /placeholder for cook temp dropdown
 
-      .recipe-will-yield-box
-        h4 This Recipe Will Make
+      .yield-container
+
+        p This Recipe Will Make
         input.input-small placeholder="Amount"
         input.input-medium placeholder="cookies, loaves, etc"
-        /placeholder for cook temp
 
       .heading Step 1
 
