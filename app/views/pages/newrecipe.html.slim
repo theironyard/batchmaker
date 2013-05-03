@@ -14,15 +14,14 @@ html
       .basic-info-box
       
         .addphoto
-          .ss-plus
-          p.addphoto add photo
+          .ss-plus <br/>add photo
 
         .main-recipe-input-area 
 
           input.input-large placeholder="Recipe Name"
           input.input-large placeholder="By"
 
-          .main-recipe-checkboxes
+          .main-recipe-checkboxesa
 
             form
 
@@ -31,7 +30,7 @@ html
               input type="checkbox" 
                 p Keep it Private 
 
-      .recipe-time-input-box
+      .recipe-time-container
         
         .dropdown
 
@@ -59,23 +58,25 @@ html
 
       .yield-container
 
-        p This Recipe Will Make
+        p This recipe will make
         input.input-smaller placeholder="Amount"
         input.input-medium placeholder="cookies, loaves, etc"
 
       .heading Step 1
 
       .recipe-steps-box
-        input.input-small placeholder="2" 
+        input.input-smaller placeholder="2" 
         input.input-small placeholder="cups" 
-        input.input-medium placeholder="bread flour"
-        button.buttonplus
+        input.input-380 placeholder="bread flour"
+        button.addremove
 
       .recipe-steps-box
-        input.input-small placeholder="2" 
+        input.input-smaller placeholder="2" 
         input.input-small placeholder="cups" 
-        input.input-medium placeholder="bread flour"
-        input.input-xlarge placeholder="What directions go with this step?"
+        input.input-380 placeholder="bread flour"
+        button.addremove
+
+      input.input-xlarge placeholder="What directions go with this step?"
 
       .heading Personal Notes
       input.input-xlarge placeholder="(notes go here)"
