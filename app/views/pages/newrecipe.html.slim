@@ -1,9 +1,14 @@
 html
   body
     .container
-      .heading Basic Info
-
-      .basic-info-box
+      
+      //this is the block of divs that show the heading
+      //and the line beside the heading
+      .heading.steps-title Basic Info
+      hr
+  
+      //this is div that shows the first chunk of recipe info
+      .full-width
       
         .addphoto
           .ss-plus <br/>add photo
@@ -16,61 +21,75 @@ html
           .main-recipe-checkboxes
 
             form
-
               input type="checkbox" 
                 p Make it Public 
               input type="checkbox"
                 p Keep it Private 
 
-      .recipe-time-container
+      //this is div that allows user to enter time, etc..
+      .full-width
         
         .dropdown
-
-          ul
-
-            li 
-              a href="#" Recipe Types
-              / .ss-navigatedown
-
-              ul
-
-                li
-                  a href="#" Breakfast
-                li
-                  a href="#" Lunch
-                li
-                  a href="#" Dinner
-                li
-                  a href="#" Dessert
+          .recipe-type
+            ul
+              li 
+                a href="#" Recipe Types
+                / .ss-navigatedown
+                ul
+                  li
+                    a href="#" Breakfast
+                  li
+                    a href="#" Lunch
+                  li
+                    a href="#" Dinner
+                  li
+                    a href="#" Dessert
 
         input.input-small placeholder="Prep Time"
         input.input-small placeholder="Cook Time" 
         input.input-medium-small placeholder="Cook Temp" 
-        /placeholder for cook temp dropdown
+        //added temp dropdown
 
+        .dropdown
+          ul
+            li 
+              a href="#" F&deg;
+              / .ss-navigatedown
+              ul
+                li
+                  a href="#" C&deg;
+
+      //this is div that shows the yield
       .yield-container
 
         p This recipe will make
         input.input-smaller placeholder="Amount"
         input.input-medium placeholder="cookies, loaves, etc"
 
-      .heading Step 1
+      .heading.steps-title Step 1
+      hr
 
-      .recipe-steps-box
+      .full-width
         input.input-smaller placeholder="2" 
         input.input-small placeholder="cups" 
         input.input-380 placeholder="bread flour"
         button.addremove
 
-      .recipe-steps-box
+      .full-width
         input.input-smaller placeholder="2" 
         input.input-small placeholder="cups" 
-        input.input-380 placeholder="bread flour"
+        input.input-380 placdeholder="bread flour"
         button.addremove
 
       input type="textarea" placeholder="What directions go with this step?"
+      .full-width
+        button.add-step Add another step
 
-      .heading Personal Notes
-      input type="textarea"
+      .heading.steps-title Personal Notes
+      hr
 
-      button.buttonDescription placeholder="Save this recipe"
+      //input for user to enter notes
+      input.personal-notes type="textarea"
+
+      .full-width
+        button.savebutton Save this recipe!

@@ -1,216 +1,27 @@
-//  ___                   _    __     __         _       _     _           
- // |_ _|_ __  _ __  _   _| |_  \ \   / /_ _ _ __(_) __ _| |__ | | ___  ___ 
- //  | || '_ \| '_ \| | | | __|  \ \ / / _` | '__| |/ _` | '_ \| |/ _ \/ __|
- //  | || | | | |_) | |_| | |_    \ V / (_| | |  | | (_| | |_) | |  __/\__ \
- // |___|_| |_| .__/ \__,_|\__|    \_/ \__,_|_|  |_|\__,_|_.__/|_|\___||___/
- //           |_|                                                                                                                    
-
-$input-bg: rgb(237, 237, 237);
-
-$input-boxshadow: inset 0px 1px 3px 1px rgb(187, 187, 187);
-
-$input-borderradius: 4px;
-
-$input-border: 0px;
-
-$input-height: 50px;
-
-$input-width: 700px;
-
-$margin: 15px;
-
-::-webkit-input-placeholder {
-   color: #585858;
+//heading style can be replaced with global heading.
+.heading {
+  font-size: 20px;
+  color: #555;
 }
 
-.container {
-  width: 700px;
-  margin: 0px auto;
-  margin-top: 55px;
-  padding: 0px;
-}
-
-.basic-info-box {
-  width: 700px;
-}
-
-.recipe-time-container {
-  margin-top: 27px;
-}
-
-.yield-container {
-  width: 100%;
-  margin-top: 28px;
-  margin-bottom: 28px;
-  display: inline-block;
-}
-
-.yield-container p {
-  color: #585858;
-  font-size: 18px;
-  font-family: sans-serif;
-  display: inline-block;
-  margin-right: 20px;
-}
-
-.main-recipe-input-area  {
-  width: 480px;
-  display: inline-block;
-  margin-bottom: 15px;
-}
-
-.main-recipe-checkboxes {
-  width: 480px;
-  margin-top: 0px;
-
-}
-
-input[type="checkbox"] {
-  padding: 0px;
-  margin: 0 10px 0 0;  
-}
-
-.main-recipe-checkboxes p {
-  margin: 0;
-  padding-right: 25px;
-  color: #b1b1b1;
-  font-family: sans-serif;
-  font-size: 15px;
+.steps-title {
   font-weight: lighter;
+  text-align: left;
   display: inline-block;
-}
-
-.input-checkbox {
-  height: 19px;
-  width: 19px;
-  padding: 0px;
-  margin: 0 10px 0 0;
-}
-
-.addphoto {
-  width: 188px;
-  padding: 77px 0;
-  float: left;
-  background: #bfbfbf;
-  border-radius: 4px;
-  text-align: center;
-  margin-right: 30px;
-
-}
-
-input {
-  display: inline-block;
-  background-color: $input-bg;
-  border-radius: $input-borderradius;
-  border: $input-border;
-  box-shadow: $input-boxshadow;
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
-}
-
-input[type="textarea"] {
-  width: 700px;
-  height: 150px;
-  padding: 0;
-  margin: 0;
-  color: #585858;
-}
-
-.input-large {
-  padding-left: 25px;
-  background: #f1f1f1;
-  margin-bottom: 22px;
-  width: 475px;
-  height: 60px;
-  border: 0px;
-  border-radius: 4px;
-  box-shadow: inset 1px 2px 3px 2px #d9d9d9;
-  color: #585858;
-  font-size: 16px;
-}
-
-.input-small {
-  width: 124px;
-  height: 50px;
-  margin: 0 13px 0 0;
-  padding: 0 0 0 16px;
-  color: #585858;
-  font-size: 16px;
-}
-
-.input-smaller {
-  width: 90px;
-  height: 50px;
-  margin: 0 13px 0 0;
-  padding: 0 0 0 13px;
-  color: #585858;
-  font-size: 16px;
-}
-
-.input-medium {
-  width: 410px;
-  height: 50px;
-  margin: 0;
-  padding: 0 0 0 16px;
-  color: #585858;
-  font-size: 16px;
-}
-
-.input-medium-small {
-  width: 180px;
-  height: 50px;
-  margin: 0;
-  padding: 0 0 0 16px;
-  color: #585858;
-  font-size: 14px;
-}
-
-.input-380 {
-  width: 380px;
-  height: 50px;
-  margin: 0 15px 0 0;
-  padding: 0 0 0 16px;
-  color: #585858;
-  font-size: 16px;
-}
-
-.addremove {
-  width: 58px;
-  height: 48px;
-  margin: 0;
-  padding: 0;
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #bfbfbf;
-  background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(242,242,242,1) 0%,rgba(234,234,234,1) 100%);
-}
-
-.stepbutton {
-  height: 45px;
-  width: 200px;
-  border-radius: 4px;
-  background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(244,244,244,1) 0%,rgba(234,234,234,1) 100%);
-  border: 1px #bfbfbf;
-}
-
-.savebutton {
-  height: 50px;
-  width: 225px;
-  border-radius: 4px;
-  background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(170,170,170,1) 0%,rgba(145,145,145,1) 100%);
-  border: 1px #bfbfbf;
-  color: rgb(237, 237, 237);
+  padding-right: 10px;
+  background-color: #fff;
 }
 
 hr {
-  background: #bfbfbf;
-  border: 0px;
+  border: none;
+  border-top: 1px solid #b0b0b0;
+  margin-top: -10px;
 }
 
-.heading {
-  color: #555555;
-  font-size: 20px;
-  font-family: Georgia;
-  margin-bottom: 15px;
+.steps-content {
+  width: 460px;
+  line-height: 20px;
+  padding: 24px 20px 24px 0;
+  vertical-align: top;
+  display: inline-block;
 }
