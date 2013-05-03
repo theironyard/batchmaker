@@ -132,9 +132,22 @@ input {
   font-size: 16px;
 }
 
+.input-smaller {
+  width: 90px;
+  height: 50px;
+  margin: 0 13px 0 0;
+  padding: 0 0 0 16px;
+  color: #585858;
+  font-size: 16px;
+}
+
 .input-medium {
   width: 410px;
-  height: $input-height;
+  height: 50px;
+  margin: 0;
+  padding: 0 0 0 16px;
+  color: #585858;
+  font-size: 16px;
 }
 
 .input-medium-small {
@@ -190,6 +203,6 @@ hr {
 .heading {
   color: #555555;
   font-size: 20px;
-  font-family: Georgia, Helvetica;
+  font-family: Georgia;
   margin-bottom: 15px;
 }
