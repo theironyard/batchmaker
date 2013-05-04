@@ -9,8 +9,6 @@ $(document).ready ->
     name: 'The Iron Yard'
     description: 'A really hard class'
 
-  array = [1,3,4,5]
+      
+  $('.test-div').html template
 
-  $.each array, (index, value) -> 
-
-    $('.test-div').html template
