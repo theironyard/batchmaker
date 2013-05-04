@@ -29,33 +29,29 @@ html
       //this is div that allows user to enter time, etc..
       .full-width
         
-        .dropdown
-          .recipe-type
-            ul
-              li 
-                a href="#" Recipe Types
-                / .ss-navigatedown
-                ul
-                  li
-                    a href="#" Breakfast
-                  li
-                    a href="#" Lunch
-                  li
-                    a href="#" Dinner
-                  li
-                    a href="#" Dessert
+        .dropdown.recipe-type
+          ul
+            li 
+              .ss-icon Recipe Types navigatedown
+              ul.recipe-type
+                li
+                  a href="#" Breakfast
+                li
+                  a href="#" Lunch
+                li
+                  a href="#" Dinner
+                li
+                  a href="#" Dessert
 
         input.input-small placeholder="Prep Time"
         input.input-small placeholder="Cook Time" 
-        input.input-medium-small placeholder="Cook Temp" 
-        //added temp dropdown
-
-        .dropdown
+        input.input-medium-small placeholder="Cook Temp"
+          
+        .dropdown.temp-unit
           ul
             li 
-              a href="#" F&deg;
-              / .ss-navigatedown
-              ul
+              .ss-icon F&deg; navigatedown
+              ul.temp-unit
                 li
                   a href="#" C&deg;
 
@@ -70,18 +66,51 @@ html
       hr
 
       .full-width
-        input.input-smaller placeholder="2" 
-        input.input-small placeholder="cups" 
-        input.input-380 placeholder="bread flour"
-        button.addremove
+
+        input.input-smaller placeholder="#" 
+        .dropdown.unit-type
+          ul
+            li 
+              .ss-icon Unit navigatedown
+              ul.unit-type
+                li
+                  a href="#" Cups
+                li
+                  a href="#" Ounces
+                li
+                  a href="#" Quarts
+                li
+                  a href="#" Tablespoons
+                li
+                  a href="#" Teaspoons
+
+        input.input-385 placeholder="breads flour"
+        button.addremove 
+          .ss-hyphen
 
       .full-width
-        input.input-smaller placeholder="2" 
-        input.input-small placeholder="cups" 
-        input.input-380 placdeholder="bread flour"
-        button.addremove
+        input.input-smaller placeholder="Amount" 
+        .dropdown.unit-type
+          ul
+            li 
+              .ss-icon Unit navigatedown
+              ul.unit-type
+                li
+                  a href="#" Cups
+                li
+                  a href="#" Ounces
+                li
+                  a href="#" Quarts
+                li
+                  a href="#" Tablespoons
+                li
+                  a href="#" Teaspoons
 
-      input type="textarea" placeholder="What directions go with this step?"
+        input.input-385 placeholder="Ingredients"
+        button.addremove 
+          .ss-plus
+
+      textarea placeholder="What directions go with this step?"
       .full-width
         button.add-step Add another step
 
@@ -89,7 +118,7 @@ html
       hr
 
       //input for user to enter notes
-      input.personal-notes type="textarea"
+      textarea.personal-notes
 
       .full-width
         button.savebutton Save this recipe!

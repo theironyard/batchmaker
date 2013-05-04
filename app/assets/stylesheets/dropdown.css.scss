@@ -1,0 +1,120 @@
+/*---------------------------------------------------------------*/
+/*Dropdown Menu for Recipe Type Only - Has a fixed width of 222px*/
+/*---------------------------------------------------------------*/
+
+.dropdown {
+  margin: 0;
+  margin-right: 13px;
+  display: inline-block;
+
+  &.recipe-type {
+    width: 222px;
+  }
+
+  &.temp-unit {
+    width: 63px;
+    position: absolute;
+    border-radius: 0 5px 5px 0;
+    margin-left: -64px;
+    margin-top: 2px;
+    box-shadow: -1px 0 1px #d9d9d9;
+  }
+
+  &.unit-type {
+    width: 124px;
+  }
+}
+
+.dropdown ul ul {
+  display: none;
+}
+
+.dropdown ul li:hover > ul {
+  display: block;
+  background-color: whitesmoke;
+}
+
+.dropdown ul {
+  font-family: sans-serif;
+  background: #ededed; 
+  padding: 0px;
+  border-radius: 3px;  
+  list-style: none;
+  position: relative;
+  display: block;
+
+  &.recipe-type {
+    width: 222px;
+  }
+
+  &.temp-unit {
+    width: 63px;
+  }
+
+  &.unit-type {
+    width: 124px;
+  }
+}
+
+.dropdown ul:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/*.dropdown ul li {
+  float: left;
+}*/
+
+.dropdown ul li:hover {
+  background-color: #ededed;
+  border-bottom: 1px solid #cfcfcf;
+}
+
+.dropdown ul li:hover a {
+  color: #333;
+}
+
+.dropdown ul li {
+  width: 100%;
+  display: block;
+  padding: 16px 0 16px 20px;
+  color: #585858;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+
+  &.temp-unit {
+    padding-left: 10px;
+  }
+
+  &.temp-unit {
+    padding-left: 10px;
+  }
+}
+
+.dropdown ul ul {
+  background-color: #e0e0e0;
+  border-radius: 0px 0px 3px 3px ;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.dropdown ul ul li {
+  float: none;
+  border-bottom: 1px solid #cfcfcf;
+  position: relative; 
+  padding-left: 25px;
+}
+
+.dropdown ul ul li a {
+  padding: 15px 0px 15px 0px;
+  text-decoration: none;
+}
+
+.dropdown ul ul li a:hover {
+  background-color: #ededed;
+}

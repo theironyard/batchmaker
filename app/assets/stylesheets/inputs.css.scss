@@ -7,7 +7,7 @@
 
 $input-bg: rgb(237, 237, 237);
 
-$input-boxshadow: inset 0px 1px 3px 1px rgb(187, 187, 187);
+$input-boxshadow: inset 0px 1px 2px rgba(0,0,0,.3);
 
 $input-borderradius: 4px;
 
@@ -17,18 +17,14 @@ $input-height: 50px;
 
 $input-width: 700px;
 
-//may or may not need
-// $margin: 15px;
+// general input styles
 
 ::-webkit-input-placeholder {
    color: #585858;
 }
 
-
-// general input styles
 input {
   display: inline-block;
-  vertical-align: top;
   background-color: $input-bg;
   border-radius: $input-borderradius;
   border: $input-border;
@@ -36,14 +32,25 @@ input {
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
+  color: #585858;
+  font-size: 16px;
 }
 
-input[type="textarea"] {
+textarea {
+  -webkit-appearance: none;
   width: 700px;
   height: 150px;
-  padding: 0;
+  background-color: $input-bg;
+  border: 1px solid #dbdbdb;
+  box-shadow: inset 0px 1px 3px 1px rgb(187, 187, 187);
+  border-radius: 5px;
+  padding: 20px 0 0 13px;
+  -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
   margin:  0;
   color: #585858;
+  font-size: 16px;
 
   &.personal-notes {
   margin: 20px 0 0 0;
@@ -71,13 +78,11 @@ input[type="checkbox"] {
   padding-left: 25px;
   background: #f1f1f1;
   margin-bottom: 22px;
-  width: 475px;
+  width: 483px;
   height: 60px;
   border: 0px;
   border-radius: 4px;
-  box-shadow: inset 1px 2px 3px 2px #d9d9d9;
-  color: #585858;
-  font-size: 16px;
+  box-shadow: $input-boxshadow;
 }
 
 .input-medium {
@@ -85,21 +90,17 @@ input[type="checkbox"] {
   height: 50px;
   margin: 0;
   padding: 0 0 0 16px;
-  color: #585858;
-  font-size: 16px;
 }
 
-.input-380 {
-  width: 380px;
+.input-385 {
+  width: 385px;
   height: 50px;
   margin: 0 15px 0 0;
   padding: 0 0 0 16px;
-  color: #585858;
-  font-size: 16px;
 }
 
 .input-medium-small {
-  width: 180px;
+  width: 191px;
   height: 50px;
   margin: 0;
   padding: 0 0 0 16px;
@@ -112,8 +113,6 @@ input[type="checkbox"] {
   height: 50px;
   margin: 0 13px 0 0;
   padding: 0 0 0 16px;
-  color: #585858;
-  font-size: 16px;
 }
 
 .input-smaller {
@@ -121,6 +120,4 @@ input[type="checkbox"] {
   height: 50px;
   margin: 0 13px 0 0;
   padding: 0 0 0 13px;
-  color: #585858;
-  font-size: 16px;
 }
