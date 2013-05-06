@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  
   def test
   end
 
@@ -11,4 +12,4 @@ class PagesController < ApplicationController
   def dropdown_menu
   end
   
-end 
+end
