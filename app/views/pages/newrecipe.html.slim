@@ -1,0 +1,124 @@
+html
+  body
+    .container
+      
+      //this is the block of divs that show the heading
+      //and the line beside the heading
+      .heading.steps-title Basic Info
+      hr
+  
+      //this is div that shows the first chunk of recipe info
+      .full-width
+      
+        .addphoto
+          .ss-plus <br/>add photo
+
+        .main-recipe-input-area 
+
+          input.input-large placeholder="Recipe Name"
+          input.input-large placeholder="By"
+
+          .main-recipe-checkboxes
+
+            form
+              input type="checkbox" 
+                p Make it Public 
+              input type="checkbox"
+                p Keep it Private 
+
+      //this is div that allows user to enter time, etc..
+      .full-width
+        
+        .dropdown.recipe-type
+          ul
+            li 
+              .ss-icon Recipe Types navigatedown
+              ul.recipe-type
+                li
+                  a href="#" Breakfast
+                li
+                  a href="#" Lunch
+                li
+                  a href="#" Dinner
+                li
+                  a href="#" Dessert
+
+        input.input-small placeholder="Prep Time"
+        input.input-small placeholder="Cook Time" 
+        input.input-medium-small placeholder="Cook Temp"
+          
+        .dropdown.temp-unit
+          ul
+            li 
+              .ss-icon F&deg; navigatedown
+              ul.temp-unit
+                li
+                  a href="#" C&deg;
+
+      //this is div that shows the yield
+      .yield-container
+
+        p This recipe will make
+        input.input-smaller placeholder="Amount"
+        input.input-medium placeholder="cookies, loaves, etc"
+
+      .heading.steps-title Step 1
+      hr
+
+      .full-width
+
+        input.input-smaller placeholder="#" 
+        .dropdown.unit-type
+          ul
+            li 
+              .ss-icon Unit navigatedown
+              ul.unit-type
+                li
+                  a href="#" Cups
+                li
+                  a href="#" Ounces
+                li
+                  a href="#" Quarts
+                li
+                  a href="#" Tablespoons
+                li
+                  a href="#" Teaspoons
+
+        input.input-385 placeholder="breads flour"
+        button.addremove 
+          .ss-hyphen
+
+      .full-width
+        input.input-smaller placeholder="Amount" 
+        .dropdown.unit-type
+          ul
+            li 
+              .ss-icon Unit navigatedown
+              ul.unit-type
+                li
+                  a href="#" Cups
+                li
+                  a href="#" Ounces
+                li
+                  a href="#" Quarts
+                li
+                  a href="#" Tablespoons
+                li
+                  a href="#" Teaspoons
+
+        input.input-385 placeholder="Ingredients"
+        button.addremove 
+          .ss-plus
+
+      textarea placeholder="What directions go with this step?"
+      .full-width
+        button.add-step Add another step
+
+      .heading.steps-title Personal Notes
+      hr
+
+      //input for user to enter notes
+      textarea.personal-notes
+
+      .full-width
+        button.savebutton Save this recipe!

@@ -1,0 +1,123 @@
+//  ___                   _    __     __         _       _     _           
+ // |_ _|_ __  _ __  _   _| |_  \ \   / /_ _ _ __(_) __ _| |__ | | ___  ___ 
+ //  | || '_ \| '_ \| | | | __|  \ \ / / _` | '__| |/ _` | '_ \| |/ _ \/ __|
+ //  | || | | | |_) | |_| | |_    \ V / (_| | |  | | (_| | |_) | |  __/\__ \
+ // |___|_| |_| .__/ \__,_|\__|    \_/ \__,_|_|  |_|\__,_|_.__/|_|\___||___/
+ //           |_|                                                                                                                    
+
+$input-bg: rgb(237, 237, 237);
+
+$input-boxshadow: inset 0px 1px 2px rgba(0,0,0,.3);
+
+$input-borderradius: 4px;
+
+$input-border: 0px;
+
+$input-height: 50px;
+
+$input-width: 700px;
+
+// general input styles
+
+::-webkit-input-placeholder {
+   color: #585858;
+}
+
+input {
+  display: inline-block;
+  background-color: $input-bg;
+  border-radius: $input-borderradius;
+  border: $input-border;
+  box-shadow: $input-boxshadow;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  color: #585858;
+  font-size: 16px;
+}
+
+textarea {
+  -webkit-appearance: none;
+  width: 700px;
+  height: 150px;
+  background-color: $input-bg;
+  border: 1px solid #dbdbdb;
+  box-shadow: inset 0px 1px 3px 1px rgb(187, 187, 187);
+  border-radius: 5px;
+  padding: 20px 0 0 13px;
+  -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  margin:  0;
+  color: #585858;
+  font-size: 16px;
+
+  &.personal-notes {
+  margin: 20px 0 0 0;
+  }
+}
+
+
+// checkboxes
+input[type="checkbox"] {
+  padding: 0px;
+  margin: 0 10px 0 0;  
+}
+
+.input-checkbox {
+  height: 19px;
+  width: 19px;
+  padding: 0px;
+  margin: 0 10px 0 0;
+}
+
+
+//different sized inputs
+//this may not be the best naming strategy
+.input-large {
+  padding-left: 25px;
+  background: #f1f1f1;
+  margin-bottom: 22px;
+  width: 483px;
+  height: 60px;
+  border: 0px;
+  border-radius: 4px;
+  box-shadow: $input-boxshadow;
+}
+
+.input-medium {
+  width: 410px;
+  height: 50px;
+  margin: 0;
+  padding: 0 0 0 16px;
+}
+
+.input-385 {
+  width: 385px;
+  height: 50px;
+  margin: 0 15px 0 0;
+  padding: 0 0 0 16px;
+}
+
+.input-medium-small {
+  width: 191px;
+  height: 50px;
+  margin: 0;
+  padding: 0 0 0 16px;
+  color: #585858;
+  font-size: 14px;
+}
+
+.input-small {
+  width: 124px;
+  height: 50px;
+  margin: 0 13px 0 0;
+  padding: 0 0 0 16px;
+}
+
+.input-smaller {
+  width: 90px;
+  height: 50px;
+  margin: 0 13px 0 0;
+  padding: 0 0 0 13px;
+}

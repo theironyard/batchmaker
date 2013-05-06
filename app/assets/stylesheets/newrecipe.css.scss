@@ -1,0 +1,27 @@
+//heading style can be replaced with global heading.
+.heading {
+  font-size: 20px;
+  color: #555;
+}
+
+.steps-title {
+  font-weight: lighter;
+  text-align: left;
+  display: inline-block;
+  padding-right: 10px;
+  background-color: #fff;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #b0b0b0;
+  margin-top: -10px;
+}
+
+.steps-content {
+  width: 460px;
+  line-height: 20px;
+  padding: 24px 20px 24px 0;
+  vertical-align: top;
+  display: inline-block;
+}

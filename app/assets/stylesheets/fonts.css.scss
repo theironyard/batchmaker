@@ -1,19 +1,71 @@
-h2 {
-  font-size: 34px;
-}
+@import 'variables';
 
-h3 {
-  font-size: 30px;
-}
+// ______          _       
+// |  ___|        | |      
+// | |_ ___  _ __ | |_ ___ 
+// |  _/ _ \| '_ \| __/ __|
+// | || (_) | | | | |_\__ \
+// \_| \___/|_| |_|\__|___/
+//                         
+//---------------------
+//
+// Global Font Styles & Attachments
+//
+//---------------------
 
-h5 {
-  font-size: 18px;
-}
+// IMPORT-------------
 
-h6 {
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200italic|Noticia+Text:400,700,400italic,700italic);
+
+
+// DEFAULTS-------------
+
+body {
+  font-family: 'Noticia Text',Georgia,'New Times Roman',serif;
+  color: $c-slate;
   font-size: 16px;
 }
 
-p {
-  font-size: 14px;
+// HEADINGS Large-------------
+
+h1, h2 {
+  color: $c-midnight;
+  letter-spacing: -0.04em;
+  font-family: $ff-head;
+  font-weight: 200;
+}
+
+h2 {
+  font-size: 96px;
+}
+
+h3 {
+  font-size: 70px;
+  padding-bottom: 10px;
+}
+
+// HEADINGS Small-------------
+
+h4, h5, h6 {
+  color: $c-midnight;
+  font-family: $ff-body;
+}
+
+h4 {
+  font-size: 34px;
+  padding-bottom: 14px;
+  font-weight: normal;
+}
+
+h5 {
+  font-size: 24px;
+  padding-bottom: 14px;
+  font-weight: 700;
+}
+
+h6 {
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 8px;
+  font-weight: 700;
 }
