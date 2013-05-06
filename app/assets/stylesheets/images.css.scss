@@ -1,6 +1,9 @@
-.PreviewRecipePhoto {
-  width: 978px;
-  height: 486px; 
-  border-radius: 5px;
-  background-color: #6c6c6c;
+.photo {
+  &.large {
+    width: 800px;
+    height: 400px; 
+    @include border-radius(5px);
+    background-color: #6c6c6c;
+  }
 }
+
