@@ -11,8 +11,6 @@
   max-width: 700px;
   width: 100%;
   margin: 0 auto;
-  @include border-radius(5px);
-  border: 1px solid #cccccc;
 
   &.summary {
     margin-top: 24px;
@@ -76,7 +74,6 @@
 
 
 /* ______________________________________ */
-
 /* recipe box */
 /* ______________________________________ */
 
@@ -183,7 +180,3 @@ button.start {
   margin: 14px 0 0 405px;
   float: right;
 }
-
-
-
-

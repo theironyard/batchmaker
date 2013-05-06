@@ -36,6 +36,7 @@ input {
   font-size: 16px;
 }
 
+//this has no hyphen on purpose
 textarea {
   -webkit-appearance: none;
   width: 700px;
@@ -62,13 +63,6 @@ textarea {
 input[type="checkbox"] {
   padding: 0px;
   margin: 0 10px 0 0;  
-}
-
-.input-checkbox {
-  height: 19px;
-  width: 19px;
-  padding: 0px;
-  margin: 0 10px 0 0;
 }
 
 

@@ -1,5 +1,11 @@
+//compass imports
+@import "compass/css3";
+@import "compass/utilities";
+@import "compass/css3/box-sizing";
+@import "compass/css3/box-shadow";
+
 .PreviewRecipePhoto {
   width: 800px;
   height: 400px; 
-  border-radius: 5px;
+  @include border-radius(5px);
 }

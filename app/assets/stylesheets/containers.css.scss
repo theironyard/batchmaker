@@ -1,5 +1,7 @@
-// newrecipe.html container styles
-// to be figured out and merged with the andrew & rasheeda's styles
+//compass imports
+@import "compass/css3";
+@import "compass/utilities";
+
 .container {
   width: 700px;
   margin: 0px auto;
@@ -20,9 +22,7 @@
 }
 
 .yield-container p {
-  color: #585858;
   font-size: 18px;
-  font-family: sans-serif;
   display: inline-block;
   margin-right: 20px;
 }
@@ -42,20 +42,17 @@
   margin: 0;
   padding-right: 25px;
   color: #b1b1b1;
-  font-family: sans-serif;
   font-size: 15px;
   font-weight: lighter;
   display: inline-block;
 }
 
-.addphoto {
+.add-photo {
   width: 188px;
   padding: 77px 0;
   float: left;
   background: #bfbfbf;
-  border-radius: 4px;
+  @include border-radius(5px);
   text-align: center;
   margin-right: 30px;
 }
-
-// end newrecipe.html container styles

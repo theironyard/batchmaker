@@ -1,13 +1,17 @@
-//newrecipe.html button styles
+//compass imports
+@import "compass/css3";
+@import "compass/utilities";
+@import "compass/css3/box-sizing";
+@import "compass/css3/box-shadow";
 
 button:hover {
-  opacity: .5;
+  @include opacity(0.6);
 }
 
-.add-step {
+.add-step-button {
   height: 45px;
   width: 217px;
-  border-radius: 4px;
+  @include border-radius(5px);
   background: linear-gradient(to bottom, 
     rgba(30,87,153,1) 0%,
     rgba(244,244,244,1) 0%,
@@ -17,13 +21,13 @@ button:hover {
   margin: 0px 0 0px 483px;
 }
 
-.addremove {
+.add-remove-button {
   width: 58px;
   height: 48px;
   margin: 0;
   padding: 0;
   display: inline-block;
-  border-radius: 4px;
+  @include border-radius(5px);
   border: 1px solid #bfbfbf;
   background: linear-gradient(to bottom, 
     rgba(30,87,153,1) 0%,
@@ -33,10 +37,10 @@ button:hover {
   color: #585858;
 }
 
-.savebutton {
+.save-button {
   height: 56px;
   width: 244px;
-  border-radius: 4px;
+  @include border-radius(5px);
   background: linear-gradient(to bottom, 
     rgba(30,87,153,1) 0%,
     rgba(170,170,170,1) 0%,
@@ -47,5 +51,3 @@ button:hover {
   color: rgb(237, 237, 237);
   margin: 0px 0 0px 457px;
 }
-
-// end newrecipe.html button styles
