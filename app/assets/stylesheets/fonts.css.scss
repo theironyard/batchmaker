@@ -15,13 +15,13 @@
 
 // IMPORT-------------
 
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200italic|Noticia+Text:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200italic,|Noticia+Text:400,700,400italic,700italic);
 
 
 // DEFAULTS-------------
 
 body {
-  font-family: 'Noticia Text',Georgia,'New Times Roman',serif;
+  font-family: $ff-body;
   color: $c-slate;
   font-size: 16px;
 }
@@ -42,19 +42,21 @@ h2 {
 h3 {
   font-size: 70px;
   padding-bottom: 10px;
+  font-family: $ff-head;
+
 }
 
 // HEADINGS Small-------------
 
 h4, h5, h6 {
   color: $c-midnight;
-  font-family: $ff-body;
+  font-family: $ff-head;
 }
 
 h4 {
-  font-size: 34px;
+  font-size: 40px;
   padding-bottom: 14px;
-  font-weight: normal;
+  font-weight: 200;
 }
 
 h5 {
@@ -65,7 +67,6 @@ h5 {
 
 h6 {
   font-size: 18px;
-  font-weight: bold;
-  padding-bottom: 8px;
   font-weight: 700;
+  padding-bottom: 8px;
 }

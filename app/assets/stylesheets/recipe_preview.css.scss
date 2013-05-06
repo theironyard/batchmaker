@@ -1,4 +1,5 @@
 @import "compass/css3";
+@import "variables";
 
 .wrapper {
   max-width: 800px;
@@ -16,7 +17,6 @@
 
   &.summary {
     margin-top: 24px;
-    height: 80px;
   }
 
   &.ingredients {
@@ -30,7 +30,7 @@
     border: none;
   }
 
-  &.button {
+  &.btnstart {
     margin-top: 80px;
     border: none;
   }
@@ -57,21 +57,29 @@
 
 .glance-box {
   width: 154px;
-  height: 56px;
-  padding: 12px 0 12px 20px;
+  padding: 16px 0 4px 20px;
   border-right: 1px solid #cccccc;
   display: inline-block;
+
+  h4 {
+    padding-top: 5px;
+    padding-bottom: 8px;
+    font-weight: lighter;
+  }
 
   &.glance-box:last-child {
   border: none;
   }
+
 }  
 
 .glance-title {
-  font-weight: lighter;
   text-align: left;
-  margin-bottom: 6px;
-  
+
+  span { 
+  font-family: $ff-head;
+  font-weight: bold;
+  } 
 }
 
 
@@ -82,14 +90,22 @@
 
 .recipe-box {
   background-color: #ededed;
-  height: 46px;
   @include border-radius(5px 5px 0 0);
 }
 
 .recipe-title {
-  font-weight: lighter;
   text-align: left;
-  padding: 14px 0 12px 20px;
+  padding: 18px 0 18px 20px;
+  
+  span {
+    font-size: 24px;
+  }
+  
+  button.adjust {
+    float: right;
+    margin-top: -10px;
+    margin-right: 10px;
+  }
 }
 
 /* ______________________________________ */
@@ -98,33 +114,41 @@
 /* ______________________________________ */
 
 .ingredient-panel {
-  width: 112px;
-  height: 36px;
-  padding: 18px 12px 0 0;
+  width: 122px;
+  padding: 22px 10px 4px 0;
   text-align: right;
-  border-right: 1px solid #cccccc;
   border-top: 1px solid #cccccc;
-  background-color: #fafafa;
   display: inline-block;
+  border-right: 1px solid #cccccc;
 
-  &.ingredient-panel:last-child {
-  @include border-radius(0 0 5px 0);
+
+  &:last-child {
+    @include border-radius(0 0 0 5px);
   }
 }  
 
 .ingredient-line {
-  width: 563px;
-  height: 36px;
-  padding: 18px 0 0 12px;
-  background-color: #fafafa;
+  width: 547px;
+  padding: 22px 10px 4px 10px;
   border-top: 1px solid #cccccc;
   display: inline-block;
-  font-weight: lighter;
 
-  &.ingredient-line:last-child {
-  @include border-radius(0 0 0 5px);
+  h5 {
+    font-weight: 200;
+    padding: 0;
+  }
+
+  &:last-child {
+    @include border-radius(0px 0 5px 0px);
   }
 }
+
+//  _______  _______  _______  _______  _______ 
+// |  _____||_     _||    ___||    _  ||  _____|
+// | |_____   |   |  |   |___ |   |_| || |_____ 
+// |_____  |  |   |  |    ___||    ___||_____  |
+//  _____| |  |   |  |   |___ |   |     _____| |
+// |_______|  |___|  |_______||___|    |_______|
 
 .steps-title {
   font-weight: lighter;
@@ -132,12 +156,18 @@
   display: inline-block;
   padding-right: 10px;
   background-color: #fff;
+
+  h5 {
+    font-family: $ff-body;
+    font-weight: lighter;
+    font-size: 22px;
+  }
 }
 
 hr {
   border: none;
   border-top: 1px solid #b0b0b0;
-  margin-top: -10px;
+  margin-top: -22px;
 }
 
 .steps-content {
@@ -146,6 +176,8 @@ hr {
   padding: 24px 20px 24px 0;
   vertical-align: top;
   display: inline-block;
+  font-family: $ff-head;
+  line-height: 29px;
 }
 
 table.steps {
@@ -153,21 +185,24 @@ table.steps {
   display: inline-block;
   float: right;
   margin-top: 18px;
+  font-family: $ff-head;
 
   td.left {
-    width: 70px;
+    width: 80px;
     border-bottom: 1px solid #ccc;
     border-right: 1px solid #ccc;
-    padding: 12px 15px 12px 0;
+    padding: 14px 15px 18px 0;
     text-align: right;
     font-weight: bolder;
   }
 
   td.right {
-    width: 150px;
+    width: 140px;
     padding-left: 15px;
     border-bottom: 1px solid #ccc;
     text-align: left; 
+    font-weight: lighter;
+
   } 
 
   td.last {
@@ -175,15 +210,27 @@ table.steps {
   }
 }
 
-button.start {
+button.savebutton {
   height: 50px;
   width: 170px;
   display: inline-block;
   font-weight: lighter;
-  margin: 14px 0 0 405px;
+  margin: 0px 0 0 0;
   float: right;
 }
 
+.btnstart.edit {
+  text-align: right;
+  padding-right: 22px;
+  padding-top: 14px;
+  float: right;
+  display: inline-block;
+
+  span { 
+  font-family: $ff-head;
+  font-weight: bold;
+  }
+}
 
 
 
