@@ -8,5 +8,5 @@
 .PreviewRecipePhoto {
   width: 800px;
   height: 400px; 
-  @include border-radius(5px);
+  @include border-radius($border-radius);
 }

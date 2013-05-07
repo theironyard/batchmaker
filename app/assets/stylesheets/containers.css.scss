@@ -72,7 +72,7 @@
   padding: 88px 0;
   float: left;
   background: #bfbfbf;
-  @include border-radius(5px);
+  @include border-radius($border-radius);
   text-align: center;
   margin-right: 30px;
 }

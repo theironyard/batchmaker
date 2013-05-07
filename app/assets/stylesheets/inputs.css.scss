@@ -15,7 +15,7 @@ input {
   box-shadow: $input-boxshadow;
   @include box-sizing(border-box);
   color: #585858;
-  font-size: 18px;
+  font-size: $input-fontsize;
 }
 
 //this has no hyphen on purpose
@@ -56,32 +56,31 @@ input[type="checkbox"] {
   padding-left: 25px;
   padding-top: 21px;
   padding-bottom: 25px;
-  background: #f1f1f1;
   margin-bottom: 20px;
   width: 483px;
   border: 0px;
-  font-size: 18px;
+  font-size: $input-fontsize;
 }
 
 .input-large {
   width: 354px;
   margin: 11px 0 0 16px;
   padding: 18px 0 15px 16px; 
-  font-size: 18px;
+  font-size: $input-fontsize;
 }
 
 .input-medium {
   width: 375px;
   margin: 11px 0 0 8px;
   padding: 18px 0 15px 16px;
-  font-size: 18px; 
+  font-size: $input-fontsize; 
 }
 
 .input-medium-small {
   width: 177px;
   margin: 1px 0 0 0;
   padding: 18px 0 15px 16px; 
-  font-size: 18px;
+  font-size: $input-fontsize;
 }
 
 .input-small {
@@ -89,12 +88,12 @@ input[type="checkbox"] {
   margin-right: 16px;
   padding: 18px 0 15px 16px; 
   margin-top: 1px;
-  font-size: 18px;
+  font-size: $input-fontsize;
 }
 
 .input-smaller {
   width: 103px;
   margin: 11px 16px 0 0;
   padding: 18px 0 15px 16px; 
-  font-size: 18px;
+  font-size: $input-fontsize;
 }
