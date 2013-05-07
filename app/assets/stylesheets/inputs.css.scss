@@ -1,4 +1,5 @@
 @import "compass/css3";
+@import 'variables';
 
 // general input styles
 
@@ -9,7 +10,7 @@
 input {
   display: inline-block;
   background-color: $input-bg;
-  border-radius: $input-borderradius;
+  border-radius: $border-radius;
   border: $input-border;
   box-shadow: $input-boxshadow;
   @include box-sizing(border-box);
@@ -59,8 +60,6 @@ input[type="checkbox"] {
   margin-bottom: 20px;
   width: 483px;
   border: 0px;
-  border-radius: 4px;
-  box-shadow: $input-boxshadow;
   font-size: 18px;
 }
 
