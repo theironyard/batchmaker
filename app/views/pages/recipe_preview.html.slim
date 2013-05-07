@@ -1,43 +1,55 @@
 .wrapper
 
-  h2.center.headerspace The Most Awesome Chocolate Chip Cookies
+  h4.center.headerspace The Most Awesome Chocolate Chip Cookies
 
-  h5.center.authorspace By Rasheeda
+  h6.center.authorspace By Rasheeda
 
   img.photo.large src="http://placehold.it/800x400"
 
   / Summary
   .container.summary
     .glance-box
-      h5.glance-title Recipe Type
-      h3 Dessert
+      .glance-title.labels Recipe Type
+      span Dessert
     .glance-box
-      h5.glance-title Prep Time
-      h3 15min
+      .glance-title.labels Prep Time
+      span 15min
     .glance-box
-      h5.glance-title Cook Time
-      h3 20min
+      .glance-title.labels Cook Time
+      span 20min
     .glance-box
-      h5.glance-title Cook Temp
-      h3 350F
+      .glance-title.labels Cook Temp
+      span 350F
 
   / Ingredients 
   .container.ingredients
     .recipe-box
-      h5.recipe-title 12 Cookies
-    h5.ingredient-panel 1/2 Cup
-    h5.ingredient-line Sugar
-    h5.ingredient-panel 1 Cup
-    h5.ingredient-line All purpose flour
-    h5.ingredient-panel 2 Tb
-    h5.ingredient-line Cinnamon
-    h5.ingredient-panel 1/2 t
-    h5.ingredient-line Baking powder
+      .recipe-title
+        span 12 cookies
+        button.adjust Adjust
+
+    .ingredient-panel
+      span 1/2 cup
+    .ingredient-line
+      span Sugar
+    .ingredient-panel
+      span 1 cup
+    .ingredient-line
+      span All purpose flour
+    .ingredient-panel
+      span 2 tb
+    .ingredient-line
+      span Cinnamon
+    .ingredient-panel
+      span 1/2 t
+    .ingredient-line
+      span Baking powder
 
 
   / Steps
   .container.steps
-    h5.steps-title Steps 1
+    .steps-title
+      span Step 1
     hr
 
     p.steps-content The dog and chicken followed each other through the meadow, jumped the fence and into the chicken coupe. The dog and chicken followed each other through the meadow, jumped the fence and into the chicken coupe. Where are the chickens???
@@ -55,7 +67,8 @@
 
 
   .container.steps
-    h5.steps-title Steps 2
+    .steps-title
+      span Steps 2
     hr
 
     p.steps-content The dog and chicken followed each other through the meadow, jumped the fence and into the chicken coupe. The dog and chicken followed each other through the meadow, jumped the fence and into the chicken coupe. Where are the chickens???
@@ -73,7 +86,8 @@
 
 
   .container.steps
-    h5.steps-title Personal Notes
+    .steps-title
+      span Personal Notes
     hr
 
     p.steps-content The dog and chicken followed each other through the meadow, jumped the fence and into the chicken coupe. The dog and chicken followed each other through the meadow, jumped the fence and into the chicken coupe. Where are the chickens???
@@ -90,8 +104,8 @@
           td.right.last Cinnamon
 
 
-/ edit recipe button
-  .container.button
-
-    h5.button-start Edit this recipe
-    button.start Start [Dan's button]
+  / edit recipe button
+  .container.btnstart
+    button.savebutton Start
+    .btnstart.edit  
+      span Edit this recipe
