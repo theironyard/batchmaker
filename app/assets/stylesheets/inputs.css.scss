@@ -33,14 +33,13 @@ input {
        -moz-box-sizing: border-box;
             box-sizing: border-box;
   color: #585858;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 //this has no hyphen on purpose
 textarea {
   -webkit-appearance: none;
   width: 700px;
-  // height: 163px;
   background-color: $input-bg;
   border: 1px solid #dbdbdb;
   box-shadow: inset 0px 1px 3px 1px rgb(187, 187, 187);
@@ -73,11 +72,10 @@ input[type="checkbox"] {
 }
 
 //different sized inputs
-//this may not be the best naming strategy
 .input-large {
   padding-left: 25px;
   padding-top: 21px;
-padding-bottom: 25px;
+  padding-bottom: 25px;
   background: #f1f1f1;
   margin-bottom: 20px;
   width: 483px;
@@ -87,32 +85,23 @@ padding-bottom: 25px;
   font-size: 18px;
 }
 
+.input-385 {
+  width: 354px;
+  margin: 11px 0 0 16px;
+  padding: 18px 0 15px 16px; 
+  font-size: 18px;
+}
+
 .input-medium {
   width: 375px;
   margin: 11px 0 0 8px;
-  padding: 18px 0 15px 16px; 
-  font-size: 18px;
-}
-
-.input-385 {
-  width: 370px;
-  margin: 11px 0 0 8px;
-  padding: 18px 0 18px 16px; 
-  font-size: 18px;
-}
-
-.input-medium-small {
-  width: 177px;
-  margin: 1px 0 0 8px;
-  padding: 18px 0 15px 16px; 
-  color: #585858;
-  font-size: 18px;
+  padding: 18px 0 15px 16px;
+  font-size: 18px; 
 }
 
 .input-small {
   width: 124px;
-  margin-left: 8px;
-  margin-right: 8px;
+  margin-right: 16px;
   padding: 18px 0 15px 16px; 
   margin-top: 1px;
   font-size: 18px;
@@ -120,15 +109,14 @@ padding-bottom: 25px;
 
 .input-smaller {
   width: 103px;
-  margin: 11px 0 0 8px;
+  margin: 11px 16px 0 0;
   padding: 18px 0 15px 16px; 
   font-size: 18px;
 }
 
-
-// .input-medium {
-//   width: 399px;
-//   margin-top: 11px;
-//   padding: 18px 0 15px 16px; 
-//   font-size: 18px;
-// }
+.input-medium-small {
+  width: 177px;
+  margin: 1px 0 0 0;
+  padding: 18px 0 15px 16px; 
+  font-size: 18px;
+}
