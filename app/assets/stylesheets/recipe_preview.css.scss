@@ -1,5 +1,6 @@
 @import "compass/css3";
 @import "variables";
+@import "containers";
 
 .wrapper {
   max-width: 800px;
@@ -7,33 +8,25 @@
   margin: 0 auto;
 }
 
-/* containers */
-.container {
-  max-width: 700px;
-  width: 100%;
-  margin: 0 auto;
-  @include border-radius(5px);
-  border: 1px solid #cccccc;
+//semi container classes
+.summary {
+  margin-top: 24px;
+}
 
-  &.summary {
-    margin-top: 24px;
-  }
+.ingredients {
+  margin-top: 20px;
+  background-color: #f5f5f5;
+  @include box-shadow(0 2px 2px 0 #d9d9d9);
+}
 
-  &.ingredients {
-    margin-top: 20px;
-    background-color: #f5f5f5;
-    @include box-shadow(0 2px 2px 0 #d9d9d9);
-  }
+.steps {
+  margin-top: 40px;
+  border: none;
+} 
 
-  &.steps {
-    margin-top: 40px;
-    border: none;
-  }
-
-  &.btnstart {
-    margin-top: 80px;
-    border: none;
-  }
+.btnstart {
+  margin-top: 18px;
+  border: none;
 }
 
 
@@ -57,14 +50,15 @@
 
 .glance-box {
   width: 154px;
-  padding: 16px 0 4px 20px;
+  padding: 16px 0 14px 20px;
   border-right: 1px solid #cccccc;
   display: inline-block;
 
-  h4 {
-    padding-top: 5px;
-    padding-bottom: 8px;
-    font-weight: lighter;
+  span {
+    font-size: 32px;
+    color: $c-slate;
+    font-family: $ff-head;
+    font-weight: 200;
   }
 
   &.glance-box:last-child {
@@ -76,10 +70,6 @@
 .glance-title {
   text-align: left;
 
-  span { 
-  font-family: $ff-head;
-  font-weight: bold;
-  } 
 }
 
 
@@ -115,7 +105,7 @@
 
 .ingredient-panel {
   width: 122px;
-  padding: 22px 10px 4px 0;
+  padding: 22px 10px 18px 0;
   text-align: right;
   border-top: 1px solid #cccccc;
   display: inline-block;
@@ -125,16 +115,25 @@
   &:last-child {
     @include border-radius(0 0 0 5px);
   }
+
+  span {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: $ff-head;
+    padding: 0;
+  }
 }  
 
 .ingredient-line {
   width: 547px;
-  padding: 22px 10px 4px 10px;
+  padding: 22px 10px 18px 10px;
   border-top: 1px solid #cccccc;
   display: inline-block;
 
-  h5 {
+  span {
+    font-size: 24px;
     font-weight: 200;
+    font-family: $ff-head;
     padding: 0;
   }
 
@@ -151,23 +150,22 @@
 // |_______|  |___|  |_______||___|    |_______|
 
 .steps-title {
-  font-weight: lighter;
   text-align: left;
   display: inline-block;
   padding-right: 10px;
   background-color: #fff;
 
-  h5 {
+  span {
     font-family: $ff-body;
-    font-weight: lighter;
-    font-size: 22px;
+    font-weight: 400;
+    font-size: 24px;
   }
 }
 
 hr {
   border: none;
   border-top: 1px solid #b0b0b0;
-  margin-top: -22px;
+  margin-top: -11px;
 }
 
 .steps-content {
@@ -222,7 +220,6 @@ button.savebutton {
 .btnstart.edit {
   text-align: right;
   padding-right: 22px;
-  padding-top: 14px;
   float: right;
   display: inline-block;
 
@@ -231,6 +228,3 @@ button.savebutton {
   font-weight: bold;
   }
 }
-
-
-
