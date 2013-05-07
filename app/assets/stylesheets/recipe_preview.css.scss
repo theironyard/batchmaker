@@ -2,23 +2,6 @@
 @import "variables";
 @import "containers";
 
-.wrapper {
-  max-width: 800px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-/* containers */
-.container {
-  max-width: 700px;
-  width: 100%;
-  margin: 0 auto;
-
-  &.summary {
-    margin-top: 24px;
-    height: 80px;
-  }
-
 //semi container classes
 .summary {
   margin-top: 24px;
@@ -40,14 +23,13 @@
   border: none;
 }
 
-
 .center {
   text-align: center;
 }
 
-.headerspace {
-  margin-top: 64px
-}
+// .headerspace {
+//   margin-top: 64px
+// }
 
 .authorspace {
   margin-top: 14px;
@@ -75,7 +57,6 @@
   &.glance-box:last-child {
   border: none;
   }
-
 }  
 
 .glance-title {
@@ -210,7 +191,6 @@ table.steps {
     border-bottom: 1px solid #ccc;
     text-align: left; 
     font-weight: lighter;
-
   } 
 
   td.last {
@@ -226,18 +206,16 @@ button.savebutton {
   margin: 0px 0 0 0;
   float: right;
 }
-<<<<<<< HEAD
-=======
 
 .btnstart.edit {
+  width: 217px;
   text-align: right;
-  padding-right: 22px;
-  float: right;
+  padding-right: 20px;
   display: inline-block;
+  margin-right: -229px;
 
   span { 
   font-family: $ff-head;
-  font-weight: bold;
+  font-weight: 700;
   }
 }
->>>>>>> 854982a0d8549b6de0e5b6c6b3d28a3bfa28210c

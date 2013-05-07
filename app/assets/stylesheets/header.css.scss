@@ -18,6 +18,9 @@
   padding: 21px 30px;
   background: $c-midgrey;
   text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;  
 
   h2 {
     font-style: italic;

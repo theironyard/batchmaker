@@ -9,13 +9,12 @@
 
 
 .global-sidebar {
-  float: left;
+  position: fixed;
   width: 200px;
-  //not sure how to make it fill the height
-  //linds tried min-height: 100% but nope
-  height: auto;
+  height: 100%;
   background-color: $c-ivory;
   color: $c-slate;
+  margin-top: 74px;
 
   ul{
     width: 160px;
