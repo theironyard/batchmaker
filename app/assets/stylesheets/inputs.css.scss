@@ -1,21 +1,5 @@
-//  ___                   _    __     __         _       _     _           
- // |_ _|_ __  _ __  _   _| |_  \ \   / /_ _ _ __(_) __ _| |__ | | ___  ___ 
- //  | || '_ \| '_ \| | | | __|  \ \ / / _` | '__| |/ _` | '_ \| |/ _ \/ __|
- //  | || | | | |_) | |_| | |_    \ V / (_| | |  | | (_| | |_) | |  __/\__ \
- // |___|_| |_| .__/ \__,_|\__|    \_/ \__,_|_|  |_|\__,_|_.__/|_|\___||___/
- //           |_|                                                                                                                    
-
-$input-bg: rgb(237, 237, 237);
-
-$input-boxshadow: inset 0px 1px 2px rgba(0,0,0,.3);
-
-$input-borderradius: 4px;
-
-$input-border: 0px;
-
-$input-height: 50px;
-
-$input-width: 700px;
+@import "compass/css3";
+@import 'variables';
 
 // general input styles
 
@@ -26,14 +10,12 @@ $input-width: 700px;
 input {
   display: inline-block;
   background-color: $input-bg;
-  border-radius: $input-borderradius;
+  border-radius: $border-radius;
   border: $input-border;
   box-shadow: $input-boxshadow;
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
+  @include box-sizing(border-box);
   color: #585858;
-  font-size: 18px;
+  font-size: $input-fontsize;
 }
 
 //this has no hyphen on purpose
@@ -45,9 +27,7 @@ textarea {
   box-shadow: inset 0px 1px 3px 1px rgb(187, 187, 187);
   border-radius: 5px;
   padding: 20px 0 0 13px;
-  -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
+  @include box-sizing(border-box);
   margin:  0;
   color: #585858;
   font-size: 16px;
@@ -72,31 +52,35 @@ input[type="checkbox"] {
 }
 
 //different sized inputs
-.input-large {
+.input-xlarge {
   padding-left: 25px;
   padding-top: 21px;
   padding-bottom: 25px;
-  background: #f1f1f1;
   margin-bottom: 20px;
   width: 483px;
   border: 0px;
-  border-radius: 4px;
-  box-shadow: $input-boxshadow;
-  font-size: 18px;
+  font-size: $input-fontsize;
 }
 
-.input-385 {
+.input-large {
   width: 354px;
   margin: 11px 0 0 16px;
   padding: 18px 0 15px 16px; 
-  font-size: 18px;
+  font-size: $input-fontsize;
 }
 
 .input-medium {
   width: 375px;
   margin: 11px 0 0 8px;
   padding: 18px 0 15px 16px;
-  font-size: 18px; 
+  font-size: $input-fontsize; 
+}
+
+.input-medium-small {
+  width: 177px;
+  margin: 1px 0 0 0;
+  padding: 18px 0 15px 16px; 
+  font-size: $input-fontsize;
 }
 
 .input-small {
@@ -104,7 +88,7 @@ input[type="checkbox"] {
   margin-right: 16px;
   padding: 18px 0 15px 16px; 
   margin-top: 1px;
-  font-size: 18px;
+  font-size: $input-fontsize;
 }
 
 .input-smaller {
@@ -118,5 +102,5 @@ input[type="checkbox"] {
   width: 185px;
   margin: 1px 0 0 0;
   padding: 18px 0 15px 16px; 
-  font-size: 18px;
+  font-size: $input-fontsize;
 }

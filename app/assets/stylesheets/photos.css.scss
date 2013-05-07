@@ -3,9 +3,10 @@
 @import "compass/utilities";
 @import "compass/css3/box-sizing";
 @import "compass/css3/box-shadow";
+@import 'variables';
 
 .PreviewRecipePhoto {
   width: 800px;
   height: 400px; 
-  @include border-radius(5px);
+  @include border-radius($border-radius);
 }
