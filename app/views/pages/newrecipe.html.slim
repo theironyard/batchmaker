@@ -29,31 +29,25 @@ html
       //this is div that allows user to enter time, etc..
       .full-width
         
-        .dropdown.recipe-type
-          ul
-            li 
-              .ss-icon Recipe Types navigatedown
-              ul.recipe-type
-                li
-                  a href="#" Breakfast
-                li
-                  a href="#" Lunch
-                li
-                  a href="#" Dinner
-                li
-                  a href="#" Dessert
+        .recipe-type-dropdown
+          .ss-navigatedown
+          select data-placeholder="Recipe Type" class="recipe-type chzn-select"
+            option value=""
+            option value="Breakfast" Breakfast
+            option value="Lunch" Lunch
+            option value="Dinner" Dinner
+            option value="Dessert" Dessert
 
         input.input-small placeholder="Prep Time"
         input.input-small placeholder="Cook Time" 
         input.input-medium-small placeholder="Cook Temp"
           
-        .dropdown.temp-unit
-          ul
-            li 
-              .ss-icon F&deg; navigatedown
-              ul.temp-unit
-                li
-                  a href="#" C&deg;
+        .temp-unit-dropdown
+          .ss-navigatedown
+          select data-placeholder="F&deg;" class="temp-unit chzn-select"
+          .ss-navigatedown
+            option selected="true" value="F" F&deg;
+            option value="C" C&deg;
 
       //this is div that shows the yield
       .yield-container
@@ -68,21 +62,17 @@ html
       .full-width.margin-top-28
 
         input.input-smaller placeholder="#" 
-        .dropdown.unit-type
-          ul
-            li 
-              .ss-icon Unit navigatedown
-              ul.unit-type
-                li
-                  a href="#" Cups
-                li
-                  a href="#" Ounces
-                li
-                  a href="#" Quarts
-                li
-                  a href="#" Tablespoons
-                li
-                  a href="#" Teaspoons
+        .unit-type-dropdown
+          .ss-navigatedown
+          select data-placeholder="Unit" class="unit-type chzn-select"
+            option value=""
+            option value="Cup" Cup
+            option value="Teaspoon" Teaspoon
+            option value="Tablespoon" Tablespoon
+            option value="Ounce" Ounce
+            option value="Quart" Quart
+            option value="Pound" Pound
+            option value="Pint" Pint
 
         input.input-385 placeholder="breads flour"
         button.add-remove-button 
@@ -90,21 +80,17 @@ html
 
       .full-width.margin-top-8
         input.input-smaller placeholder="Amount" 
-        .dropdown.unit-type
-          ul
-            li 
-              .ss-icon Unit navigatedown
-              ul.unit-type
-                li
-                  a href="#" Cups
-                li
-                  a href="#" Ounces
-                li
-                  a href="#" Quarts
-                li
-                  a href="#" Tablespoons
-                li
-                  a href="#" Teaspoons
+        .unit-type-dropdown
+          .ss-navigatedown
+          select data-placeholder="Unit" class="unit-type chzn-select"
+            option value=""
+            option value="Cup" Cup
+            option value="Teaspoon" Teaspoon
+            option value="Tablespoon" Tablespoon
+            option value="Ounce" Ounce
+            option value="Quart" Quart
+            option value="Pound" Pound
+            option value="Pint" Pint
 
         input.input-385 placeholder="Ingredients"
         button.add-remove-button 
