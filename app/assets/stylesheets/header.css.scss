@@ -15,8 +15,8 @@
 //---------------------
 
 .global-header {
-  padding: 20px 30px;
-  background: lighten($c-slate, 80%);
+  padding: 21px 30px;
+  background: $c-midgrey;
   text-align: center;
 
   h2 {
@@ -32,17 +32,24 @@
 
   .nav-user {
     float: right;
-    width: 300px;
     text-align: right;
+    font-size: 22px;
 
     li {
       display: inline-block;
-      margin: 0 10px 0 0;
     }
 
     a {
       text-decoration: none;
-      color: $c-slate;
+      color: lighten($c-darkgrey, 20%);
+      padding: 3px 0 0 0;
+      margin: 0 0 0 40px;
+      display: inline-block;
+
+      &:hover, &.active {
+        color: $c-darkgrey;
+      }
+
     }
 
   }
