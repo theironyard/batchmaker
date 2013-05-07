@@ -9,7 +9,7 @@ class PagesController < ApplicationController
   def recipe_preview
   end
 
-  def dropdown_menu
+  def dropdown
   end
   
 end
