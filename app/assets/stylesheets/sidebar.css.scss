@@ -11,7 +11,9 @@
 .global-sidebar {
   float: left;
   width: 200px;
-  height: 800px;
+  //not sure how to make it fill the height
+  //linds tried min-height: 100% but nope
+  height: 4000px;
   background-color: $c-ivory;
   color: $c-slate;
 

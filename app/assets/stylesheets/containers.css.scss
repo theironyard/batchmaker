@@ -11,8 +11,23 @@
 
 .full-width {
   width: 100%;
-  // margin: 25px 0;
-  margin-top: 63px;
+  margin-top: 52px;
+}
+
+.margin-top-46 {
+  margin-top: 46px;
+}
+
+.margin-top-28 {
+  margin-top: 28px;
+}
+
+.margin-top-8 {
+  margin-top: 8px;
+}
+
+.margin-top-16 {
+  margin-top: 16px;
 }
 
 .yield-container {
@@ -50,7 +65,7 @@
 
 .add-photo {
   width: 188px;
-  padding: 90px 0;
+  padding: 88px 0;
   float: left;
   background: #bfbfbf;
   @include border-radius(5px);

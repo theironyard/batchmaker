@@ -8,8 +8,9 @@ button:hover {
   @include opacity(0.6);
 }
 
+
 .add-step-button {
-  height: 45px;
+  padding: 15px 0 13px 0;
   width: 217px;
   @include border-radius(5px);
   background: linear-gradient(to bottom, 
@@ -18,14 +19,15 @@ button:hover {
     rgba(234,234,234,1) 100%);
   border: 1px solid #bfbfbf;
   display: inline-block;
-  margin: 0px 0 0px 483px;
+  margin: 6px 0 0px 483px;
+  font-size: 18px;
 }
 
 .add-remove-button {
   width: 58px;
-  height: 48px;
-  margin: 0;
-  padding: 0;
+  font-size: 18px;
+  margin: 11px 0 0 16px;
+  padding: 15px 0 17px 0px;
   display: inline-block;
   @include border-radius(5px);
   border: 1px solid #bfbfbf;
@@ -34,12 +36,11 @@ button:hover {
     rgba(242,242,242,1) 0%,
     rgba(234,234,234,1) 100%);
   vertical-align: top;
-  color: #585858;
 }
 
 .save-button {
-  height: 56px;
   width: 244px;
+  padding: 20px 0 20px 0;
   @include border-radius(5px);
   background: linear-gradient(to bottom, 
     rgba(30,87,153,1) 0%,
@@ -50,4 +51,5 @@ button:hover {
   font-weight: normal;
   color: rgb(237, 237, 237);
   margin: 0px 0 0px 457px;
+  font-size: 18px;
 }

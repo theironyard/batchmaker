@@ -40,7 +40,7 @@ input {
 textarea {
   -webkit-appearance: none;
   width: 700px;
-  height: 150px;
+  // height: 163px;
   background-color: $input-bg;
   border: 1px solid #dbdbdb;
   box-shadow: inset 0px 1px 3px 1px rgb(187, 187, 187);
@@ -58,6 +58,13 @@ textarea {
   }
 }
 
+.taller {
+  height: 202px;
+}
+
+.shorter {
+  height: 163px;
+}
 
 // checkboxes
 input[type="checkbox"] {
@@ -69,48 +76,59 @@ input[type="checkbox"] {
 //this may not be the best naming strategy
 .input-large {
   padding-left: 25px;
+  padding-top: 21px;
+padding-bottom: 25px;
   background: #f1f1f1;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
   width: 483px;
-  height: 65px;
   border: 0px;
   border-radius: 4px;
   box-shadow: $input-boxshadow;
+  font-size: 18px;
 }
 
 .input-medium {
-  width: 410px;
-  height: 50px;
-  margin: 0;
-  padding: 0 0 0 16px;
+  width: 375px;
+  margin: 11px 0 0 8px;
+  padding: 18px 0 15px 16px; 
+  font-size: 18px;
 }
 
 .input-385 {
-  width: 385px;
-  height: 50px;
-  margin: 0 15px 0 0;
-  padding: 0 0 0 16px;
+  width: 370px;
+  margin: 11px 0 0 8px;
+  padding: 18px 0 18px 16px; 
+  font-size: 18px;
 }
 
 .input-medium-small {
-  width: 191px;
-  height: 50px;
-  margin: 0;
-  padding: 0 0 0 16px;
+  width: 177px;
+  margin: 1px 0 0 8px;
+  padding: 18px 0 15px 16px; 
   color: #585858;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .input-small {
   width: 124px;
-  height: 50px;
-  margin: 0 13px 0 0;
-  padding: 0 0 0 16px;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding: 18px 0 15px 16px; 
+  margin-top: 1px;
+  font-size: 18px;
 }
 
 .input-smaller {
-  width: 90px;
-  height: 50px;
-  margin: 0 13px 0 0;
-  padding: 0 0 0 13px;
+  width: 103px;
+  margin: 11px 0 0 8px;
+  padding: 18px 0 15px 16px; 
+  font-size: 18px;
 }
+
+
+// .input-medium {
+//   width: 399px;
+//   margin-top: 11px;
+//   padding: 18px 0 15px 16px; 
+//   font-size: 18px;
+// }
