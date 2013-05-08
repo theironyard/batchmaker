@@ -14,8 +14,15 @@
 //
 //---------------------
 
+//need this to keep the user from disappearing
+.containerTop {
+  padding-left: 21px;
+  padding-right: 21px;
+}
+
 .global-header {
-  padding: 21px 30px;
+  // padding is now in the .containerTop
+  padding-top: 40px;
   background: $c-midgrey;
   text-align: center;
   position: fixed;
