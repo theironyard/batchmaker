@@ -1,6 +1,7 @@
-/*---------------------------------------------------------------*/
-/*Dropdown Menu for Recipe Type Only - Has a fixed width of 222px*/
-/*---------------------------------------------------------------*/
+@import "compass/css3/box-sizing";
+/* --------------------------------------------------------------- */
+/* Dropdown Menu for Recipe Type Only - Has a fixed width of 222px */
+/* --------------------------------------------------------------- */
 
 .dropdown {
   margin: 0;
@@ -13,6 +14,7 @@
 
   &.temp-unit {
     width: 63px;
+    padding: 0;
     position: absolute;
     border-radius: 0 5px 5px 0;
     margin-left: -64px;
@@ -45,14 +47,17 @@
 
   &.recipe-type {
     width: 222px;
+    z-index: 9999;
   }
 
   &.temp-unit {
     width: 63px;
+    z-index: 9998;
   }
 
   &.unit-type {
     width: 124px;
+    z-index: 9900;
   }
 }
 
@@ -81,16 +86,14 @@
   padding: 16px 0 16px 20px;
   color: #585858;
   text-decoration: none;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  @include box-sizing(border-box);
 
   &.temp-unit {
     padding-left: 10px;
   }
 
-  &.temp-unit {
-    padding-left: 10px;
+  &.unit-type {
+    padding-left: 21px;
   }
 }
 
@@ -107,11 +110,24 @@
   float: none;
   border-bottom: 1px solid #cfcfcf;
   position: relative; 
-  padding-left: 25px;
+  padding-left: 20px;
+  background-color: #f5f5f5;
+
+  &.temp-unit {
+    width: 191px;
+    padding-left: 15px;
+    position: relative;
+    margin-left: -126px;
+  }
+
+  &.unit-type {
+    width: 124px;
+    padding-left: 21px;
+  }
 }
 
 .dropdown ul ul li a {
-  padding: 15px 0px 15px 0px;
+  padding: 5px 0px 5px 0px;
   text-decoration: none;
 }
 
