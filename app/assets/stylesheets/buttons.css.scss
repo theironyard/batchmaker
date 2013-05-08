@@ -27,7 +27,7 @@ button:hover {
 .add-remove-button {
   width: 58px;
   font-size: 16px;
-  margin: 11px 0 0 16px;
+  margin: 10px 0 0 16px;
   padding: 15px 0 17px 0px;
   display: inline-block;
   @include border-radius($border-radius);
@@ -37,6 +37,7 @@ button:hover {
     rgba(242,242,242,1) 0%,
     rgba(234,234,234,1) 100%);
   vertical-align: top;
+  color: #585858;
 }
 
 .save-button {
@@ -88,6 +89,20 @@ button:hover {
   color: #585858;
 }
 
+.add-photo {
+  width: 188px;
+  padding-top: 58px;
+  padding-bottom: 48px;
+  float: left;
+  background: #bfbfbf;
+  @include border-radius($border-radius);
+  text-align: center;
+  margin-right: 30px;
 
-// end newrecipe.html button styles
+  .ss-plus {
+    font-size: 32px;
+    line-height: 54px;
+    color: #585858;
+  }
 
+}

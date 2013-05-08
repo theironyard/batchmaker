@@ -5,14 +5,15 @@ html
         
         //this is the block of divs that show the heading
         //and the line beside the heading
-        h5.steps-title Basic Info
+        h5.steps-title.margin-top-21 Basic Info
         hr
     
         //this is div that shows the first chunk of recipe info
         .full-width
         
           .add-photo
-            .ss-plus <br/>add photo
+            .ss-plus
+            h5 Add Photo
 
           .main-recipe-input-area 
 
@@ -43,12 +44,13 @@ html
           input.input-small placeholder="Cook Time" 
           input.input-medium-small placeholder="Cook Temp"
             
-          .temp-unit-dropdown
-            .ss-navigatedown
-            select data-placeholder="F&deg;" class="temp-unit chzn-select"
-            .ss-navigatedown
-              option selected="true" value="F" F&deg;
-              option value="C" C&deg;
+          .holder
+            .temp-unit-dropdown  
+              .ss-navigatedown
+              select data-placeholder="F&deg;" class="temp-unit chzn-select"
+              .ss-navigatedown
+                option selected="true" value="F" F&deg;
+                option value="C" C&deg;
 
         //this is div that shows the yield
         .yield-container

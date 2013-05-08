@@ -2,22 +2,6 @@
 @import "variables";
 @import "containers";
 
-//semi container classes
-.summary {
-  margin-top: 24px;
-}
-
-.ingredients {
-  margin-top: 20px;
-  background-color: #f5f5f5;
-  @include box-shadow(0 2px 2px 0 #d9d9d9);
-}
-
-.steps {
-  margin-top: 40px;
-  border: none;
-} 
-
 .btnstart {
   margin-top: 18px;
   border: none;
@@ -26,10 +10,6 @@
 .center {
   text-align: center;
 }
-
-// .headerspace {
-//   margin-top: 64px
-// }
 
 .authorspace {
   margin-top: 14px;
@@ -61,9 +41,7 @@
 
 .glance-title {
   text-align: left;
-
 }
-
 
 /* ______________________________________ */
 /* recipe box */
@@ -196,15 +174,6 @@ table.steps {
   td.last {
   border-bottom: none;
   }
-}
-
-button.savebutton {
-  height: 50px;
-  width: 170px;
-  display: inline-block;
-  font-weight: lighter;
-  margin: 0px 0 0 0;
-  float: right;
 }
 
 .btnstart.edit {
