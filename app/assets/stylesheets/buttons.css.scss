@@ -30,15 +30,15 @@ button:hover {
   padding: 15px 0 15px 0px;
   display: inline-block;
   @include border-radius($border-radius);
-  border: 1px solid #bbbbbb;
-  background: #e5e5e5; /* Old browsers */
-  background: -moz-linear-gradient(top,  #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  #ffffff 0%,#e5e5e5 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+  border: 1px solid $c-darkgrey;
+  background: $c-midgrey; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ffffff 0%, $c-midgrey 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,$c-midgrey)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #ffffff 0%,$c-midgrey 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #ffffff 0%,$c-midgrey 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #ffffff 0%,$c-midgrey 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #ffffff 0%,$c-midgrey 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='$c-midgrey',GradientType=0 ); /* IE6-9 */
   vertical-align: top;
   color: $c-inputgrey;
 }
@@ -95,7 +95,7 @@ button:hover {
   width: 188px;
   padding: 54px 0;
   float: left;
-  background: #bfbfbf;
+  background: $c-darkestgrey;
   @include border-radius($border-radius);
   text-align: center;
   margin-right: 30px;
