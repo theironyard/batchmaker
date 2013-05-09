@@ -14,54 +14,55 @@
 //
 //---------------------
 
-//need this to keep the user from disappearing
-.containerTop {
-  padding-left: 21px;
-  padding-right: 21px;
+header {
+  width: 100%;
+  height: 68px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #c5c5c5;
+  z-index: 9999;
+  font-size: 24px;
+  color: #909090;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: light;
+  font-style: italic;
 }
 
-.global-header {
-  // padding is now in the .containerTop
-  padding-top: 40px;
-  background: $c-midgrey;
+.salutation {
+  margin: 0;
+  margin-top:20px;
+  padding-left: 34px;
+}
+
+.logo {
   text-align: center;
-  position: fixed;
-  width: 100%;
-  z-index: 9999;  
+  margin: 0 auto;
+  margin-top: -35px;
+  padding: 0;
+}
 
-  h2 {
-    font-style: italic;
-    font-size: 24px;
-    float: left;
-  }
+.navigation {
+  text-align: right;
+  padding-right: 37px;
+  margin-top: -39px;
+}
 
-  h1 {
-    margin: auto;
-    display: inline-block;
-  }
+.navigation ul {
+  list-style: none;
+  display: inline-block;
+}
 
-  .nav-user {
-    float: right;
-    text-align: right;
-    font-size: 22px;
+.navigation li {
+  display: inline-block; 
+  padding-left: 44px;
+}
 
-    li {
-      display: inline-block;
-    }
+.navigation a {
+  text-decoration: none;
+  color: #909090;
+}
 
-    a {
-      text-decoration: none;
-      color: lighten($c-darkgrey, 20%);
-      padding: 3px 0 0 0;
-      margin: 0 0 0 40px;
-      display: inline-block;
-
-      &:hover, &.active {
-        color: $c-darkgrey;
-      }
-
-    }
-
-  }
-
+.navigation a:hover {
+  color: #585858;
 }

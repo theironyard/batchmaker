@@ -28,6 +28,7 @@
 .holder{
   display: inline-block;
   position: relative;
+  background-color: red;
 
   .temp-unit-dropdown {
     display: inline-block;
@@ -37,6 +38,7 @@
     box-shadow: -2px 0 2px rgba(0, 0, 0, 0.2);
     padding-top: 6px;
     border-radius: 0 5px 5px 0;
+    background-color: red;
     top: -36px;
     
 
