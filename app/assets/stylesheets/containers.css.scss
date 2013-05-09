@@ -103,8 +103,8 @@
 
 .ingredients {
   max-width: 700px;
-  background-color: #f5f5f5;
-  border: 1px solid #cccccc;
+  background-color: $c-lightgrey;
+  border: 1px solid $c-darkgrey;
   margin-bottom: 36px;
   @include border-radius(5px);
   text-align: left;

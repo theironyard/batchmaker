@@ -1,3 +1,5 @@
+@import "compass/utilities";
+
 @import 'variables';
 
 //  _____ _     _      _                
@@ -7,14 +9,17 @@
 // /\__/ / | (_| |  __/ |_) | (_| | |   
 // \____/|_|\__,_|\___|_.__/ \__,_|_|   
 
+
 //fix to make the sidebar extend full page length
 .global-sidebar {
   position: absolute;
   width: 200px;
   top: 68px;
   bottom: 0;
-  background-color: #e0e0e0;
+  background-color: $c-lightgrey;
+  color: $c-darkgrey;
   z-index: 9998;
+
 
   ul{
     width: 120px;
@@ -28,12 +33,13 @@
   margin: auto;
   color: $c-slate;
 
+
     &:after {
       content: "";
       display: block;
       width: 50px;
       padding: 25px 0 0 0;
-      border-bottom: 1px solid $c-slate;
+      border-bottom: 1px solid $c-midgrey;
       margin: auto;
     }
 
@@ -45,6 +51,7 @@
     text-decoration: none;
     color: $c-midnight;
     }
+
 
     }
   }

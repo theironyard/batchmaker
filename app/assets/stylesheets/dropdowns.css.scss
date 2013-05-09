@@ -1,3 +1,5 @@
+@import 'variables';
+
 .chzn-search {
   display: none;
 }
@@ -22,7 +24,7 @@
 
     // avoid click events
     pointer-events: none;
-    color: #585858;
+    color: $c-inputgrey;
   }
 }
 
@@ -51,7 +53,7 @@
 
       // avoid click events
       pointer-events: none;
-      color: #585858;
+      color: $c-inputgrey;
     }
   }
 }
@@ -76,6 +78,6 @@
 
     // avoid click events
     pointer-events: none;
-    color: #585858;
+    color: $c-inputgrey;
   }
 }

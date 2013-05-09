@@ -4,7 +4,7 @@
 // general input styles
 
 ::-webkit-input-placeholder {
-   color: #585858;
+   color: $c-inputgrey;
 }
 
 input {
@@ -14,7 +14,7 @@ input {
   border: $input-border;
   box-shadow: $input-boxshadow;
   @include box-sizing(border-box);
-  color: #585858;
+  color: $c-inputgrey;
   font-size: $input-fontsize;
 }
 
@@ -28,7 +28,7 @@ textarea {
   border-radius: 5px;
   @include box-sizing(border-box);
   margin:  0;
-  color: #585858;
+  color: $c-inputgrey;
   font-size: 16px;
 
   &.personal-notes {

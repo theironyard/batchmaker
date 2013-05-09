@@ -55,7 +55,7 @@ h4 {
 // HEADINGS Small-------------
 
 h5, h6 {
-  color: $c-midnight;
+  color: $c-slate;
   font-family: $ff-body;
   line-height: 1.3;
 }
@@ -70,14 +70,10 @@ h6 {
   font-weight: 400;
 }
 
-.lighter {
-  font-weight: lighter;
-}
-
 .labels {
   font-size: 14px;
   font-weight: 400;
-  color: #c6c6c6;
+  color: $c-darkgrey;
   padding-top: 2px;
   padding-bottom: 4px;
   font-family: $ff-head;
@@ -87,7 +83,7 @@ h6 {
   margin: 0;
   padding-right: 25px;
   font-family: $ff-head;
-  color: #b1b1b1;
+  color: $c-darkgrey;
   font-size: 15px;
   font-weight: 200;
   display: inline-block;
