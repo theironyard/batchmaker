@@ -6,17 +6,18 @@
   display: inline-block;
   position: relative;
   margin-right: 13px;
+  top: -3px;
 
   .chzn-container {
-    width: 222px !important;
+    width: 222px !important;    
   }
 
   .ss-navigatedown {
     position: absolute;
     width: 0px;
     height: 0px;
-    top: 15px;
-    right: 32px;
+    top: 24px;
+    right: 38px;
     z-index: 100;
 
     // avoid click events
@@ -26,24 +27,18 @@
 }
 
 .holder{
-  display: inline-block;
   position: relative;
-  background-color: red;
+  border-radius: 0 5px 5px 0;
 
   .temp-unit-dropdown {
-    display: inline-block;
     position: absolute;
-    margin-top: 2px;
-    margin-left: -36px;
-    box-shadow: -2px 0 2px rgba(0, 0, 0, 0.2);
-    padding-top: 6px;
-    border-radius: 0 5px 5px 0;
-    background-color: red;
-    top: -36px;
-    
+    box-shadow: -1px 0 1px rgba(0, 0, 0, 0.2);
+    right: 0;
+    top: -58px;
 
     .chzn-container {
       width: 63px !important;
+      border-radius: 0 5px 5px 0;
     }
 
     .ss-navigatedown {
@@ -64,18 +59,19 @@
 .unit-type-dropdown {
   display: inline-block;
   position: relative;
+  margin-right: 13px;
+  top: -3px;
 
   .chzn-container {
     width: 124px !important;
   }
 
   .ss-navigatedown { 
-    background-color: red;
     position: absolute;
     width: 0px;
     height: 0px;
-    top: 15px;
-    right: 32px;
+    top: 24px;
+    right: 31px;
     z-index: 100;
 
     // avoid click events

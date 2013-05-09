@@ -1,7 +1,7 @@
 /* @group Base */
 .chzn-container {
-  font-size: 18px;
-  font-family: Helvetica, sans-serif;
+  font-size: 17px;
+  font-family: 'Source Sans Pro',Helvetica,Arial,sans-serif;
   position: relative;
   display: inline-block;
   vertical-align: middle;
@@ -43,8 +43,7 @@
   overflow: hidden;
   white-space: nowrap;
   position: relative;
-  padding: 19px 0 16px 16px;
-  margin-top: -7px;
+  padding: 19px 0 20px 16px;
   color: #808080;
   text-decoration: none;
 }

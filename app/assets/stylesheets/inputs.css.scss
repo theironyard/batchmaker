@@ -24,9 +24,8 @@ textarea {
   width: 700px;
   background-color: $input-bg;
   border: 1px solid #dbdbdb;
-  box-shadow: inset 0px 1px 3px 1px rgb(187, 187, 187);
+  box-shadow: $input-boxshadow;
   border-radius: 5px;
-  padding: 20px 0 0 13px;
   @include box-sizing(border-box);
   margin:  0;
   color: #585858;
@@ -34,15 +33,14 @@ textarea {
 
   &.personal-notes {
   margin: 20px 0 0 0;
-  }
-}
-
-.taller {
   height: 202px;
-}
+  }
 
-.shorter {
+  &.directions {
   height: 163px;
+  padding-top: 20px;
+  padding-left: 13px;
+  }
 }
 
 // checkboxes
@@ -53,47 +51,45 @@ input[type="checkbox"] {
 
 //different sized inputs
 .input-xlarge {
-  padding-left: 25px;
-  padding-top: 14px;
-  padding-bottom: 25px;
+  padding: 22px 0 22px 20px;
   margin-bottom: 16px;
-  width: 483px;
+  width: 478px;
   border: 0px;
   font-size: $input-fontsize;
 }
 
 .input-large {
-  width: 362px;
-  margin: 11px 0 0 16px;
-  padding: 18px 0 15px 16px; 
+  width: 410px;
+  margin: 11px 0 0 0;
+  padding: 18px 0 18px 16px; 
   font-size: $input-fontsize;
 }
 
 .input-medium {
-  width: 375px;
-  margin: 11px 0 0 8px;
-  padding: 18px 0 15px 16px;
+  width: 383px;
+  margin: 11px 0 0 0px;
+  padding: 18px 0 18px 16px;
   font-size: $input-fontsize; 
 }
 
 .input-medium-small {
-  width: 158px;
+  width: 185px;
   margin: 1px 0 0 0;
-  padding: 18px 0 15px 16px; 
+  padding: 18px 0 18px 16px; 
   font-size: $input-fontsize;
 }
 
 .input-small {
   width: 124px;
   margin-right: 16px;
-  padding: 18px 0 15px 16px; 
+  padding: 18px 0 18px 16px; 
   margin-top: 1px;
   font-size: $input-fontsize;
 }
 
 .input-smaller {
-  width: 103px;
-  margin: 11px 16px 0 0;
-  padding: 18px 0 15px 16px; 
-  font-size: 18px;
+  width: 96px;
+  margin: 11px 13px 0 0;
+  padding: 18px 0 18px 14px; 
+  font-size: $input-fontsize;
 }

@@ -13,11 +13,10 @@ button:hover {
   padding: 15px 0 13px 0;
   width: 217px;
   @include border-radius($border-radius);
-  background: linear-gradient(to bottom, 
-    rgba(30,87,153,1) 0%,
-    rgba(244,244,244,1) 0%,
-    rgba(234,234,234,1) 100%);
-  border: 1px solid #bfbfbf;
+  background: linear-gradient(to top, 
+    rgb(210,210,210) 0%,
+    rgb(235,235,235) 100%);
+  border: 1px solid #a3a3a3;
   display: inline-block;
   margin: 6px 0 0px 483px;
   font-size: 18px;
@@ -26,16 +25,20 @@ button:hover {
 
 .add-remove-button {
   width: 58px;
-  font-size: 16px;
-  margin: 10px 0 0 16px;
-  padding: 15px 0 17px 0px;
+  font-size: 17px;
+  margin: 12px 0 0 13px;
+  padding: 15px 0 15px 0px;
   display: inline-block;
   @include border-radius($border-radius);
-  border: 1px solid #bfbfbf;
-  background: linear-gradient(to bottom, 
-    rgba(30,87,153,1) 0%,
-    rgba(242,242,242,1) 0%,
-    rgba(234,234,234,1) 100%);
+  border: 1px solid #bbbbbb;
+  background: #e5e5e5; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #ffffff 0%,#e5e5e5 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
   vertical-align: top;
   color: #585858;
 }
@@ -44,14 +47,13 @@ button:hover {
   width: 244px;
   padding: 20px 0 20px 0;
   @include border-radius($border-radius);
-  background: linear-gradient(to bottom, 
-    rgba(30,87,153,1) 0%,
-    rgba(170,170,170,1) 0%,
-    rgba(145,145,145,1) 100%);
-  border: 1px #8b8b8b;
+  background: linear-gradient(to top, 
+    rgb(120,120,120) 0%,
+    rgb(157,157,157) 100%);
+  border: 1px solid #5a5a5a;
   font-size: 16px;
   font-weight: normal;
-  color: rgb(237, 237, 237);
+  color: white;
   margin: 0px 0 0px 457px;
   font-size: 18px;
 }
@@ -91,8 +93,7 @@ button:hover {
 
 .add-photo {
   width: 188px;
-  padding-top: 58px;
-  padding-bottom: 48px;
+  padding: 54px 0;
   float: left;
   background: #bfbfbf;
   @include border-radius($border-radius);

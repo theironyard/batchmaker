@@ -14,7 +14,7 @@
 
 .full-width {
   width: 100%;
-  margin-top: 49px;
+  margin-top: 42px;
 }
 
 .full-width-photo {
@@ -58,7 +58,8 @@
 .yield-container p {
   font-size: 18px;
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 19px;
+  font-family: $ff-head;
 }
 
 .main-recipe-input-area  {
@@ -70,15 +71,6 @@
 .main-recipe-checkboxes {
   width: 480px;
   margin-top: 0px;
-}
-
-.main-recipe-checkboxes p {
-  margin: 0;
-  padding-right: 25px;
-  color: #b1b1b1;
-  font-size: 15px;
-  font-weight: lighter;
-  display: inline-block;
 }
 
 //nested styles in newrecipes.html
