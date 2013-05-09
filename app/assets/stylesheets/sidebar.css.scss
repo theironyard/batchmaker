@@ -1,5 +1,7 @@
+@import "compass/css3";
 @import "compass/utilities";
-
+@import "compass/css3/box-sizing";
+@import "compass/css3/box-shadow";
 @import 'variables';
 
 //  _____ _     _      _                
@@ -52,6 +54,9 @@
     color: $c-midnight;
     }
 
+    &:hover {
+         @include opacity(0.6);
+         }
 
     }
   }
