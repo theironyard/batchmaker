@@ -1,111 +1,109 @@
-.wrapper
+.container
+
+  .content
   
-  .container
+    h6.steps-title Basic Info
+    hr
 
-    .content
+    //first chunk of recipe info
+    .full-width
     
-      h6.steps-title Basic Info
-      hr
+      .add-photo
+        .ss-plus
+        h6 Add Photo
 
-      //first chunk of recipe info
-      .full-width
+      .main-recipe-input-area 
+
+        input.input-xlarge placeholder="Recipe Name"
+        input.input-xlarge placeholder="By"
+
+        .main-recipe-checkboxes
+
+          form
+            input type="checkbox" 
+              p Make it Public 
+            input type="checkbox"
+              p Keep it Private 
+
+    //allows user to enter time, etc..
+    .full-width
       
-        .add-photo
-          .ss-plus
-          h6 Add Photo
+      .recipe-type-dropdown
+        .ss-navigatedown
+        select data-placeholder="Recipe Type" class="recipe-type chzn-select"
+          option value=""
+          option value="Breakfast" Breakfast
+          option value="Lunch" Lunch
+          option value="Dinner" Dinner
+          option value="Dessert" Dessert
 
-        .main-recipe-input-area 
-
-          input.input-xlarge placeholder="Recipe Name"
-          input.input-xlarge placeholder="By"
-
-          .main-recipe-checkboxes
-
-            form
-              input type="checkbox" 
-                p Make it Public 
-              input type="checkbox"
-                p Keep it Private 
-
-      //allows user to enter time, etc..
-      .full-width
+      input.input-small placeholder="Prep Time"
+      input.input-small placeholder="Cook Time" 
+      input.input-medium-small placeholder="Cook Temp"
         
-        .recipe-type-dropdown
+      .temp-unit-wrap
+        .temp-unit-dropdown  
           .ss-navigatedown
-          select data-placeholder="Recipe Type" class="recipe-type chzn-select"
-            option value=""
-            option value="Breakfast" Breakfast
-            option value="Lunch" Lunch
-            option value="Dinner" Dinner
-            option value="Dessert" Dessert
+          select data-placeholder="F&deg;" class="temp-unit chzn-select"
+            option selected="true" value="F" F&deg;
+            option value="C" C&deg;
 
-        input.input-small placeholder="Prep Time"
-        input.input-small placeholder="Cook Time" 
-        input.input-medium-small placeholder="Cook Temp"
-          
-        .temp-unit-wrap
-          .temp-unit-dropdown  
-            .ss-navigatedown
-            select data-placeholder="F&deg;" class="temp-unit chzn-select"
-              option selected="true" value="F" F&deg;
-              option value="C" C&deg;
+    //shows yield
+    .yield-container
 
-      //shows yield
-      .yield-container
+      p This recipe will make
+      input.input-smaller placeholder="Amount"
+      input.input-large placeholder="cookies, loaves, etc"
 
-        p This recipe will make
-        input.input-smaller placeholder="Amount"
-        input.input-large placeholder="cookies, loaves, etc"
+    h6.steps-title Step 1
+    hr
 
-      h6.steps-title Step 1
-      hr
+    .full-width.margin-top-28
 
-      .full-width.margin-top-28
+      input.input-smaller placeholder="#" 
+      .unit-type-dropdown
+        .ss-navigatedown
+        select data-placeholder="Unit" class="unit-type chzn-select"
+          option value=""
+          option value="Cup" Cup
+          option value="Teaspoon" Teaspoon
+          option value="Tablespoon" Tablespoon
+          option value="Ounce" Ounce
+          option value="Quart" Quart
+          option value="Pound" Pound
+          option value="Pint" Pint
 
-        input.input-smaller placeholder="#" 
-        .unit-type-dropdown
-          .ss-navigatedown
-          select data-placeholder="Unit" class="unit-type chzn-select"
-            option value=""
-            option value="Cup" Cup
-            option value="Teaspoon" Teaspoon
-            option value="Tablespoon" Tablespoon
-            option value="Ounce" Ounce
-            option value="Quart" Quart
-            option value="Pound" Pound
-            option value="Pint" Pint
+      input.input-medium placeholder="breads flour"
+      button.add-remove-button 
+        .ss-hyphen
 
-        input.input-medium placeholder="breads flour"
-        button.add-remove-button 
-          .ss-hyphen
+    .full-width.margin-top-8
+      input.input-smaller placeholder="Amount" 
+      .unit-type-dropdown
+        .ss-navigatedown
+        select data-placeholder="Unit" class="unit-type chzn-select"
+          option value=""
+          option value="Cup" Cup
+          option value="Teaspoon" Teaspoon
+          option value="Tablespoon" Tablespoon
+          option value="Ounce" Ounce
+          option value="Quart" Quart
+          option value="Pound" Pound
+          option value="Pint" Pint
 
-      .full-width.margin-top-8
-        input.input-smaller placeholder="Amount" 
-        .unit-type-dropdown
-          .ss-navigatedown
-          select data-placeholder="Unit" class="unit-type chzn-select"
-            option value=""
-            option value="Cup" Cup
-            option value="Teaspoon" Teaspoon
-            option value="Tablespoon" Tablespoon
-            option value="Ounce" Ounce
-            option value="Quart" Quart
-            option value="Pound" Pound
-            option value="Pint" Pint
+      input.input-medium placeholder="Ingredients"
+      button.add-remove-button 
+        .ss-plus
 
-        input.input-medium placeholder="Ingredients"
-        button.add-remove-button 
-          .ss-plus
+    textarea.margin-top-16.directions placeholder="What directions go with this step?"
+    .full-width.margin-top-16
+      button.add-step-button Add another step
 
-      textarea.margin-top-16.directions placeholder="What directions go with this step?"
-      .full-width.margin-top-16
-        button.add-step-button Add another step
+    h6.steps-title Personal Notes
+    hr
 
-      h6.steps-title Personal Notes
-      hr
+    //input for user to enter notes
+    textarea.personal-notes
 
-      //input for user to enter notes
-      textarea.personal-notes
-
-      .full-width.margin-top-28
-        button.save-button Save this recipe!
+    .full-width.margin-top-28
+      button.save-button Save this recipe!

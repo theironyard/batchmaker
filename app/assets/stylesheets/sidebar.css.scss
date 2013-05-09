@@ -9,12 +9,11 @@
 
 //fix to make the sidebar extend full page length
 .global-sidebar {
-  position: fixed;
+  position: absolute;
   width: 200px;
-  height: 100%;
-  background-color: #e0e0e0;
-  color: $c-slate;
   top: 68px;
+  bottom: 0;
+  background-color: #e0e0e0;
   z-index: 9998;
 
   ul{
@@ -27,6 +26,7 @@
   padding: 25px 0 0 0;
   text-align: center;
   margin: auto;
+  color: $c-slate;
 
     &:after {
       content: "";
