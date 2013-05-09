@@ -9,7 +9,7 @@
 
 //fix to make the sidebar extend full page length
 .global-sidebar {
-  position: absolute;
+  position: fixed;
   width: 200px;
   top: 68px;
   bottom: 0;
