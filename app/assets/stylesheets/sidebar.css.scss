@@ -22,29 +22,29 @@
     margin: 0 auto;
     margin-top: 10px;
 
-    li {
-    list-style: none;
-    padding: 25px 0 0 0;
-    text-align: center;
-    margin: auto;
+  li {
+  list-style: none;
+  padding: 25px 0 0 0;
+  text-align: center;
+  margin: auto;
 
-      &:after {
-        content: "";
-        display: block;
-        width: 50px;
-        padding: 25px 0 0 0;
-        border-bottom: 1px solid $c-slate;
-        margin: auto;
-      }
+    &:after {
+      content: "";
+      display: block;
+      width: 50px;
+      padding: 25px 0 0 0;
+      border-bottom: 1px solid $c-slate;
+      margin: auto;
+    }
 
-      &:last-child:after {
-        border-bottom: none;
-      }
+    &:last-child:after {
+      border-bottom: none;
+    }
 
-      a {
-      text-decoration: none;
-      color: $c-midnight;
-      }
+    a {
+    text-decoration: none;
+    color: $c-midnight;
+    }
 
     }
   }

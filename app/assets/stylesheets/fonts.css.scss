@@ -24,6 +24,7 @@ body {
   font-family: $ff-body;
   color: $c-slate;
   font-size: 16px;
+  -webkit-font-smoothing: antialiased;
 }
 
 // HEADINGS Large-------------
@@ -49,7 +50,6 @@ h4 {
   font-size: 40px;
   padding-bottom: 14px;
   font-weight: 200;
-  text-align: center;
 }
 
 // HEADINGS Small-------------
@@ -67,7 +67,7 @@ h5 {
 
 h6 {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .lighter {
