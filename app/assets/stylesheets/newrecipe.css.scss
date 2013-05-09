@@ -8,10 +8,28 @@
   padding-right: 10px;
   background-color: #fff;
   margin-top: 16px;
-} 
+}
+
+.view-all {
+  font-size: 16px;
+  font-family: $ff-body;
+  text-align: right;
+  background-color: #fff;
+  display: inline-block;
+  top: -19px;
+  position: relative;
+  margin-left: 969px;
+  padding-left: 7px;
+
+  .ss-navigateright {
+    font-size: 12px;
+    display: inline-block;
+    top: -20px;
+    padding-left: 14px;
+  }
+}
 
 hr {
-  width: 100%;
   border: none;
   border-top: 1px solid #b0b0b0;
   margin-top: -12px;

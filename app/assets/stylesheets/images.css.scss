@@ -1,4 +1,8 @@
+//compass imports
 @import "compass/css3";
+@import "compass/utilities";
+@import "compass/css3/box-sizing";
+@import "compass/css3/box-shadow";
 @import 'variables';
 
 .cover-photo {
@@ -10,4 +14,18 @@
   width: 809px;
   height: 403px;
   padding: 0;
+}
+
+.recipe-type-thumb {
+  width: 188px;
+  height: 188px;
+  background-color: $c-darkgrey;
+  display: inline-block;
+  background-size: cover;
+  @include border-radius($border-radius);
+  margin-right: 30px;
+
+  &.recipe-type-thumb:last-child {
+  margin-right: 0;
+  }
 }
