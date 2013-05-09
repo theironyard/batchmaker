@@ -7,19 +7,24 @@
   border: none;
 }
 
-.center {
+.big-ass-recipe-title {
   text-align: center;
+  margin-top: 19px;
 }
 
-.authorspace {
-  margin-top: 14px;
-  margin-bottom:24px;
+.byline {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+  font-family: $ff-head;
+  font-weight: 200;
+  color: #595959;
+  margin-top: -7px;
 }
 
-/* ______________________________________ */
-
+/* ----------------------------------- */
 /* recipe instructions at a glance */
-/* ______________________________________ */
+/* ----------------------------------- */
 
 .glance-box {
   width: 154px;
@@ -27,11 +32,16 @@
   border-right: 1px solid #cccccc;
   display: inline-block;
 
-  span {
+  span, small {
     font-size: 32px;
-    color: $c-slate;
+    color: #595959;
     font-family: $ff-head;
     font-weight: 200;
+    letter-spacing: 1px;
+  }
+
+  small {
+    font-size: 23px;
   }
 
   &.glance-box:last-child {
@@ -43,12 +53,12 @@
   text-align: left;
 }
 
-/* ______________________________________ */
+/* ----------------------------------- */
 /* recipe box */
-/* ______________________________________ */
+/* ----------------------------------- */
 
 .recipe-box {
-  background-color: #ededed;
+  background-color: #f3f3f3;
   @include border-radius(5px 5px 0 0);
 }
 
@@ -67,10 +77,9 @@
   }
 }
 
-/* ______________________________________ */
-
+/* ----------------------------------- */
 /* ingredients panel */
-/* ______________________________________ */
+/* ----------------------------------- */
 
 .ingredient-panel {
   width: 122px;
@@ -79,6 +88,7 @@
   border-top: 1px solid #cccccc;
   display: inline-block;
   border-right: 1px solid #cccccc;
+  background-color: #f9f9f9;
 
 
   &:last-child {
@@ -98,6 +108,7 @@
   padding: 22px 10px 18px 10px;
   border-top: 1px solid #cccccc;
   display: inline-block;
+  background-color: #f9f9f9;
 
   span {
     font-size: 24px;
@@ -120,7 +131,7 @@
 
 
 
-.steps-content {
+.steps-content, .notes-content {
   width: 460px;
   line-height: 20px;
   padding: 24px 20px 24px 0;
@@ -128,6 +139,10 @@
   display: inline-block;
   font-family: $ff-head;
   line-height: 29px;
+
+  &.notes-content {
+    width: 700px;
+  }
 }
 
 table.steps {
@@ -160,14 +175,9 @@ table.steps {
 }
 
 .btnstart.edit {
-  width: 217px;
   text-align: right;
-  padding-right: 20px;
-  display: inline-block;
-  margin-right: -229px;
-
-  span { 
+  float: right;
   font-family: $ff-head;
-  font-weight: 700;
-  }
+  font-weight: 400;
+  color: #7e7e7e;
 }

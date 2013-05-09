@@ -2,14 +2,11 @@
 
 img {
   margin: 0 auto;
+  @include border-radius(5px);
 
   &.large {
-    width: 800px;
-    height: 400px; 
-    margin-left: 300px;
-    @include border-radius(5px);
-    background-color: #6c6c6c;
-    margin: 0 auto;
+    max-width: 809px;
+    padding: 25px 0 28px 0;
   }
 }
 
