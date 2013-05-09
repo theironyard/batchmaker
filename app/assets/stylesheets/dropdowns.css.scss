@@ -1,0 +1,83 @@
+@import 'variables';
+
+.chzn-search {
+  display: none;
+}
+
+.recipe-type-dropdown {
+  display: inline-block;
+  position: relative;
+  margin-right: 13px;
+  top: -3px;
+
+  .chzn-container {
+    width: 222px !important;    
+  }
+
+  .ss-navigatedown {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    top: 24px;
+    right: 38px;
+    z-index: 100;
+
+    // avoid click events
+    pointer-events: none;
+    color: $c-inputgrey;
+  }
+}
+
+.temp-unit-wrap {
+  position: relative;
+  border-radius: 0 5px 5px 0;
+
+  .temp-unit-dropdown {
+    position: absolute;
+    box-shadow: -1px 0 1px rgba(0, 0, 0, 0.2);
+    right: 0;
+    top: -58px;
+
+    .chzn-container {
+      width: 63px !important;
+      border-radius: 0 5px 5px 0;
+    }
+
+    .ss-navigatedown {
+      position: absolute;
+      width: 0px;
+      height: 0px;
+      top: 23px;
+      right: 22px;
+      z-index: 100;
+
+      // avoid click events
+      pointer-events: none;
+      color: $c-inputgrey;
+    }
+  }
+}
+
+.unit-type-dropdown {
+  display: inline-block;
+  position: relative;
+  margin-right: 13px;
+  top: -3px;
+
+  .chzn-container {
+    width: 124px !important;
+  }
+
+  .ss-navigatedown { 
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    top: 24px;
+    right: 31px;
+    z-index: 100;
+
+    // avoid click events
+    pointer-events: none;
+    color: $c-inputgrey;
+  }
+}

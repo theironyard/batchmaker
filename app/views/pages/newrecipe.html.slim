@@ -1,124 +1,109 @@
-html
-  body
-    .container
-      
-      //this is the block of divs that show the heading
-      //and the line beside the heading
-      .heading.steps-title Basic Info
-      hr
+.container
+
+  .content
   
-      //this is div that shows the first chunk of recipe info
-      .full-width
+    h6.steps-title Basic Info
+    hr
+
+    //first chunk of recipe info
+    .full-width
+    
+      .add-photo
+        .ss-plus
+        h6 Add Photo
+
+      .main-recipe-input-area 
+
+        input.input-xlarge placeholder="Recipe Name"
+        input.input-xlarge placeholder="By"
+
+        .main-recipe-checkboxes
+
+          form
+            input type="checkbox" 
+              p Make it Public 
+            input type="checkbox"
+              p Keep it Private 
+
+    //allows user to enter time, etc..
+    .full-width
       
-        .addphoto
-          .ss-plus <br/>add photo
+      .recipe-type-dropdown
+        .ss-navigatedown
+        select data-placeholder="Recipe Type" class="recipe-type chzn-select"
+          option value=""
+          option value="Breakfast" Breakfast
+          option value="Lunch" Lunch
+          option value="Dinner" Dinner
+          option value="Dessert" Dessert
 
-        .main-recipe-input-area 
-
-          input.input-large placeholder="Recipe Name"
-          input.input-large placeholder="By"
-
-          .main-recipe-checkboxes
-
-            form
-              input type="checkbox" 
-                p Make it Public 
-              input type="checkbox"
-                p Keep it Private 
-
-      //this is div that allows user to enter time, etc..
-      .full-width
+      input.input-small placeholder="Prep Time"
+      input.input-small placeholder="Cook Time" 
+      input.input-medium-small placeholder="Cook Temp"
         
-        .dropdown.recipe-type
-          ul
-            li 
-              .ss-icon Recipe Types navigatedown
-              ul.recipe-type
-                li
-                  a href="#" Breakfast
-                li
-                  a href="#" Lunch
-                li
-                  a href="#" Dinner
-                li
-                  a href="#" Dessert
+      .temp-unit-wrap
+        .temp-unit-dropdown  
+          .ss-navigatedown
+          select data-placeholder="F&deg;" class="temp-unit chzn-select"
+            option selected="true" value="F" F&deg;
+            option value="C" C&deg;
 
-        input.input-small placeholder="Prep Time"
-        input.input-small placeholder="Cook Time" 
-        input.input-medium-small placeholder="Cook Temp"
-          
-        .dropdown.temp-unit
-          ul
-            li 
-              .ss-icon F&deg; navigatedown
-              ul.temp-unit
-                li
-                  a href="#" C&deg;
+    //shows yield
+    .yield-container
 
-      //this is div that shows the yield
-      .yield-container
+      p This recipe will make
+      input.input-smaller placeholder="Amount"
+      input.input-large placeholder="cookies, loaves, etc"
 
-        p This recipe will make
-        input.input-smaller placeholder="Amount"
-        input.input-medium placeholder="cookies, loaves, etc"
+    h6.steps-title Step 1
+    hr
 
-      .heading.steps-title Step 1
-      hr
+    .full-width.margin-top-28
 
-      .full-width
+      input.input-smaller placeholder="#" 
+      .unit-type-dropdown
+        .ss-navigatedown
+        select data-placeholder="Unit" class="unit-type chzn-select"
+          option value=""
+          option value="Cup" Cup
+          option value="Teaspoon" Teaspoon
+          option value="Tablespoon" Tablespoon
+          option value="Ounce" Ounce
+          option value="Quart" Quart
+          option value="Pound" Pound
+          option value="Pint" Pint
 
-        input.input-smaller placeholder="#" 
-        .dropdown.unit-type
-          ul
-            li 
-              .ss-icon Unit navigatedown
-              ul.unit-type
-                li
-                  a href="#" Cups
-                li
-                  a href="#" Ounces
-                li
-                  a href="#" Quarts
-                li
-                  a href="#" Tablespoons
-                li
-                  a href="#" Teaspoons
+      input.input-medium placeholder="breads flour"
+      button.add-remove-button 
+        .ss-hyphen
 
-        input.input-385 placeholder="breads flour"
-        button.addremove 
-          .ss-hyphen
+    .full-width.margin-top-8
+      input.input-smaller placeholder="Amount" 
+      .unit-type-dropdown
+        .ss-navigatedown
+        select data-placeholder="Unit" class="unit-type chzn-select"
+          option value=""
+          option value="Cup" Cup
+          option value="Teaspoon" Teaspoon
+          option value="Tablespoon" Tablespoon
+          option value="Ounce" Ounce
+          option value="Quart" Quart
+          option value="Pound" Pound
+          option value="Pint" Pint
 
-      .full-width
-        input.input-smaller placeholder="Amount" 
-        .dropdown.unit-type
-          ul
-            li 
-              .ss-icon Unit navigatedown
-              ul.unit-type
-                li
-                  a href="#" Cups
-                li
-                  a href="#" Ounces
-                li
-                  a href="#" Quarts
-                li
-                  a href="#" Tablespoons
-                li
-                  a href="#" Teaspoons
+      input.input-medium placeholder="Ingredients"
+      button.add-remove-button 
+        .ss-plus
 
-        input.input-385 placeholder="Ingredients"
-        button.addremove 
-          .ss-plus
+    textarea.margin-top-16.directions placeholder="What directions go with this step?"
+    .full-width.margin-top-16
+      button.add-step-button Add another step
 
-      textarea placeholder="What directions go with this step?"
-      .full-width
-        button.add-step Add another step
+    h6.steps-title Personal Notes
+    hr
 
-      .heading.steps-title Personal Notes
-      hr
+    //input for user to enter notes
+    textarea.personal-notes
 
-      //input for user to enter notes
-      textarea.personal-notes
-
-      .full-width
-        button.savebutton Save this recipe!
+    .full-width.margin-top-28
+      button.save-button Save this recipe!

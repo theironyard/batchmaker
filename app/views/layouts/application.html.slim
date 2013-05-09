@@ -9,36 +9,42 @@ head
 head
 body
 
-  div.global-header
-    h2 The kitchen is yours, chef!
-    h1
-      a.logo.seo
-        | BatchMaker
-        img src="http://placehold.it/150x24"
+  header
 
-    ul.nav-user
-      li
-        a.add.active.ss-plus href="#"
-          span.seo Add
-      li
-        a.settings.ss-settings href="#"
-        span.seo Settings
-      li
-        a.user.ss-user href="#"
-        span.seo User
+    .salutation The kitchen is yours, Chef!
+
+    .logo
+      img src="http://placehold.it/200x50"
+
+    .navigation
+
+      ul
+        a href="#"
+          li.ss-plus
+        a href="#"
+          li.ss-settings
+        a href="#"
+          li.ss-user
 
   div.global-sidebar
+
     ul.nav-app
+
       li
-        a href="#" My Recipes
+        a href="#"
+          h6 My Recipes
       li
-        a href="#" Public Recipes
+        a href="#"
+          h6 Public Recipes
       li
-        a href="#" Popular Recipes
+        a href="#"
+          h6 Popular Recipes
       li
-        a href="#" My Favorite Recipes
+        a href="#"
+          h6 My Favorite Recipes
       li
-        a href="#" My Pantry
+        a href="#"
+          h6 My Pantry
 
   div.global-container
     = yield
