@@ -7,47 +7,45 @@
 // /\__/ / | (_| |  __/ |_) | (_| | |   
 // \____/|_|\__,_|\___|_.__/ \__,_|_|   
 
-
+//fix to make the sidebar extend full page length
 .global-sidebar {
-  float: left;
+  position: absolute;
   width: 200px;
-  height: 800px;
-  background-color: $c-ivory;
-  color: $c-slate;
+  top: 68px;
+  bottom: 0;
+  background-color: #e0e0e0;
+  z-index: 9998;
 
   ul{
-    width: 160px;
+    width: 120px;
     margin: 0 auto;
+    margin-top: 10px;
 
-    li {
-    list-style: none;
-    padding: 40px 0 0 0;
-    text-align: center;
-    width: 125px;
-    margin: auto;
+  li {
+  list-style: none;
+  padding: 25px 0 0 0;
+  text-align: center;
+  margin: auto;
+  color: $c-slate;
 
-      &:after {
-        content: "";
-        display: block;
-        width: 50px;
-        padding: 40px 0 0 0;
-        border-bottom: 1px solid $c-slate;
-        margin: auto;
-      }
+    &:after {
+      content: "";
+      display: block;
+      width: 50px;
+      padding: 25px 0 0 0;
+      border-bottom: 1px solid $c-slate;
+      margin: auto;
+    }
 
-      &:last-child:after {
-        border-bottom: none;
-      }
+    &:last-child:after {
+      border-bottom: none;
+    }
 
-      a {
-      text-decoration: none;
-      color: $c-midnight;
-      }
+    a {
+    text-decoration: none;
+    color: $c-midnight;
+    }
 
     }
   }
 }
-
-
-
-
