@@ -1,25 +1,82 @@
-//newrecipe.html button styles
+//compass imports
+@import "compass/css3";
+@import "compass/utilities";
+@import "compass/css3/box-sizing";
+@import "compass/css3/box-shadow";
+@import 'variables';
 
 button:hover {
-  opacity: .5;
+  @include opacity(0.6);
 }
 
-.add-step {
-  height: 45px;
+.add-step-button {
+  padding: 15px 0 13px 0;
   width: 217px;
-  border-radius: 4px;
-  background: linear-gradient(to bottom, 
-    rgba(30,87,153,1) 0%,
-    rgba(244,244,244,1) 0%,
-    rgba(234,234,234,1) 100%);
-  border: 1px solid #bfbfbf;
+  @include border-radius($border-radius);
+  background: linear-gradient(to top, 
+    rgb(210,210,210) 0%,
+    rgb(235,235,235) 100%);
+  border: 1px solid #a3a3a3;
   display: inline-block;
-  margin: 0px 0 0px 483px;
+  margin: 6px 0 0px 483px;
+  font-size: 18px;
+  color: $c-inputgrey;
 }
 
-.addremove {
+.add-remove-button {
   width: 58px;
-  height: 48px;
+  font-size: 17px;
+  margin: 12px 0 0 13px;
+  padding: 15px 0 15px 0px;
+  display: inline-block;
+  @include border-radius($border-radius);
+  border: 1px solid $c-darkgrey;
+  background: $c-midgrey; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ffffff 0%, $c-midgrey 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,$c-midgrey)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #ffffff 0%,$c-midgrey 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #ffffff 0%,$c-midgrey 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #ffffff 0%,$c-midgrey 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #ffffff 0%,$c-midgrey 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='$c-midgrey',GradientType=0 ); /* IE6-9 */
+  vertical-align: top;
+  color: $c-inputgrey;
+}
+
+.save-button {
+  width: 242px;
+  padding: 15px 0 16px 0;
+  @include border-radius($border-radius);
+  background: linear-gradient(to top, 
+    rgb(120,120,120) 0%,
+    rgb(157,157,157) 100%);
+  border: 1px solid #5a5a5a;
+  font-size: 16px;
+  font-weight: normal;
+  color: white;
+  margin: 0px 0 0px 457px;
+  font-size: 18px;
+}
+
+.start-button {
+  width: 172px;
+  padding: 17px 0;
+  float: right;
+  margin: -4px 0px 50px 18px;
+  @include border-radius($border-radius);
+  background: linear-gradient(to top, 
+    #787878 0%,
+    #9d9d9d 100%);
+  border: 1px solid #5a5a5a;
+  font-size: 17px;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+}
+
+.adjust {
+  width: 110px;
+  height: 44px;
   margin: 0;
   padding: 0;
   display: inline-block;
@@ -30,22 +87,23 @@ button:hover {
     rgba(242,242,242,1) 0%,
     rgba(234,234,234,1) 100%);
   vertical-align: top;
-  color: #585858;
+  font-size: 17px;
+  color: $c-inputgrey;
 }
 
-.savebutton {
-  height: 56px;
-  width: 244px;
-  border-radius: 4px;
-  background: linear-gradient(to bottom, 
-    rgba(30,87,153,1) 0%,
-    rgba(170,170,170,1) 0%,
-    rgba(145,145,145,1) 100%);
-  border: 1px #8b8b8b;
-  font-size: 16px;
-  font-weight: normal;
-  color: rgb(237, 237, 237);
-  margin: 0px 0 0px 457px;
-}
+.add-photo {
+  width: 188px;
+  padding: 54px 0;
+  float: left;
+  background: $c-darkestgrey;
+  @include border-radius($border-radius);
+  text-align: center;
+  margin-right: 30px;
 
-// end newrecipe.html button styles
+  .ss-plus {
+    font-size: 32px;
+    line-height: 54px;
+    color: $c-inputgrey;
+  }
+
+}

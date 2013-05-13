@@ -1,11 +1,13 @@
 @import "compass/css3";
+@import 'variables';
 
-.photo {
-  &.large {
-    width: 800px;
-    height: 400px; 
-    @include border-radius(5px);
-    background-color: #6c6c6c;
-  }
+.cover-photo {
+  background-color: $c-darkgrey;
+  background-size: cover;
+  margin: 26px auto 32px auto;
+  text-align: center;
+  @include border-radius(5px);
+  width: 809px;
+  height: 403px;
+  padding: 0;
 }
-
