@@ -1,0 +1,795 @@
+//compass imports
+@import "compass/css3";
+@import "compass/utilities";
+@import "compass/css3/box-sizing";
+@import "compass/css3/box-shadow";
+@import 'variables';
+
+//----------------------
+//
+// Clear Fix
+//
+//---------------------
+
+.cf:before, .cf:after { content: " "; display: table; }
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
+
+
+//----------------------
+//
+// Colors
+//
+//---------------------
+
+
+.slate { color: $c-slate; }
+.slate-bg { background-color: $c-slate; }
+
+.midnight { color: $c-midnight; }
+.midnight-bg { background-color: $c-midnight; }
+
+.aqua { color: $c-aqua; }
+.aqua-bg { background-color: $c-aqua; }
+
+.ivory { color: $c-ivory; }
+.ivory-bg { background-color: $c-ivory; }
+
+.marigold { color: $c-marigold; }
+.marigold-bg { background-color: $c-marigold; }
+
+
+
+//----------------------
+//
+// Variables
+//
+//---------------------
+
+                      
+
+$c-slate: #232323;
+$c-midnight: #254a5d;
+$c-aqua: #76c7a5;
+$c-ivory: #f9f5eb;
+$c-marigold: #efb968; //Great color name, Jen!
+
+//----------GREYSCALE COLORS FOR HI-FI WIREFRAME
+
+$c-lightgrey: #ededed;
+$c-midgrey: #e0e0e0;
+$c-darkgrey: #c5c5c5;
+$c-darkestgrey: #b2b2b2;
+$c-inputgrey: #585858;
+
+$c-white: #fff;
+
+$ff-head: 'Source Sans Pro',Helvetica,Arial,sans-serif;
+$ff-body: 'Noticia Text',Georgia,'New Times Roman',serif;
+
+$border-radius: 5px;
+
+$input-bg: rgb(237, 237, 237);
+$input-boxshadow: inset 0px 1px 2px rgba(0,0,0,.3);
+$input-border: 0px;
+$input-height: 50px;
+$input-width: 700px;
+$input-fontsize: 17px;
+
+
+
+//---------------------------------
+//
+// Global Font Styles & Attachments
+//
+//---------------------------------
+
+// IMPORT-------------
+
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200italic,|Noticia+Text:400,700,400italic,700italic);
+
+
+// DEFAULTS-------------
+
+body {
+  font-family: $ff-body;
+  color: $c-slate;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+// HEADINGS Large-------------
+
+h1, h2, h3, h4 {
+  color: $c-midnight;
+  letter-spacing: -0.04em;
+  font-family: $ff-head;
+  font-weight: 200;
+  line-height: 1.3;
+}
+
+h2 {
+  font-size: 96px;
+}
+
+h3 {
+  font-size: 70px;
+  padding-bottom: 10px;
+}
+
+h4 {
+  font-size: 40px;
+  padding-bottom: 14px;
+}
+
+// HEADINGS Small-------------
+
+h5, h6 {
+  color: $c-slate;
+  font-family: $ff-body;
+  line-height: 1.3;
+}
+
+h5 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h6 {
+  font-size: 20px;
+  font-weight: 400;
+}
+/* Detail titles in .glance-box */
+.labels {
+  font-size: 14px;
+  font-weight: 400;
+  color: $c-darkgrey;
+  padding-top: 2px;
+  padding-bottom: 4px;
+  font-family: $ff-head;
+}
+
+.main-recipe-checkboxes p {
+  margin: 0;
+  padding-right: 25px;
+  font-family: $ff-head;
+  color: $c-darkgrey;
+  font-size: 15px;
+  font-weight: 200;
+  display: inline-block;
+}
+
+//--------
+//
+// Sidebar
+//
+//--------
+
+//fix to make the sidebar extend full page length
+.global-sidebar {
+  position: fixed;
+  width: 200px;
+  top: 68px;
+  bottom: 0;
+  background-color: $c-lightgrey;
+  color: $c-darkgrey;
+  z-index: 9998;
+
+
+  ul {
+    width: 120px;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+
+  li {
+    list-style: none;
+    padding: 25px 0 0 0;
+    text-align: center;
+    margin: auto;
+    color: $c-slate;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    width: 50px;
+    padding: 25px 0 0 0;
+    border-bottom: 1px solid $c-midgrey;
+    margin: auto;
+  }
+
+  &:last-child:after {
+    border-bottom: none;
+  }
+
+  a {
+  text-decoration: none;
+  color: $c-midnight;
+  }
+
+  &:hover {
+   @include opacity(0.6);
+  }
+}
+                                
+//---------------------
+//
+// Global Header Styles
+//
+//---------------------
+
+header {
+  width: 100%;
+  height: 68px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $c-darkgrey;
+  z-index: 9999;
+  font-size: 24px;
+  color: $c-slate;
+  font-family: $ff-head;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.salutation {
+  margin: 0;
+  margin-top:20px;
+  padding-left: 34px;
+}
+
+.logo {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: -35px;
+  padding: 0;
+}
+
+.navigation {
+  text-align: right;
+  padding-right: 37px;
+  margin-top: -39px;
+
+  ul {
+    list-style: none;
+    display: inline-block;
+  }
+
+  li {
+    display: inline-block; 
+    padding-left: 44px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #909090;
+  }
+
+  a:hover {
+    color: $c-inputgrey;
+  }
+}
+
+//---------------------
+//
+// Page Container Styles
+//
+//---------------------
+
+.global-container {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+
+
+//----------------------
+//
+// Containers
+//
+//---------------------
+
+.container {
+  position: relative;
+  margin-left: 200px;
+  top: 101px;
+  text-align: left;
+  padding-bottom: 100px;
+}
+
+.content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.full-width {
+  width: 100%;
+  margin-top: 42px;
+}
+
+.full-width-photo {
+  width: 100%;
+  margin-top: 52px;
+  text-align: center;
+}
+
+//margin classes apply spacing
+.margin-top-36 {
+  margin-top: 36px;
+}
+
+.margin-top-46 {
+  margin-top: 46px;
+}
+
+.margin-top-28 {
+  margin-top: 28px;
+}
+
+.margin-top-8 {
+  margin-top: 8px;
+}
+
+.margin-top-21 {
+  margin-top: 21px;
+}
+
+.margin-top-16 {
+  margin-top: 16px;
+}
+
+.yield-container {
+  width: 100%;
+  margin-top: 13px;
+  margin-bottom: 28px;
+  display: inline-block;
+
+  p {
+    font-size: 18px;
+    display: inline-block;
+    margin-right: 19px;
+    font-family: $ff-head;
+  }
+}
+
+.main-recipe-input-area  {
+  width: 480px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.main-recipe-checkboxes {
+  width: 480px;
+  margin-top: 0px;
+}
+
+.recipe-details {
+  width: 702px;
+  margin: 0 auto; 
+  text-align: center;
+}
+  
+.summary {
+  max-width: 700px;
+  @include border-radius(5px);
+  border: 1px solid #cccccc;
+  margin-bottom: 36px;
+  text-align: left;
+}
+
+.ingredients {
+  max-width: 700px;
+  background-color: $c-lightgrey;
+  border: 1px solid $c-darkgrey;
+  margin-bottom: 36px;
+  @include border-radius(5px);
+  text-align: left;
+}
+
+.steps {
+  max-width: 700px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border: none;
+  text-align: left;
+}
+
+.btnstart {
+  margin-top: 35px;
+}
+
+
+//----------------------
+//
+// Images
+//
+//---------------------
+
+
+.cover-photo {
+  background-color: $c-darkgrey;
+  background-size: cover;
+  margin: 26px auto 32px auto;
+  text-align: center;
+  @include border-radius(5px);
+  width: 809px;
+  height: 403px;
+  padding: 0;
+}
+
+.PreviewRecipePhoto {
+  width: 800px;
+  height: 400px; 
+  @include border-radius($border-radius);
+}
+
+.steps-title {
+  text-align: left;
+  display: inline-block;
+  padding-right: 10px;
+  background-color: #fff;
+  margin-top: 16px;
+} 
+
+hr {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #b0b0b0;
+  margin-top: -12px;
+}
+
+.steps-content {
+  width: 460px;
+  line-height: 20px;
+  padding: 24px 20px 24px 0;
+  vertical-align: top;
+  display: inline-block;
+}
+
+//-------------------------
+//
+// Recipe Preview Specifics
+//
+//-------------------------
+
+.big-ass-recipe-title {
+  text-align: center;
+  margin-top: 19px;
+}
+
+.byline {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+  font-family: $ff-head;
+  font-weight: 200;
+  color: $c-inputgrey;
+  margin-top: -7px;
+}
+
+/* ----------------------------------- */
+/*   recipe instructions at a glance   */
+/* ----------------------------------- */
+
+.glance-box {
+  width: 154px;
+  padding: 16px 0 14px 20px;
+  border-right: 1px solid $c-darkgrey;
+  display: inline-block;
+
+  span, small {
+    font-size: 32px;
+    color: $c-inputgrey;
+    font-family: $ff-head;
+    font-weight: 200;
+    letter-spacing: 1px;
+  }
+
+  small {
+    font-size: 23px;
+  }
+
+  &.glance-box:last-child {
+  border: none;
+  }
+}  
+
+.glance-title {
+  text-align: left;
+}
+
+//--------------------------
+//
+// Recipe Ingredient Details
+//
+//--------------------------
+
+.recipe-box {
+  background-color: $c-lightgrey;
+  @include border-radius(5px 5px 0 0);
+}
+
+.recipe-title {
+  text-align: left;
+  padding: 18px 0 18px 20px;
+  
+  span {
+    font-size: 24px;
+    font-weight: 400;
+    font-family: $ff-head;
+    padding: 0;
+  }
+  
+  button.adjust {
+    float: right;
+    margin-top: -10px;
+    margin-right: 10px;
+  }
+}
+
+//--------------------------
+//
+// Ingredients Panel
+//
+//--------------------------
+
+.ingredient-panel {
+  width: 122px;
+  padding: 22px 10px 18px 0;
+  text-align: right;
+  border-top: 1px solid $c-darkgrey;
+  display: inline-block;
+  border-right: 1px solid $c-darkgrey;
+  background-color: $c-lightgrey;
+
+
+  &:last-child {
+    @include border-radius(0 0 0 5px);
+  }
+
+  span {
+    font-size: 24px;
+    font-weight: 400;
+    font-family: $ff-head;
+    padding: 0;
+  }
+}  
+
+.ingredient-line {
+  width: 547px;
+  padding: 22px 10px 18px 10px;
+  border-top: 1px solid $c-darkgrey;
+  display: inline-block;
+  background-color: $c-lightgrey;
+
+  span {
+    font-size: 24px;
+    font-weight: 200;
+    font-family: $ff-head;
+    padding: 0;
+  }
+
+  &:last-child {
+    @include border-radius(0px 0 5px 0px);
+  }
+}
+
+
+//--------------------------
+//
+// Buttons
+//
+//--------------------------
+
+button:hover {
+  @include opacity(0.6);
+}
+
+.add-step-button {
+  padding: 15px 0 13px 0;
+  width: 217px;
+  @include border-radius($border-radius);
+  background: linear-gradient(to top, 
+    rgb(210,210,210) 0%,
+    rgb(235,235,235) 100%);
+  border: 1px solid #a3a3a3;
+  display: inline-block;
+  margin: 6px 0 0px 483px;
+  font-size: 18px;
+  color: $c-inputgrey;
+}
+
+.add-remove-button {
+  width: 58px;
+  font-size: 17px;
+  margin: 12px 0 0 13px;
+  padding: 15px 0 15px 0px;
+  display: inline-block;
+  @include border-radius($border-radius);
+  border: 1px solid $c-darkgrey;
+  background: $c-midgrey; /* Old browsers */
+  @include background(linear-gradient(top, $c-white, $c-midgrey));
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='$c-midgrey',GradientType=0 ); /* IE6-9 */
+  vertical-align: top;
+  color: $c-inputgrey;
+}
+
+.save-button {
+  width: 242px;
+  padding: 15px 0 16px 0;
+  @include border-radius($border-radius);
+  background: linear-gradient(to top, 
+    rgb(120,120,120) 0%,
+    rgb(157,157,157) 100%);
+  border: 1px solid #5a5a5a;
+  font-size: 16px;
+  font-weight: normal;
+  color: white;
+  margin: 0px 0 0px 457px;
+  font-size: 18px;
+}
+
+.start-button {
+  width: 172px;
+  padding: 17px 0;
+  float: right;
+  margin: -4px 0px 50px 18px;
+  @include border-radius($border-radius);
+  background: linear-gradient(to top, 
+    #787878 0%,
+    #9d9d9d 100%);
+  border: 1px solid #5a5a5a;
+  font-size: 17px;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+}
+
+.adjust {
+  width: 110px;
+  height: 44px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #bfbfbf;
+  background: linear-gradient(to bottom, 
+    rgba(30,87,153,1) 0%,
+    rgba(242,242,242,1) 0%,
+    rgba(234,234,234,1) 100%);
+  vertical-align: top;
+  font-size: 17px;
+  color: $c-inputgrey;
+}
+
+.add-photo {
+  width: 188px;
+  padding: 54px 0;
+  float: left;
+  background: $c-darkestgrey;
+  @include border-radius($border-radius);
+  text-align: center;
+  margin-right: 30px;
+
+  .ss-plus {
+    font-size: 32px;
+    line-height: 54px;
+    color: $c-inputgrey;
+  }
+
+}
+
+//--------------------------
+//
+// Inputs
+//
+//--------------------------
+
+
+::-webkit-input-placeholder {
+   color: $c-inputgrey;
+}
+
+input {
+  display: inline-block;
+  background-color: $input-bg;
+  border-radius: $border-radius;
+  border: $input-border;
+  box-shadow: $input-boxshadow;
+  @include box-sizing(border-box);
+  color: $c-inputgrey;
+  font-size: $input-fontsize;
+}
+
+//this has no hyphen on purpose
+textarea {
+  -webkit-appearance: none;
+  width: 700px;
+  background-color: $input-bg;
+  border: 1px solid #dbdbdb;
+  box-shadow: $input-boxshadow;
+  border-radius: 5px;
+  @include box-sizing(border-box);
+  margin:  0;
+  color: $c-inputgrey;
+  font-size: 16px;
+
+  &.personal-notes {
+  margin: 20px 0 0 0;
+  height: 202px;
+  }
+
+  &.directions {
+  height: 163px;
+  padding-top: 20px;
+  padding-left: 13px;
+  }
+}
+
+input[type="checkbox"] {
+  padding: 0px;
+  margin: 0 10px 0 0;  
+}
+
+.input-xlarge {
+  padding: 22px 0 22px 20px;
+  margin-bottom: 16px;
+  width: 478px;
+  border: 0px;
+}
+
+.input-large {
+  width: 410px;
+  margin: 11px 0 0 0;
+  padding: 18px 0 18px 16px; 
+}
+
+.input-medium {
+  width: 383px;
+  margin: 11px 0 0 0px;
+  padding: 18px 0 18px 16px; 
+}
+
+.input-medium-small {
+  width: 185px;
+  margin: 1px 0 0 0;
+  padding: 18px 0 18px 16px; 
+}
+
+.input-small {
+  width: 124px;
+  margin-right: 16px;
+  padding: 18px 0 18px 16px; 
+  margin-top: 1px;
+}
+
+.input-smaller {
+  width: 96px;
+  margin: 11px 13px 0 0;
+  padding: 18px 0 18px 14px; 
+}
+
+
+
+/* #Media Queries
+================================================== */
+ 
+  /* Smaller than standard 960 (devices and browsers) */
+  @media only screen and (max-width: 959px) {}
+ 
+  /* Tablet Portrait size to standard 960 (devices and browsers) */
+  @media only screen and (min-width: 768px) and (max-width: 959px) {}
+ 
+  /* All Mobile Sizes (devices and browser) */
+  @media only screen and (max-width: 767px) {}
+ 
+  /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+  @media only screen and (min-width: 480px) and (max-width: 767px) {}
+ 
+  /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+  @media only screen and (max-width: 479px) {}
