@@ -15,12 +15,17 @@
 .cf:after { clear: both; }
 .cf { *zoom: 1; }
 
+
+
+
+
 //----------------------
 //
 // Variables
 //
 //---------------------
-                   
+
+                      
 
 $c-slate: #232323;
 $c-midnight: #254a5d;
@@ -363,7 +368,8 @@ header {
 }
 
 .recipe-details {
-  width: 702px;
+  max-width: 702px;
+  width: 90%;
   margin: 0 auto; 
   text-align: center;
 }
@@ -849,7 +855,11 @@ input[type="checkbox"] {
   @media only screen and (max-width: 767px) {
     .global-sidebar {
       display: none;
-    } 
+    }
+
+    .container {
+      margin-left: 0;
+    }
   }
  
   /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
@@ -857,6 +867,14 @@ input[type="checkbox"] {
     .global-sidebar {
       display: none;
     }
+
+    .container {
+      margin-left: 0;
+    }
+
+    /* .salutation {
+      display: none;
+    } */
   }
  
   /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
