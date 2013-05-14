@@ -15,38 +15,12 @@
 .cf:after { clear: both; }
 .cf { *zoom: 1; }
 
-
-//----------------------
-//
-// Colors
-//
-//---------------------
-
-
-.slate { color: $c-slate; }
-.slate-bg { background-color: $c-slate; }
-
-.midnight { color: $c-midnight; }
-.midnight-bg { background-color: $c-midnight; }
-
-.aqua { color: $c-aqua; }
-.aqua-bg { background-color: $c-aqua; }
-
-.ivory { color: $c-ivory; }
-.ivory-bg { background-color: $c-ivory; }
-
-.marigold { color: $c-marigold; }
-.marigold-bg { background-color: $c-marigold; }
-
-
-
 //----------------------
 //
 // Variables
 //
 //---------------------
-
-                      
+                   
 
 $c-slate: #232323;
 $c-midnight: #254a5d;
@@ -76,7 +50,27 @@ $input-height: 50px;
 $input-width: 700px;
 $input-fontsize: 17px;
 
+//----------------------
+//
+// Colors
+//
+//---------------------
 
+
+.slate { color: $c-slate; }
+.slate-bg { background-color: $c-slate; }
+
+.midnight { color: $c-midnight; }
+.midnight-bg { background-color: $c-midnight; }
+
+.aqua { color: $c-aqua; }
+.aqua-bg { background-color: $c-aqua; }
+
+.ivory { color: $c-ivory; }
+.ivory-bg { background-color: $c-ivory; }
+
+.marigold { color: $c-marigold; }
+.marigold-bg { background-color: $c-marigold; }
 
 //---------------------------------
 //
@@ -287,7 +281,7 @@ header {
 
 
 
-//----------------------
+//---------------------
 //
 // Containers
 //
@@ -403,7 +397,6 @@ header {
   margin-top: 35px;
 }
 
-
 //----------------------
 //
 // Images
@@ -412,14 +405,20 @@ header {
 
 
 .cover-photo {
+  max-width: 809px;
+  width: 90%;
+  max-height: 403px;
+  height: 30%;
+  padding: 0;
   background-color: $c-darkgrey;
-  background-size: cover;
   margin: 26px auto 32px auto;
   text-align: center;
   @include border-radius(5px);
-  width: 809px;
-  height: 403px;
-  padding: 0;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
 }
 
 .PreviewRecipePhoto {
@@ -562,7 +561,7 @@ hr {
 
 .ingredient-line {
   width: 547px;
-  padding: 22px 10px 18px 10px;
+  padding: 22px 9px 18px 10px;
   border-top: 1px solid $c-darkgrey;
   display: inline-block;
   background-color: $c-lightgrey;
@@ -577,6 +576,57 @@ hr {
   &:last-child {
     @include border-radius(0px 0 5px 0px);
   }
+}
+
+.steps-content, .notes-content {
+  width: 460px;
+  line-height: 20px;
+  padding: 24px 20px 24px 0;
+  vertical-align: top;
+  display: inline-block;
+  font-family: $ff-head;
+  line-height: 29px;
+
+  &.notes-content {
+    width: 700px;
+  }
+}
+
+table.steps {
+  width: 200px;
+  display: inline-block;
+  float: right;
+  margin-top: 18px;
+  font-family: $ff-head;
+
+  td.left {
+    width: 80px;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    padding: 14px 15px 18px 0;
+    text-align: right;
+    font-weight: bolder;
+  }
+
+  td.right {
+    width: 140px;
+    padding-left: 15px;
+    border-bottom: 1px solid #ccc;
+    text-align: left; 
+    font-weight: lighter;
+  } 
+
+  td.last {
+  border-bottom: none;
+  }
+}
+
+.btnstart.edit {
+  text-align: right;
+  float: right;
+  font-family: $ff-head;
+  font-weight: 400;
+  color: white;
 }
 
 
@@ -780,16 +830,34 @@ input[type="checkbox"] {
 ================================================== */
  
   /* Smaller than standard 960 (devices and browsers) */
-  @media only screen and (max-width: 959px) {}
+  @media only screen and (max-width: 959px) {
+
+  }
  
   /* Tablet Portrait size to standard 960 (devices and browsers) */
-  @media only screen and (min-width: 768px) and (max-width: 959px) {}
+  @media only screen and (min-width: 768px) and (max-width: 900px) {
+    .global-sidebar {
+      display: none;
+    }
+
+    .container {
+      margin-left: 0;
+    }
+  }
  
   /* All Mobile Sizes (devices and browser) */
-  @media only screen and (max-width: 767px) {}
+  @media only screen and (max-width: 767px) {
+    .global-sidebar {
+      display: none;
+    } 
+  }
  
   /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-  @media only screen and (min-width: 480px) and (max-width: 767px) {}
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
+    .global-sidebar {
+      display: none;
+    }
+  }
  
   /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
   @media only screen and (max-width: 479px) {}

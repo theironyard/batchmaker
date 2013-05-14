@@ -1,0 +1,63 @@
+@import "compass/css3";
+@import "compass/utilities";
+@import "compass/css3/box-sizing";
+@import "compass/css3/box-shadow";
+@import 'variables';
+
+//  _____ _     _      _                
+// /  ___(_)   | |    | |               
+// \ `--. _  __| | ___| |__   __ _ _ __ 
+//  `--. \ |/ _` |/ _ \ '_ \ / _` | '__|
+// /\__/ / | (_| |  __/ |_) | (_| | |   
+// \____/|_|\__,_|\___|_.__/ \__,_|_|   
+
+
+//fix to make the sidebar extend full page length
+.global-sidebar {
+  position: fixed;
+  width: 200px;
+  top: 68px;
+  bottom: 0;
+  background-color: $c-lightgrey;
+  color: $c-darkgrey;
+  z-index: 9998;
+
+
+  ul{
+    width: 120px;
+    margin: 0 auto;
+    margin-top: 10px;
+
+  li {
+  list-style: none;
+  padding: 25px 0 0 0;
+  text-align: center;
+  margin: auto;
+  color: $c-slate;
+
+
+    &:after {
+      content: "";
+      display: block;
+      width: 50px;
+      padding: 25px 0 0 0;
+      border-bottom: 1px solid $c-midgrey;
+      margin: auto;
+    }
+
+    &:last-child:after {
+      border-bottom: none;
+    }
+
+    a {
+    text-decoration: none;
+    color: $c-midnight;
+    }
+
+    &:hover {
+     @include opacity(0.6);
+    }
+
+    }
+  }
+}

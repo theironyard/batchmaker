@@ -1,0 +1,26 @@
+@import 'variables';
+
+//   _____      _                
+//  / ____|    | |               
+// | |     ___ | | ___  _ __ ___ 
+// | |    / _ \| |/ _ \| '__/ __|
+// | |___| (_) | | (_) | |  \__ \
+//  \_____\___/|_|\___/|_|  |___/  
+//
+
+// COLOR CLASSES-------------
+
+.slate { color: $c-slate; }
+.slate-bg { background-color: $c-slate; }
+
+.midnight { color: $c-midnight; }
+.midnight-bg { background-color: $c-midnight; }
+
+.aqua { color: $c-aqua; }
+.aqua-bg { background-color: $c-aqua; }
+
+.ivory { color: $c-ivory; }
+.ivory-bg { background-color: $c-ivory; }
+
+.marigold { color: $c-marigold; }
+.marigold-bg { background-color: $c-marigold; }
