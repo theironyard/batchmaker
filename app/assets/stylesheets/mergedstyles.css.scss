@@ -15,17 +15,11 @@
 .cf:after { clear: both; }
 .cf { *zoom: 1; }
 
-
-
-
-
 //----------------------
 //
 // Variables
 //
 //---------------------
-
-                      
 
 $c-slate: #232323;
 $c-midnight: #254a5d;
@@ -97,6 +91,13 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+p {
+    font-size: 18px;
+    display: inline-block;
+    margin: 40px 19px 52px 0;
+    font-family: $ff-head;
+}
+
 // HEADINGS Large-------------
 
 h1, h2, h3, h4 {
@@ -148,16 +149,6 @@ h6 {
   font-family: $ff-head;
 }
 
-.main-recipe-checkboxes p {
-  margin: 0;
-  padding-right: 25px;
-  font-family: $ff-head;
-  color: $c-darkgrey;
-  font-size: 15px;
-  font-weight: 200;
-  display: inline-block;
-}
-
 //--------
 //
 // Sidebar
@@ -175,11 +166,10 @@ h6 {
   z-index: 9998;
 
 
-  ul {
+  ul.text, ul.icons {
     width: 120px;
     margin: 0 auto;
     margin-top: 10px;
-  }
 
   li {
     list-style: none;
@@ -187,28 +177,41 @@ h6 {
     text-align: center;
     margin: auto;
     color: $c-slate;
+
+
+    &:after {
+      content: "";
+      display: block;
+      width: 50px;
+      padding: 25px 0 0 0;
+      border-bottom: 1px solid $c-midgrey;
+      margin: auto;
+    }
+
+    &:last-child:after {
+      border-bottom: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: $c-midnight;
+    }
+
+    &:hover {
+     @include opacity(0.6);
+    }
+
+    }
   }
 
-  &:after {
-    content: "";
-    display: block;
-    width: 50px;
-    padding: 25px 0 0 0;
-    border-bottom: 1px solid $c-midgrey;
-    margin: auto;
-  }
-
-  &:last-child:after {
-    border-bottom: none;
-  }
-
-  a {
-  text-decoration: none;
-  color: $c-midnight;
-  }
-
-  &:hover {
-   @include opacity(0.6);
+  ul.icons {
+    width: 68px;
+  
+    img {
+      text-align: center;
+      margin: 0 auto;
+      padding: 0;
+    }
   }
 }
                                 
@@ -281,10 +284,7 @@ header {
   position: relative;
   width: 100%;
   text-align: center;
-  padding-bottom: 100px;
 }
-
-
 
 //---------------------
 //
@@ -293,73 +293,46 @@ header {
 //---------------------
 
 .container {
-  position: relative;
-  margin-left: 200px;
-  top: 101px;
+  width: 100%;
   text-align: left;
-  padding-bottom: 100px;
+  margin: 0 auto 0 auto;
+  padding-left: 200px;
+
+  &.read-recipe-page {
+    max-width: 809px;
+  }
+
+  &.create-recipe-page {
+    max-width: 700px;
+  }
 }
 
 .content {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 0;
-}
-
-.full-width {
-  width: 100%;
-  margin-top: 42px;
+  position: relative;
+  top: 101px;
 }
 
 .full-width-photo {
   width: 100%;
+  max-width: 809px;
   margin-top: 52px;
   text-align: center;
 }
 
-//margin classes apply spacing
-.margin-top-36 {
-  margin-top: 36px;
-}
-
-.margin-top-46 {
-  margin-top: 46px;
-}
-
-.margin-top-28 {
-  margin-top: 28px;
-}
-
-.margin-top-8 {
-  margin-top: 8px;
-}
-
-.margin-top-21 {
-  margin-top: 21px;
-}
-
-.margin-top-16 {
-  margin-top: 16px;
-}
-
-.yield-container {
-  width: 100%;
-  margin-top: 13px;
-  margin-bottom: 28px;
+form  {
+  width: 68.57143%;
   display: inline-block;
+  margin-bottom: 50px;
 
   p {
-    font-size: 18px;
-    display: inline-block;
-    margin-right: 19px;
+    margin: 0;
+    padding-right: 25px;
     font-family: $ff-head;
+    color: $c-darkgrey;
+    font-size: 15px;
+    font-weight: 200;
+    display: inline-block;
   }
-}
-
-.main-recipe-input-area  {
-  width: 480px;
-  display: inline-block;
-  margin-bottom: 15px;
 }
 
 .main-recipe-checkboxes {
@@ -399,16 +372,11 @@ header {
   text-align: left;
 }
 
-.btnstart {
-  margin-top: 35px;
-}
-
 //----------------------
 //
 // Images
 //
 //---------------------
-
 
 .cover-photo {
   max-width: 809px;
@@ -433,19 +401,28 @@ header {
   @include border-radius($border-radius);
 }
 
-.steps-title {
+.section-heading {
   text-align: left;
   display: inline-block;
   padding-right: 10px;
   background-color: #fff;
-  margin-top: 16px;
-} 
+}
 
 hr {
   width: 100%;
+  max-width: 700px;
   border: none;
   border-top: 1px solid #b0b0b0;
   margin-top: -12px;
+  margin-bottom: 52px;
+
+  &.step-heading {
+    margin: -12px 0px 25px 0px;
+  }
+
+  &.personal-notes {
+    margin: -12px 0px 17px 0px;
+  } 
 }
 
 .steps-content {
@@ -632,9 +609,9 @@ table.steps {
   float: right;
   font-family: $ff-head;
   font-weight: 400;
-  color: white;
+  color: $c-darkestgrey;
+  margin-top: 19px;
 }
-
 
 //--------------------------
 //
@@ -648,20 +625,20 @@ button:hover {
 
 .add-step-button {
   padding: 15px 0 13px 0;
-  width: 217px;
+  width: 31%;
   @include border-radius($border-radius);
   background: linear-gradient(to top, 
     rgb(210,210,210) 0%,
     rgb(235,235,235) 100%);
   border: 1px solid #a3a3a3;
   display: inline-block;
-  margin: 6px 0 0px 483px;
+  margin: 19px 0 21px 483px;
   font-size: 18px;
   color: $c-inputgrey;
 }
 
 .add-remove-button {
-  width: 58px;
+  width: 8.2857%;
   font-size: 17px;
   margin: 12px 0 0 13px;
   padding: 15px 0 15px 0px;
@@ -676,7 +653,7 @@ button:hover {
 }
 
 .save-button {
-  width: 242px;
+  width: 34.57143%;
   padding: 15px 0 16px 0;
   @include border-radius($border-radius);
   background: linear-gradient(to top, 
@@ -686,12 +663,12 @@ button:hover {
   font-size: 16px;
   font-weight: normal;
   color: white;
-  margin: 0px 0 0px 457px;
+  margin: 34px 0 0px 457px;
   font-size: 18px;
 }
 
 .start-button {
-  width: 172px;
+  width: 24.57143%;
   padding: 17px 0;
   float: right;
   margin: -4px 0px 50px 18px;
@@ -724,20 +701,106 @@ button:hover {
 }
 
 .add-photo {
-  width: 188px;
+  width: 26.857143%;
   padding: 54px 0;
   float: left;
   background: $c-darkestgrey;
   @include border-radius($border-radius);
   text-align: center;
-  margin-right: 30px;
+  margin-right: 4.2857143%;
 
   .ss-plus {
     font-size: 32px;
     line-height: 54px;
     color: $c-inputgrey;
   }
+}
 
+//--------------------------
+//
+// Dropdowns
+//
+//--------------------------
+
+.chzn-search {
+  display: none;
+}
+
+.recipe-type-dropdown {
+  display: inline-block;
+  position: relative;
+  margin-right: 1.857143%;
+  top: -3px;
+
+  .chzn-container {
+    width: 222px !important;    
+  }
+
+  .ss-navigatedown {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    top: 24px;
+    right: 38px;
+    z-index: 100;
+
+    // avoid click events
+    pointer-events: none;
+    color: $c-inputgrey;
+  }
+}
+
+.temp-unit-wrap {
+  position: relative;
+
+  .temp-unit-dropdown {
+    position: absolute;
+    right: 0;
+    top: -58px;
+
+    .chzn-container {
+      width: 63px !important;
+      border-radius: 0 5px 5px 0;
+      box-shadow: -1px 0 1px rgba(0, 0, 0, 0.2);
+    }
+
+    .ss-navigatedown {
+      position: absolute;
+      width: 0px;
+      height: 0px;
+      top: 23px;
+      right: 22px;
+      z-index: 100;
+
+      // avoid click events
+      pointer-events: none;
+      color: $c-inputgrey;
+    }
+  }
+}
+
+.unit-type-dropdown {
+  display: inline-block;
+  position: relative;
+  margin-right: 1.857143%;
+  top: -3px;
+
+  .chzn-container {
+    width: 124px !important;
+  }
+
+  .ss-navigatedown { 
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    top: 24px;
+    right: 31px;
+    z-index: 100;
+
+    // avoid click events
+    pointer-events: none;
+    color: $c-inputgrey;
+  }
 }
 
 //--------------------------
@@ -746,9 +809,8 @@ button:hover {
 //
 //--------------------------
 
-
 ::-webkit-input-placeholder {
-   color: $c-inputgrey;
+  color: $c-inputgrey;
 }
 
 input {
@@ -760,12 +822,45 @@ input {
   @include box-sizing(border-box);
   color: $c-inputgrey;
   font-size: $input-fontsize;
+  padding: 2.571% 0 2.571% 16px;
+
+  &.xlarge {
+    padding: 3.14% 0 3.14% 2.857%;
+    margin-bottom: 16px;
+    width: 68.2857%;
+  }
+
+  &.large {
+    width: 59%;
+    margin: 1.57% 0 0 0; 
+  }
+
+  &.medium {
+    width: 54.7143%;
+    margin: 1.57% 0 0 0px; 
+  }
+
+  &.smedium {
+    width: 26.42857%;
+    margin-top: 1px;
+  }
+
+  &.small {
+    width: 17.7143%;
+    margin-right: 2.28751%; 
+    margin-top: 1px;
+  }
+
+  &.smaller {
+    width: 13.7143%;
+    margin: 1.57% 1.857143% 0 0;
+    padding: 2.571% 0 2.571% 2%; 
+  }
 }
 
-//this has no hyphen on purpose
 textarea {
   -webkit-appearance: none;
-  width: 700px;
+  width: 100%;
   background-color: $input-bg;
   border: 1px solid #dbdbdb;
   box-shadow: $input-boxshadow;
@@ -784,98 +879,11 @@ textarea {
   height: 163px;
   padding-top: 20px;
   padding-left: 13px;
+  margin-top: 15px;
   }
 }
 
 input[type="checkbox"] {
   padding: 0px;
-  margin: 0 10px 0 0;  
+  margin: 0 10px 0 0;
 }
-
-.input-xlarge {
-  padding: 22px 0 22px 20px;
-  margin-bottom: 16px;
-  width: 478px;
-  border: 0px;
-}
-
-.input-large {
-  width: 410px;
-  margin: 11px 0 0 0;
-  padding: 18px 0 18px 16px; 
-}
-
-.input-medium {
-  width: 383px;
-  margin: 11px 0 0 0px;
-  padding: 18px 0 18px 16px; 
-}
-
-.input-medium-small {
-  width: 185px;
-  margin: 1px 0 0 0;
-  padding: 18px 0 18px 16px; 
-}
-
-.input-small {
-  width: 124px;
-  margin-right: 16px;
-  padding: 18px 0 18px 16px; 
-  margin-top: 1px;
-}
-
-.input-smaller {
-  width: 96px;
-  margin: 11px 13px 0 0;
-  padding: 18px 0 18px 14px; 
-}
-
-
-
-/* #Media Queries
-================================================== */
- 
-  /* Smaller than standard 960 (devices and browsers) */
-  @media only screen and (max-width: 959px) {
-
-  }
- 
-  /* Tablet Portrait size to standard 960 (devices and browsers) */
-  @media only screen and (min-width: 768px) and (max-width: 900px) {
-    .global-sidebar {
-      display: none;
-    }
-
-    .container {
-      margin-left: 0;
-    }
-  }
- 
-  /* All Mobile Sizes (devices and browser) */
-  @media only screen and (max-width: 767px) {
-    .global-sidebar {
-      display: none;
-    }
-
-    .container {
-      margin-left: 0;
-    }
-  }
- 
-  /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-  @media only screen and (min-width: 480px) and (max-width: 767px) {
-    .global-sidebar {
-      display: none;
-    }
-
-    .container {
-      margin-left: 0;
-    }
-
-    /* .salutation {
-      display: none;
-    } */
-  }
- 
-  /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-  @media only screen and (max-width: 479px) {}
