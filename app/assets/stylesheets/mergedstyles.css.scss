@@ -320,7 +320,7 @@ header {
 }
 
 form  {
-  width: 480px;
+  width: 68.57143%;
   display: inline-block;
   margin-bottom: 50px;
 
@@ -410,6 +410,7 @@ form  {
 
 hr {
   width: 100%;
+  max-width: 700px;
   border: none;
   border-top: 1px solid #b0b0b0;
   margin-top: -12px;
@@ -624,7 +625,7 @@ button:hover {
 
 .add-step-button {
   padding: 15px 0 13px 0;
-  width: 217px;
+  width: 31%;
   @include border-radius($border-radius);
   background: linear-gradient(to top, 
     rgb(210,210,210) 0%,
@@ -637,7 +638,7 @@ button:hover {
 }
 
 .add-remove-button {
-  width: 58px;
+  width: 8.2857%;
   font-size: 17px;
   margin: 12px 0 0 13px;
   padding: 15px 0 15px 0px;
@@ -652,7 +653,7 @@ button:hover {
 }
 
 .save-button {
-  width: 242px;
+  width: 34.57143%;
   padding: 15px 0 16px 0;
   @include border-radius($border-radius);
   background: linear-gradient(to top, 
@@ -667,7 +668,7 @@ button:hover {
 }
 
 .start-button {
-  width: 172px;
+  width: 24.57143%;
   padding: 17px 0;
   float: right;
   margin: -4px 0px 50px 18px;
@@ -700,13 +701,13 @@ button:hover {
 }
 
 .add-photo {
-  width: 188px;
+  width: 26.857143%;
   padding: 54px 0;
   float: left;
   background: $c-darkestgrey;
   @include border-radius($border-radius);
   text-align: center;
-  margin-right: 30px;
+  margin-right: 4.2857143%;
 
   .ss-plus {
     font-size: 32px;
@@ -728,7 +729,7 @@ button:hover {
 .recipe-type-dropdown {
   display: inline-block;
   position: relative;
-  margin-right: 13px;
+  margin-right: 1.857143%;
   top: -3px;
 
   .chzn-container {
@@ -756,12 +757,11 @@ button:hover {
     position: absolute;
     right: 0;
     top: -58px;
-    box-shadow: -1px 0 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0 5px 5px 0;
 
     .chzn-container {
       width: 63px !important;
       border-radius: 0 5px 5px 0;
+      box-shadow: -1px 0 1px rgba(0, 0, 0, 0.2);
     }
 
     .ss-navigatedown {
@@ -782,7 +782,7 @@ button:hover {
 .unit-type-dropdown {
   display: inline-block;
   position: relative;
-  margin-right: 13px;
+  margin-right: 1.857143%;
   top: -3px;
 
   .chzn-container {
@@ -822,45 +822,45 @@ input {
   @include box-sizing(border-box);
   color: $c-inputgrey;
   font-size: $input-fontsize;
-  padding: 18px 0 18px 16px;
+  padding: 2.571% 0 2.571% 16px;
 
   &.xlarge {
-    padding: 22px 0 22px 20px;
+    padding: 3.14% 0 3.14% 2.857%;
     margin-bottom: 16px;
-    width: 478px;
+    width: 68.2857%;
   }
 
   &.large {
-    width: 413px;
-    margin: 11px 0 0 0; 
+    width: 59%;
+    margin: 1.57% 0 0 0; 
   }
 
   &.medium {
-    width: 383px;
-    margin: 11px 0 0 0px; 
+    width: 54.7143%;
+    margin: 1.57% 0 0 0px; 
   }
 
   &.smedium {
-    width: 185px;
+    width: 26.42857%;
     margin-top: 1px;
   }
 
   &.small {
-    width: 124px;
-    margin-right: 16px; 
+    width: 17.7143%;
+    margin-right: 2.28751%; 
     margin-top: 1px;
   }
 
   &.smaller {
-    width: 96px;
-    margin: 11px 13px 0 0;
-    padding: 18px 0 18px 14px; 
+    width: 13.7143%;
+    margin: 1.57% 1.857143% 0 0;
+    padding: 2.571% 0 2.571% 2%; 
   }
 }
 
 textarea {
   -webkit-appearance: none;
-  width: 700px;
+  width: 100%;
   background-color: $input-bg;
   border: 1px solid #dbdbdb;
   box-shadow: $input-boxshadow;
@@ -887,44 +887,3 @@ input[type="checkbox"] {
   padding: 0px;
   margin: 0 10px 0 0;
 }
-
-/* #Media Queries
-================================================== */
- 
-  
-  @media only screen and (min-width: 978px) {
-    ul.icons {
-      display: none;
-      margin: 0 auto;
-    }
-
-  }
- 
-  
-  @media only screen and (min-width: 0px) and (max-width: 978px) {
-    .global-sidebar {
-      width: 68px;
-
-      ul.text {
-        display: none;
-        margin: 0 auto;
-      }
-    }
-
-    .container {
-      width: 90%;
-      padding-left: 68px;
-    }
-  }
- 
- 
-  @media only screen and (max-width: 767px) {
-   
-  }
-  
-  @media only screen and (min-width: 480px) and (max-width: 767px) {
-    
-  }
- 
-  /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-  @media only screen and (max-width: 479px) {}
