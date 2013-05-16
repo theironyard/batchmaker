@@ -627,9 +627,8 @@ button:hover {
   padding: 15px 0 13px 0;
   width: 31%;
   @include border-radius($border-radius);
-  background: linear-gradient(to top, 
-    rgb(210,210,210) 0%,
-    rgb(235,235,235) 100%);
+  background-color: $c-lightgrey;
+  @include background(linear-gradient(top,rgb(235,235,235),rgb(210,210,210)));
   border: 1px solid #a3a3a3;
   display: inline-block;
   margin: 19px 0 21px 483px;
@@ -645,7 +644,7 @@ button:hover {
   display: inline-block;
   @include border-radius($border-radius);
   border: 1px solid $c-darkgrey;
-  background: $c-midgrey; /* Old browsers */
+  background-color: $c-midgrey; /* Old browsers */
   @include background(linear-gradient(top, $c-white, $c-midgrey));
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='$c-midgrey',GradientType=0 ); /* IE6-9 */
   vertical-align: top;
@@ -656,9 +655,8 @@ button:hover {
   width: 34.57143%;
   padding: 15px 0 16px 0;
   @include border-radius($border-radius);
-  background: linear-gradient(to top, 
-    rgb(120,120,120) 0%,
-    rgb(157,157,157) 100%);
+  @include background(linear-gradient(top, rgb(157,157,157), rgb(120,120,120)));
+  background-color: $c-darkestgrey;
   border: 1px solid #5a5a5a;
   font-size: 16px;
   font-weight: normal;
@@ -673,9 +671,7 @@ button:hover {
   float: right;
   margin: -4px 0px 50px 18px;
   @include border-radius($border-radius);
-  background: linear-gradient(to top, 
-    #787878 0%,
-    #9d9d9d 100%);
+  @include background(linear-gradient(top, #787878, #9d9d9d));
   border: 1px solid #5a5a5a;
   font-size: 17px;
   font-weight: 400;
@@ -887,3 +883,284 @@ input[type="checkbox"] {
   padding: 0px;
   margin: 0 10px 0 0;
 }
+
+/* #Media Queries
+================================================== */
+ 
+  
+  @media only screen and (min-width: 960px) {
+    ul.icons {
+      display: none;
+      margin: 0 auto;
+    }
+
+  }
+ 
+  
+  @media only screen and (min-width: 800px) and (max-width: 959px) {
+    .global-sidebar {
+      width: 68px;
+    }
+
+    ul.text {
+      display: none;
+    }
+
+    ul.icons {
+      display: visible;
+    }
+
+    .container {
+      width: 90%;
+      padding-left: 80px;
+
+      &.read-recipe-page {
+        width: 90%;
+      }
+
+      &.create-recipe-page {
+        width: 90%;
+      }
+    }
+  }
+ 
+ 
+  @media only screen and (min-width: 641px) and (max-width: 850px) {
+    .global-sidebar {
+      width: 68px;
+
+      ul.text {
+        display: none;
+        margin: 0 auto;
+      }
+    }
+
+    .container {
+      width: 90%;
+      padding-left: 80px;
+
+      &.read-recipe-page {
+        width: 90%;
+      }
+
+      &.create-recipe-page {
+        width: 90%;
+      }
+    }
+   
+  }
+  
+  @media only screen and (max-width: 820px) {
+
+    .global-sidebar {
+      display: none;
+    }
+
+    .container {
+      width: 90%;
+
+      &.read-recipe-page {
+        width: 90%;
+      }
+
+      &.create-recipe-page {
+        width: 90%;
+        padding-left: 5px;
+      }
+    }
+
+    .add-photo {
+      width: 100%;
+      padding: 31px 0;
+      margin: -20px auto 2.08751% auto;
+      float: none;
+      display: block;
+    }
+
+    input {
+      -webkit-appearance: none; // Very important so iOS shows inset box-shadows
+      font-size: $input-fontsize;
+      padding: 15px 0 15px 2.08751%;
+
+      &.xlarge {
+        padding: 3.14% 0 3.14% 2.857%;
+        margin-bottom: 2.08751%;
+        width: 100%;
+      }
+
+      &.large {
+        width: 69.838%;
+        margin-right: 2.08751%;
+        display: inline-block;
+      }
+
+      &.medium {
+        width: 81%;
+        margin: 2.08751% 0 0 0px; 
+      }
+
+      &.smedium {
+        width: 98%;
+        margin-top: 1px;
+      }
+
+      &.small {
+        width: 47.838%;
+        margin-right: 2.08751%; 
+        display: inline-block;
+        margin-top: 2.08751%;
+        margin-bottom: 2.08751%;
+      }
+
+      &.smaller {
+        width: 26%;
+        margin-right: 2.08751%; 
+        padding: 15px 0 15px 0;
+        text-align: center;
+        margin-bottom: 2.08751%;
+        display: inline-block;
+      }
+
+      &.omega { margin-right: 0; }
+    }
+
+    form {
+      text-align: center;
+      width: 100%;
+    }
+
+    .add-remove-button {
+      width: 15.2857%;
+      font-size: 14px;
+      margin: 7px 0 2.08751% 9px;
+      padding: 14px 0 14px 0px;
+      display: inline-block;
+    }
+
+    .section-heading {
+      &.step {
+        margin-top: 37px;
+      }
+    }
+
+    hr {
+
+      &.step-heading {
+        margin: -12px 0px 26px 0px;
+      }
+
+      &.personal-notes {
+        margin: -12px 0px 17px 0px;
+      } 
+    }
+
+    .add-step-button, .save-button {
+      width: 100%;
+      margin: 10px auto;
+    }
+    
+    /* ------------- */
+    /*   Dropdowns   */
+    /* ------------- */
+
+    .recipe-type-dropdown {
+      display: block;
+      position: relative;
+      top: -3px;
+
+      .chzn-container {
+        width: 100% !important;
+        margin-top: 6px; 
+      }
+
+      .ss-navigatedown {
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        top: 27px;
+        right: 40px;
+        z-index: 100;
+        font-size: 14px;
+
+        // avoid click events
+        pointer-events: none;
+        color: $c-inputgrey;
+      }
+    }
+
+    .temp-unit-wrap {
+      position: relative;
+
+      .temp-unit-dropdown {
+        position: absolute;
+        right: 9px;
+        display: block;
+        top: -51px;
+
+        .chzn-container {
+          width: 63px !important;
+          border-radius: 0 5px 5px 0;
+          box-shadow: -1px 0 1px rgba(0, 0, 0, 0.2);
+        }
+
+        .ss-navigatedown {
+          position: absolute;
+          width: 0px;
+          height: 0px;
+          top: 16px;
+          right: 23px;
+          z-index: 100;
+          font-size: 14px;
+
+          // avoid click events
+          pointer-events: none;
+          color: $c-inputgrey;
+        }
+      }
+    }
+
+    .unit-type-dropdown {
+      display: inline-block;
+      position: relative;
+      top: -3px;
+
+      .chzn-container {
+        width: 100% !important;
+      }
+
+      .ss-navigatedown { 
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        top: 24px;
+        right: 31px;
+        z-index: 100;
+        font-size: 14px;
+
+        // avoid click events
+        pointer-events: none;
+        color: $c-inputgrey;
+      }
+    }
+
+    .chzn-container-single .chzn-single {
+      padding: 15px 0 15px 8px;
+      font-size: $input-fontsize;
+    }
+
+    /* ------------- */
+    /* End Dropdowns */
+    /* ------------- */
+
+
+    p {
+        font-size: 18px;
+        display: block;
+        margin: 29px 9px 7px 0;
+        text-align: left;
+        font-family: $ff-head;
+    }
+  }
+ 
+  /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+  @media only screen and (max-width: 399px) {}
