@@ -652,11 +652,11 @@ button:hover {
 
   .ss-plus, .ss-hyphen {
     font-size: 18px;
-    line-height: 18px;
+    line-height: 23px;
     text-align: center;
     color: $c-inputgrey;
     position: relative;
-    top: 4px;
+    top: 3px;
     }
   }
 
@@ -731,11 +731,18 @@ button:hover {
   display: none;
 }
 
+.chzn-container-single .chzn-single {
+  background-color: $input-bg;
+  @include border-radius(5px);
+  -moz-background-clip   : padding;
+  -webkit-background-clip: padding-box;
+  background-clip        : padding-box;
+}
+
 .recipe-type-dropdown {
   display: inline-block;
   position: relative;
   margin-right: 1.857143%;
-  top: -3px;
 
   .chzn-container {
     width: 222px !important;    
@@ -760,8 +767,9 @@ button:hover {
 
   .temp-unit-dropdown {
     position: absolute;
-    right: 0;
-    top: -58px;
+    right: 2px;
+    top: -55px;
+    line-height: .8;
 
     .chzn-container {
       width: 63px !important;
@@ -788,7 +796,7 @@ button:hover {
   display: inline-block;
   position: relative;
   margin-right: 1.857143%;
-  top: -3px;
+  top: 1px;
 
   .chzn-container {
     width: 124px !important;
@@ -914,6 +922,10 @@ input[type="checkbox"] {
       width: 68px;
     }
 
+    .mobile-nav {
+      display: none;
+    }
+
     ul.text {
       display: none;
     }
@@ -1000,7 +1012,7 @@ input[type="checkbox"] {
 
       &.large {
         -webkit-appearance: none;
-        width: 71.922%;
+        width: 71.9%;
         margin-right: 2.08751%;
         display: inline-block;
       }
@@ -1013,12 +1025,12 @@ input[type="checkbox"] {
 
       &.smedium {
         -webkit-appearance: none;
-        width: 80%;
+        width: 100%;
       }
 
       &.small {
         -webkit-appearance: none;
-        width: 47.978%;
+        width: 48.95%;
         margin-right: 2.08751%; 
         display: inline-block;
         margin-top: 2.08751%;
@@ -1044,11 +1056,20 @@ input[type="checkbox"] {
     }
 
     .add-remove-button {
-      width: 15.2857%;
+      width: 15.857%;
       font-size: 14px;
       margin: 7px 0 6% 9px;
       padding: 14px 0 14px 0px;
       display: inline-block;
+
+      .ss-plus, .ss-hyphen {
+        font-size: 18px;
+        line-height: 19px;
+        text-align: center;
+        color: $c-inputgrey;
+        position: relative;
+        top: 3px;
+        }
     }
 
     .section-heading {
@@ -1084,11 +1105,25 @@ input[type="checkbox"] {
     /* ------------- */
     /*   Dropdowns   */
     /* ------------- */
+    
+    .chzn-container-single .chzn-single {
+      padding: 16px 0 15px 0;
+      font-size: 18px;
+      line-height: 1;
+      background-color: $input-bg;
+      @include border-radius(5px);
+      -moz-background-clip   : padding;
+      -webkit-background-clip: padding-box;
+      background-clip        : padding-box;
+    }
+
+    .chzn-container-single .chzn-single span { padding-left: 7px; }
 
     .recipe-type-dropdown {
       display: block;
       position: relative;
-      top: -3px;
+      width: 100%;
+      top: -2px;
 
       .chzn-container {
         width: 100% !important;
@@ -1110,70 +1145,54 @@ input[type="checkbox"] {
       }
     }
 
-    // .temp-unit-wrap {
-    //   position: relative;
-
-    //   .temp-unit-dropdown {
-    //     position: absolute;
-    //     right: 10px;
-    //     display: block;
-    //     top: -50px;
-
-    //     .chzn-container {
-    //       width: 57px !important;
-    //       padding-left: 10px;
-    //       box-shadow: -2px -1px 1px rgba(0,0,0,.2);
-    //     }
-
-    //     .ss-navigatedown {
-    //       position: absolute;
-    //       width: 0px;
-    //       height: 0px;
-    //       top: 20px;
-    //       right: 32px;
-    //       z-index: 100;
-    //       font-size: 14px;
-
-    //       // avoid click events
-    //       pointer-events: none;
-    //       color: $c-inputgrey;
-    //     }
-    //   }
-    // }
-
-    .temp-unit-dropdown {
+    .temp-unit-wrap {
       position: relative;
-      right: 10px;
-      display: block;
-      top: -50px;
+      width: 100%;
+      float: right;
+      top: -1px;
+      right: 1px;
 
-      .chzn-container {
-        width: 20% !important;
-        box-shadow: -2px 0px 1px rgba(0,0,0,.2);
-      }
-
-      .ss-navigatedown {
+      .temp-unit-dropdown {
         position: absolute;
-        width: 0px;
-        height: 0px;
-        top: 20px;
-        right: 32px;
-        z-index: 100;
-        font-size: 14px;
+        width: 20%;
+        right: 1px;
+        top: -51px;
 
-        // avoid click events
-        pointer-events: none;
-        color: $c-inputgrey;
+        .chzn-container {
+          width: 100% !important;
+          box-shadow: -2px 0px 1px rgba(0,0,0,.2);
+        }
+
+        .chzn-container .chzn-single {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;          
+        }
+
+        .ss-navigatedown {
+          position: absolute;
+          width: 0px;
+          height: 0px;
+          top: 20px;
+          right: 25px;
+          z-index: 100;
+          font-size: 14px;
+
+          // avoid click events
+          pointer-events: none;
+          color: $c-inputgrey;
+        }
       }
-    }
+  }
 
     .unit-type-dropdown {
       display: inline-block;
       position: relative;
+      width: 70.5%;
       top: -3px;
 
+
       .chzn-container {
-        width: 200px !important;
+        width: 100% !important;
       }
 
       .ss-navigatedown { 
@@ -1191,11 +1210,6 @@ input[type="checkbox"] {
       }
     }
 
-    .chzn-container-single .chzn-single {
-      padding: 15px 0 15px 5%;
-      font-size: 18px;
-      line-height: 1;
-    }
 
     /* ------------- */
     /* End Dropdowns */

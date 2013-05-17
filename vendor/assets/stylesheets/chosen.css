@@ -32,13 +32,8 @@
 
 /* @group Single Chosen */
 .chzn-container-single .chzn-single {
-  background-color: #ededed;
-  -webkit-border-radius: 5px;
-  -moz-border-radius   : 5px;
-  border-radius        : 5px;
-  -moz-background-clip   : padding;
-  -webkit-background-clip: padding-box;
-  background-clip        : padding-box;
+  
+ 
   display: block;
   overflow: hidden;
   white-space: nowrap;
