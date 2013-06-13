@@ -296,7 +296,7 @@ header {
   width: 100%;
   text-align: left;
   margin: 0 auto 0 auto;
-  padding-left: 200px;
+  // padding-left: 200px;
 
   &.read-recipe-page {
     max-width: 809px;
@@ -949,6 +949,14 @@ input[type="checkbox"] {
   }
   
   @media only screen and (max-width: 820px) {
+
+    h4 {
+      font-size: 28px;
+    }
+
+    .content {
+      top: 75px;
+    }
 
     .global-sidebar, .salutation, .navigation {
       display: none;
