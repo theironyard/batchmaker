@@ -37,7 +37,9 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
-gem "unicorn", ">= 4.3.1"
+gem "unicorn"
+gem "slim"
+gem "rails-backbone"
 gem "skim"
 gem "rspec-rails", ">= 2.12.2", :group => [:development, :test]
 gem "capybara", ">= 2.0.3", :group => :test
