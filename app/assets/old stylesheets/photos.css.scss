@@ -5,7 +5,7 @@
 @import "compass/css3/box-shadow";
 @import 'variables';
 
-.PreviewRecipePhoto {
+.preview-recipe-photo {
   width: 800px;
   height: 400px; 
   @include border-radius($border-radius);

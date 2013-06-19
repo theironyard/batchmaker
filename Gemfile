@@ -29,7 +29,7 @@ gem 'jquery-rails'
 # gem 'jbuilder'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano'
@@ -37,7 +37,6 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
-gem "unicorn"
 gem "slim"
 gem "rails-backbone"
 gem "skim"
