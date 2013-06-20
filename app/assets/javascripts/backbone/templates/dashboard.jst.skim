@@ -8,18 +8,18 @@
     .ss-navigateright
 
    
-    
-    .add-photo
-      .ss-plus
-      h6 Add Photo
+    a href="#"
+      .add-photo
+        .ss-plus
+        h6 Add Photo
 
-    .recipe-type-thumb
+      .recipe-type-thumb
 
-    .recipe-type-thumb
+      .recipe-type-thumb
 
-    .recipe-type-thumb
+      .recipe-type-thumb
 
-    .recipe-type-thumb
+      .recipe-type-thumb
 
   .photo-content
         

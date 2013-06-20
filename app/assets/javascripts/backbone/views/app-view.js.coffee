@@ -1,8 +1,5 @@
 AppView = Backbone.View.extend({
 
-  events: 
-    'click .js-create-new-recipe': 'createNewRecipeView',
-  
   initialize: ->
 
     # @render()
@@ -120,9 +117,6 @@ AppView = Backbone.View.extend({
       ]);  # End ingredients.add
 
     new DashboardView()
-
-  createNewRecipeView: ->
-    console.log "Create New Recipe Console Log"
 
 })
 

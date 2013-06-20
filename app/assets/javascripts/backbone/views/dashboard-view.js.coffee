@@ -1,8 +1,5 @@
 window.DashboardView = Backbone.View.extend({
 
-  events: 
-    'click .js-create-new-recipe': 'createNewRecipeView',
-
   initialize: ->
     
     @render()
@@ -33,10 +30,5 @@ window.DashboardView = Backbone.View.extend({
     ingredients.each (ingredient, index) ->
       console.log 'this loop iteration is ', ingredient.get('ingredientName')
       $('.my-pantry-row').append JST['backbone/templates/ingredients/pantry-grid-item'](ingredient.attributes)
-
-  createNewRecipeView: ->
-    new CreateNewRecipe()
-    $('.global-container').html ''
-    $('.global-container').append( CreateNewRecipe() )
   
 })
