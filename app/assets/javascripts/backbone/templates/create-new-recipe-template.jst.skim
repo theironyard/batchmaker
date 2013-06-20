@@ -1,0 +1,89 @@
+.container.create-recipe-page
+  .content
+
+    h6.section-heading Basic Info
+    hr
+
+    .add-photo
+      .ss-plus
+      h6 Add Photo
+
+    input.xlarge placeholder="Recipe Name"
+    input.xlarge placeholder="By"
+    form
+      input type="checkbox" 
+        p Make it Public 
+      input type="checkbox"
+        p Keep it Private 
+    
+    .recipe-type-dropdown
+      .ss-navigatedown
+      select data-placeholder="Recipe Type" class="recipe-type chzn-select"
+        option value=""
+        option value="Breakfast" Breakfast
+        option value="Lunch" Lunch
+        option value="Dinner" Dinner
+        option value="Dessert" Dessert
+
+    input.small placeholder="Prep Time"
+    input.small.omega placeholder="Cook Time" 
+    input.smedium placeholder="Cook Temp"
+      
+    .temp-unit-wrap
+      .temp-unit-dropdown  
+        .ss-navigatedown
+        select data-placeholder="F&deg;" class="temp-unit chzn-select"
+          option selected="true" value="F" F&deg;
+          option value="C" C&deg;
+
+    p This recipe will make
+    input.smaller placeholder="Amount"
+    input.large.omega placeholder="cookies, loaves, etc"
+
+    h6.section-heading.step Step 1
+    hr.step-heading
+
+    input.smaller placeholder="#" 
+    .unit-type-dropdown
+      .ss-navigatedown
+      select data-placeholder="Unit" class="unit-type chzn-select"
+        option value=""
+        option value="Cup" Cup
+        option value="Teaspoon" Teaspoon
+        option value="Tablespoon" Tablespoon
+        option value="Ounce" Ounce
+        option value="Quart" Quart
+        option value="Pound" Pound
+        option value="Pint" Pint
+
+    input.medium placeholder="breads flour"
+    
+    button.add-remove-button 
+      .ss-plus
+
+    / input.smaller placeholder="Amount" 
+    / .unit-type-dropdown
+    /   .ss-navigatedown
+    /   select data-placeholder="Unit" class="unit-type chzn-select"
+    /     option value=""
+    /     option value="Cup" Cup
+    /     option value="Teaspoon" Teaspoon
+    /     option value="Tablespoon" Tablespoon
+    /     option value="Ounce" Ounce
+    /     option value="Quart" Quart
+    /     option value="Pound" Pound
+    /     option value="Pint" Pint
+
+    / input.medium placeholder="Ingredients"
+    / button.add-remove-button 
+    /   .ss-plus
+
+    textarea.directions placeholder="What directions go with this step?"
+    button.add-step-button Add another step
+
+    h6.section-heading.p-notes Personal Notes
+    hr.personal-notes
+
+    //input for user to enter notes
+    textarea.personal-notes
+    button.save-button Save this recipe!

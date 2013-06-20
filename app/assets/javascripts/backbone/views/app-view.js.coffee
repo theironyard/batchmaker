@@ -1,11 +1,18 @@
 AppView = Backbone.View.extend({
+
+  events: 
+    'click .js-create-new-recipe': 'createNewRecipeView',
   
   initialize: ->
 
-    @render()
+    # @render()
     console.log 'Dashboard View is instantiated in AppView'
 
+    window.publicCollection = new Recipes()
+    window.popularCollection = new Recipes()
+    window.favoriteCollection = new Recipes()
     window.recipes = new Recipes()
+    window.ingredients = new Ingredients()
 
     recipes.add([
           
@@ -57,15 +64,65 @@ AppView = Backbone.View.extend({
 
             "personalNotes": "Simple to make, just dip and bake! Garlicky goodness in a breaded chicken dish. Yum!"
           },
+          
           {
             recipeName: "Foot Oven"
           }
 
       ]);  # End recipe.add
 
+    publicCollection.add([
+          
+          {
+            recipeName: "Public Recipe 1",
+          },
+          
+          {
+            recipeName: "Public Recipe 2"
+          }
+
+      ]);  # End public.add
+
+    popularCollection.add([
+          
+          {
+            recipeName: "Popular Recipe 1",
+          },
+          
+          {
+            recipeName: "Popular Recipe 2"
+          }
+
+      ]);  # End populars.add
+
+    favoriteCollection.add([
+          
+          {
+            recipeName: "Favorite Recipe 1",
+          },
+          
+          {
+            recipeName: "Favorite Recipe 2"
+          }
+
+      ]);  # End favorites.add
+
+    ingredients.add([
+          
+          {
+            ingredientName: "Ingredient 1",
+          },
+          
+          {
+            ingredientName: "Ingredient 2"
+          }
+
+      ]);  # End ingredients.add
+
     new DashboardView()
-  render: ->
-    
+
+  createNewRecipeView: ->
+    console.log "Create New Recipe Console Log"
 
 })
 

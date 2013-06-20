@@ -1,4 +1,4 @@
-CreateNewRecipe = Backbone.View.extend ({
+window.RecipeStepView = Backbone.View.extend ({
 
   initialize: ->
     @render( new RecipeIngredientView() )
