@@ -1,0 +1,36 @@
+window.DashboardView = Backbone.View.extend({
+
+  initialize: ->
+    
+    @render()
+
+  render: ->
+
+    $('.global-container').html JST['backbone/templates/dashboard']()
+
+    console.log 'recipes = ', recipes
+
+    # Loops through appropriate instance of Recipe Collection
+    # and gets recipeName and appends it to specified div and applies appropriate JST
+    recipes.each (recipe, index) ->
+      console.log 'this loop iteration is ', recipe.get('recipeName')
+      $('.my-recipes-row').append JST['backbone/templates/recipes/grid-item'](recipe.attributes)
+    
+    publicCollection.each (recipe, index) ->
+      console.log 'this loop iteration is ', recipe.get('recipeName')
+      $('.public-recipes-row').append JST['backbone/templates/recipes/grid-item'](recipe.attributes)
+    
+    popularCollection.each (recipe, index) ->
+      console.log 'this loop iteration is ', recipe.get('recipeName')
+      $('.popular-recipes-row').append JST['backbone/templates/recipes/grid-item'](recipe.attributes)
+    
+    favoriteCollection.each (recipe, index) ->
+      console.log 'this loop iteration is ', recipe.get('recipeName')
+      $('.favorite-recipes-row').append JST['backbone/templates/recipes/grid-item'](recipe.attributes)
+    
+    # This one is a little different bc it isn't a part of Recipe Collection. It's Ingredient Collection.
+    ingredients.each (ingredient, index) ->
+      console.log 'this loop iteration is ', ingredient.get('ingredientName')
+      $('.my-pantry-row').append JST['backbone/templates/ingredients/pantry-grid-item'](ingredient.attributes)
+  
+})

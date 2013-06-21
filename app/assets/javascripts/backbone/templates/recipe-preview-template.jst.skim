@@ -2,9 +2,9 @@
   .content
 
     .big-ass-recipe-title
-      h4 The Most Awesome Chocolate Chip Cookies
+      h4 = @recipeName
 
-    .byline By Rasheeda
+    .byline = @author
 
     .cover-photo
       img src="http://www.wallsonline.net/wp-content/uploads/2012/10/Outer-Space-Stars-Planets-Earth.jpg"
@@ -15,7 +15,7 @@
       .summary
         .glance-box
           .glance-title.labels Recipe Type
-          span Dessert
+          span = @recipeType
         .glance-box
           .glance-title.labels Prep Time
           span 15
