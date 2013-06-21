@@ -41,7 +41,6 @@
     input.large.omega placeholder="cookies, loaves, etc"
 
     .js-recipe-step-container
-    / .js-ingredient-container
 
     h6.section-heading.p-notes Personal Notes
     hr.personal-notes

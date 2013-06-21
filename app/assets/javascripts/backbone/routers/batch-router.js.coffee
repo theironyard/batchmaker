@@ -1,5 +1,7 @@
 BatchRouter = Backbone.Router.extend({
   
+  # my app view is the header and sidebar
+  # dashboard is first view called making it index.html
   routes:
     '': 'dashboard',
     'recipes': 'recipes',

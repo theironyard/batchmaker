@@ -768,7 +768,7 @@ button:hover {
 .add-photo {
   width: 190px;
   padding: 54px 0;
-  display: inline-block;
+  float: left;
   background: $c-darkestgrey;
   @include border-radius($border-radius);
   text-align: center;

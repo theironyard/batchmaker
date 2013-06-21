@@ -10,7 +10,7 @@ window.DashboardView = Backbone.View.extend({
 
     console.log 'recipes = ', recipes
 
-    # Loops through Recipe Collection and different instances of that collection
+    # Loops through appropriate instance of Recipe Collection
     # and gets recipeName and appends it to specified div and applies appropriate JST
     recipes.each (recipe, index) ->
       console.log 'this loop iteration is ', recipe.get('recipeName')

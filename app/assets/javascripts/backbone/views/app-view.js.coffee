@@ -5,12 +5,14 @@ AppView = Backbone.View.extend({
     # @render()
     console.log 'Dashboard View is instantiated in AppView'
 
+    # creating new instance of Recipes Collection for specific subcateories
     window.publicCollection = new Recipes()
     window.popularCollection = new Recipes()
     window.favoriteCollection = new Recipes()
     window.recipes = new Recipes()
     window.ingredients = new Ingredients()
 
+    # stubbed out recipes to use while setting up backbone
     recipes.add([
           
           {
@@ -118,6 +120,6 @@ AppView = Backbone.View.extend({
 
 })
 
-
+# Loading AppView on document ready
 $ ->
   appView = new AppView()
