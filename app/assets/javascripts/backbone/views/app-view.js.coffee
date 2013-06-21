@@ -116,8 +116,6 @@ AppView = Backbone.View.extend({
 
       ]);  # End ingredients.add
 
-    new DashboardView()
-
 })
 
 

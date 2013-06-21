@@ -1,106 +1,49 @@
-.container
-  
-  .photo-content
-      
-    h6.steps-title My Recipes
+.recipe-row
+  .my-recipes-row
+    h6.section-heading My Recipes
     hr
-    .view-all View all
-    .ss-navigateright
-
-   
-    a href="#"
-      .add-photo
-        .ss-plus
-        h6 Add Photo
-
-      .recipe-type-thumb
-
-      .recipe-type-thumb
-
-      .recipe-type-thumb
-
-      .recipe-type-thumb
-
-  .photo-content
-        
-      h6.steps-title Public Recipes
-      hr
-      .view-all View all
+    .view-all
+      h6
+        small View all
       .ss-navigateright
 
-     
-      
-      .add-photo
+    a href="#newrecipe"
+      .add-photo.js-create-new-recipe
         .ss-plus
-        h6 Add Photo
+        h6 Add a Recipe
 
-      .recipe-type-thumb
-
-      .recipe-type-thumb
-
-      .recipe-type-thumb
-
-      .recipe-type-thumb
-
-  .photo-content
-        
-      h6.steps-title Popular Recipes
-      hr
-      .view-all View all
+.recipe-row
+  .public-recipes-row
+    h6.section-heading Public Recipes
+    hr
+    .view-all
+      h6
+        small View all
       .ss-navigateright
 
-     
-      
-      .add-photo
-        .ss-plus
-        h6 Add Photo
-
-      .recipe-type-thumb
-
-      .recipe-type-thumb
-
-      .recipe-type-thumb
-
-      .recipe-type-thumb
-
-  .photo-content
-        
-      h6.steps-title My Favorite Recipes
-      hr
-      .view-all View all
+.recipe-row
+  .popular-recipes-row
+    h6.section-heading Popular Recipes
+    hr
+    .view-all
+      h6
+        small View all
       .ss-navigateright
 
-     
-      
-      .add-photo
-        .ss-plus
-        h6 Add Photo
-
-      .recipe-type-thumb
-
-      .recipe-type-thumb
-
-      .recipe-type-thumb
-
-      .recipe-type-thumb
-
-  .photo-content
-        
-      h6.steps-title My Pantry
-      hr
-      .view-all View all
+.recipe-row
+  .favorite-recipes-row
+    h6.section-heading My Favorite Recipes
+    hr
+    .view-all
+      h6
+        small View all
       .ss-navigateright
 
-     
-      
-      .add-photo
-        .ss-plus
-        h6 Add Photo
-
-      .recipe-type-thumb
-
-      .recipe-type-thumb
-
-      .recipe-type-thumb
-
-      .recipe-type-thumb
+.recipe-row
+  .my-pantry-row
+    h6.section-heading My Pantry
+    hr
+    .view-all
+      h6
+        small View all
+      .ss-navigateright

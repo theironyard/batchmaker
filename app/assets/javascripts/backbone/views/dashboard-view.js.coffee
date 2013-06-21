@@ -6,6 +6,8 @@ window.DashboardView = Backbone.View.extend({
 
   render: ->
 
+    $('.global-container').html JST['backbone/templates/dashboard']()
+
     console.log 'recipes = ', recipes
 
     # Loops through Recipe Collection and different instances of that collection

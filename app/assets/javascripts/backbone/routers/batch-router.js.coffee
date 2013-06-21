@@ -1,30 +1,26 @@
 BatchRouter = Backbone.Router.extend({
   
   routes:
-    'home': 'dashboard',
+    '': 'dashboard',
     'recipes': 'recipes',
     'newrecipe': 'newrecipe'
 
   dashboard: ->
-    $('.global-container').html JST['app/views/pages/index']
+    new DashboardView()
+    console.log 'dashboard called from router'
 
   recipes: (recipeName)->
-    $('.global-container').html ''
-    $('.global-container').html JST['backbone/templates/recipe-preview-template']
+    new RecipePreview()
+    console.log 'RecipePreview called from router'
   
   newrecipe: -> 
-    console.log "Create New Recipe Console Log"
-    new CreateNewRecipe()
-    console.log "CreateNewRecipe instantiated"
-    $('.global-container').html ''
-    $('.global-container').html JST['backbone/templates/create-new-recipe-template']  
+    new RecipeForm()
+    console.log "new recipe called from router"
 
 });
 
 # new instance of TestRouter
 batchRouter = new BatchRouter();
 # Start Backbone.history - MUST do this
-Backbone.history.start({});
-
-$('.logo').click ->
-  batchRouter.navigate 'home', trigger => true
+$ ->
+  Backbone.history.start({});
