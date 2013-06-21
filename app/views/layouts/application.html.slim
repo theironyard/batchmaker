@@ -1,13 +1,12 @@
 doctype html
 html
 head
-  title
-    Batchmaker
+  title Batchmaker
   meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"
   = stylesheet_link_tag    "application", :media => "all"
   = javascript_include_tag "application"
   = csrf_meta_tags
-head
+
 body
 
     
@@ -18,21 +17,22 @@ body
 
     .salutation The kitchen is yours, Chef!
 
-    .logo
+    a href="#"
+     .logo
       img src="http://placehold.it/200x50"
 
     .navigation
 
       ul
-        a href="#"
-          li.ss-plus
+        a href="#newrecipe"
+          li.ss-plus.js-create-new-recipe
         a href="#"
           li.ss-settings
         a href="#"
           li.ss-user
     
 
-  div.global-sidebar
+  .global-sidebar
 
     ul.text
 
@@ -56,19 +56,19 @@ body
 
       li
         a href="#"
-          img src="images/fake-icon.png"
+          img src="http://f.cl.ly/items/0H2S2Q2b0h0C3a1L1e10/pepper.png"
       li
         a href="#"
-          img src="images/fake-icon.png"
+          img src="http://f.cl.ly/items/0H2S2Q2b0h0C3a1L1e10/pepper.png"
       li
         a href="#"
-          img src="images/fake-icon.png"
+          img src="http://f.cl.ly/items/0H2S2Q2b0h0C3a1L1e10/pepper.png"
       li
         a href="#"
-          img src="images/fake-icon.png"
+          img src="http://f.cl.ly/items/0H2S2Q2b0h0C3a1L1e10/pepper.png"
       li
         a href="#"
-          img src="images/fake-icon.png"
+          img src="http://f.cl.ly/items/0H2S2Q2b0h0C3a1L1e10/pepper.png"
 
   div.global-container
     = yield

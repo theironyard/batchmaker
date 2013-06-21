@@ -1,7 +1,4 @@
 class PagesController < ApplicationController
-  
-  def test
-  end
 
   def newrecipe
   end
@@ -9,7 +6,7 @@ class PagesController < ApplicationController
   def recipe_preview
   end
 
-  def dropdown
+  def dashboard
   end
   
 end
