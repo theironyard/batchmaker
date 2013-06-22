@@ -6,6 +6,7 @@ BatchRouter = Backbone.Router.extend({
     '': 'dashboard',
     'recipes': 'recipes',
     'newrecipe': 'newrecipe'
+    'myrecipes': 'showMyRecipes'
 
   dashboard: ->
     new DashboardView()
@@ -18,6 +19,9 @@ BatchRouter = Backbone.Router.extend({
   newrecipe: -> 
     new RecipeForm()
     console.log "new recipe called from router"
+
+  showMyRecipes: ->
+    new MyRecipesView
 
 });
 
