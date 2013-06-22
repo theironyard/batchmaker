@@ -1,0 +1,4 @@
+a href="#"
+  .recipe-grid-container
+    .grid-item
+    = @ingredientName

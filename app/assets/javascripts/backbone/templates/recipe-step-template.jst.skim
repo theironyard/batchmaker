@@ -1,0 +1,7 @@
+h6.section-heading.step Step 1
+hr.step-heading
+
+.js-ingredient-container
+
+textarea.directions placeholder="What directions go with this step?"
+button.add-step-button Add another step
