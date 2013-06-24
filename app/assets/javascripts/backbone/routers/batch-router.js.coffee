@@ -21,7 +21,7 @@ BatchRouter = Backbone.Router.extend({
     console.log "new recipe called from router"
 
   showMyRecipes: ->
-    new MyRecipesView
+    new MyRecipesView()
 
 });
 
