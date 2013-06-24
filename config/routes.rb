@@ -5,4 +5,6 @@ Batchmaker::Application.routes.draw do
   get 'recipes' => 'pages#recipes'
   get 'dashboard' => 'pages#dashboard'
   get '' => 'pages#/index/index'
+  get 'myrecipes' => 'pages#myrecipes'
+  get 'signup' => 'pages#signup'
 end

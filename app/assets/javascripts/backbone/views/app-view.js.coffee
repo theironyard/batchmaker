@@ -66,6 +66,22 @@ AppView = Backbone.View.extend({
           
           {
             recipeName: "Foot Oven"
+          },
+
+          {
+            recipeName: "Boot Oven"
+          },
+
+          {
+            recipeName: "Foot Lovin'"
+          },
+
+          {
+            recipeName: "Hoot Owlen"
+          },
+
+          {
+            recipeName: "Root Coven"
           }
 
       ]);  # End recipe.add
