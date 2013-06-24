@@ -1,4 +1,4 @@
-AppView = Backbone.View.extend({
+window.AppView = Backbone.View.extend({
 
   initialize: ->
 
@@ -135,7 +135,3 @@ AppView = Backbone.View.extend({
       ]);  # End ingredients.add
 
 })
-
-# Loading AppView on document ready
-$ ->
-  appView = new AppView()

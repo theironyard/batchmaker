@@ -48,6 +48,3 @@ BatchRouter = Backbone.Router.extend({
 
 # new instance of TestRouter
 batchRouter = new BatchRouter();
-# Start Backbone.history - MUST do this
-$ ->
-  Backbone.history.start({});

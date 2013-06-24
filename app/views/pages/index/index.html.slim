@@ -1,49 +1,8 @@
-/ .recipe-row
-/   .my-recipes-row
-/     h6.section-heading My Recipes
-/     hr
-/     .view-all
-/       h6
-/         small View all
-/       .ss-navigateright
+h1 hey
 
-/     a href="#newrecipe"
-/       .add-photo.js-create-new-recipe
-/         .ss-plus
-/         h6 Add a Recipe
-
-/ .recipe-row
-/   .public-recipes-row
-/     h6.section-heading Public Recipes
-/     hr
-/     .view-all
-/       h6
-/         small View all
-/       .ss-navigateright
-
-/ .recipe-row
-/   .popular-recipes-row
-/     h6.section-heading Popular Recipes
-/     hr
-/     .view-all
-/       h6
-/         small View all
-/       .ss-navigateright
-
-/ .recipe-row
-/   .favorite-recipes-row
-/     h6.section-heading My Favorite Recipes
-/     hr
-/     .view-all
-/       h6
-/         small View all
-/       .ss-navigateright
-
-/ .recipe-row
-/   .my-pantry-row
-/     h6.section-heading My Pantry
-/     hr
-/     .view-all
-/       h6
-/         small View all
-/       .ss-navigateright
+javascript:
+  $(function(){
+    appView = new AppView()
+    // Start Backbone.history - MUST do this
+    Backbone.history.start({});
+  })
