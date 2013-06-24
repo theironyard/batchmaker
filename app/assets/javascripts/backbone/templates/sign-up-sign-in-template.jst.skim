@@ -1,0 +1,28 @@
+/ html
+/ head
+/   title Welcome to Batchmaker/title
+/   link rel="stylesheet" type="text/css" href="style.css"
+/   link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'
+
+.su-wrapper
+
+  header
+    h2 Welcome to
+    h1 Batchmaker
+    
+  .left-side
+    img src="http://placehold.it/600x600"
+
+  .right-side
+    p
+    | Skateboard VHS pour-over raw denim jean shorts. Semiotics twee fap pickled. Irony Bushwick fixie jean shorts keytar, actually dreamcatcher viral cray vegan pug american apparel wayfarers scenester. Synth tote bag PBR four loko lomo, tumblr biodiesel blog twee Portland bitters mlkshk.
+    
+    h2
+      small Don't you want to sign up?
+    form
+      input placeholder="Name"
+      input placeholder="Email"
+      button type="submit"Submit
+
+  footer
+    p Made in friendly Greenville, South Carolina
