@@ -39,6 +39,7 @@ gem "rails-backbone"
 gem "skim"
 
 gem "unicorn", ">= 4.3.1"
+gem "sqlite3"
 gem "pg", ">= 0.15.0"
 gem "rspec-rails", ">= 2.12.2", :group => [:development, :test]
 gem "capybara", ">= 2.0.3", :group => :test
