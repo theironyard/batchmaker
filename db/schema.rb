@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130625175041) do
+ActiveRecord::Schema.define(:version => 20130625185943) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -67,7 +67,7 @@ ActiveRecord::Schema.define(:version => 20130625175041) do
     t.string   "author"
     t.boolean  "public"
     t.string   "image"
-    t.string   "type"
+    t.string   "category"
     t.integer  "prep_time"
     t.integer  "cook_time"
     t.integer  "cook_temp"
