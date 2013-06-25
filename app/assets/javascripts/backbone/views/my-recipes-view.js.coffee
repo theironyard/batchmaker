@@ -4,11 +4,12 @@ window.MyRecipesView = Backbone.View.extend({
     @render()
 
   render: ->
-    console.log 'Rendering PublicRecipesView'
+    console.log 'Rendering MyRecipesView'
     $('.global-container').html ''
+    $('.global-container').html JST['backbone/templates/recipes/grid-item']()
 
     recipes.each (recipe, index) ->
       console.log 'this loop iteration is ', recipe.get('recipeName')
-      $('.global-container').append JST['backbone/templates/recipes/grid-item'](recipe.attributes)
+      $('.my-recipes-row').append JST['backbone/templates/recipes/grid-item'](recipe.attributes)
 
   })

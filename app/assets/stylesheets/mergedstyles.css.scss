@@ -3,7 +3,6 @@
 @import "compass/utilities";
 @import "compass/css3/box-sizing";
 @import "compass/css3/box-shadow";
-@import 'variables';
 
 //----------------------
 //
@@ -21,55 +20,24 @@
 //
 //---------------------
 
-$c-slate: #232323;
-$c-midnight: #254a5d;
-$c-aqua: #76c7a5;
-$c-ivory: #f9f5eb;
-$c-marigold: #efb968; //Great color name, Jen!
-
-//----------GREYSCALE COLORS FOR HI-FI WIREFRAME
-
-$c-lightgrey: #ededed;
-$c-midgrey: #e0e0e0;
-$c-darkgrey: #c5c5c5;
-$c-darkestgrey: #b2b2b2;
-$c-inputgrey: #585858;
-
-$c-white: #fff;
+$c-pepper: #232323;
+$c-blueberry: #254a5d;
+$c-spinach: #76c7a5;
+$c-cream: rgb(248,248,248);
+$c-pumpkin: #efb968;
+$c-white: white;
 
 $ff-head: 'Source Sans Pro',Helvetica,Arial,sans-serif;
 $ff-body: 'Noticia Text',Georgia,'New Times Roman',serif;
 
 $border-radius: 5px;
 
-$input-bg: rgb(237, 237, 237);
+$input-bg: lighten($c-cream, 5%);
 $input-boxshadow: inset 0px 1px 2px rgba(0,0,0,.3);
 $input-border: 0px;
 $input-height: 50px;
 $input-width: 700px;
 $input-fontsize: 17px;
-
-//----------------------
-//
-// Colors
-//
-//---------------------
-
-
-.slate { color: $c-slate; }
-.slate-bg { background-color: $c-slate; }
-
-.midnight { color: $c-midnight; }
-.midnight-bg { background-color: $c-midnight; }
-
-.aqua { color: $c-aqua; }
-.aqua-bg { background-color: $c-aqua; }
-
-.ivory { color: $c-ivory; }
-.ivory-bg { background-color: $c-ivory; }
-
-.marigold { color: $c-marigold; }
-.marigold-bg { background-color: $c-marigold; }
 
 //---------------------------------
 //
@@ -79,14 +47,15 @@ $input-fontsize: 17px;
 
 // IMPORT-------------
 
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200italic,|Noticia+Text:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
 
 
 // DEFAULTS-------------
 
 body {
+  background-color: $c-cream;
   font-family: $ff-body;
-  color: $c-slate;
+  color: $c-pepper;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
 }
@@ -94,14 +63,14 @@ body {
 p {
     font-size: 18px;
     display: inline-block;
-    margin: 40px 19px 52px 0;
+    margin: 40px 18px 52px 0;
     font-family: $ff-head;
 }
 
 // HEADINGS Large-------------
 
 h1, h2, h3, h4 {
-  color: $c-midnight;
+  color: $c-blueberry;
   letter-spacing: -0.04em;
   font-family: $ff-head;
   font-weight: 200;
@@ -125,7 +94,7 @@ h4 {
 // HEADINGS Small-------------
 
 h5, h6 {
-  color: $c-slate;
+  color: $c-pepper;
   font-family: $ff-body;
   line-height: 1.3;
 }
@@ -143,7 +112,7 @@ h6 {
 .labels {
   font-size: 14px;
   font-weight: 400;
-  color: $c-darkgrey;
+  color: $c-pepper;
   padding-top: 2px;
   padding-bottom: 4px;
   font-family: $ff-head;
@@ -161,13 +130,12 @@ h6 {
   width: 200px;
   top: 68px;
   bottom: 0;
-  background-color: $c-lightgrey;
-  color: $c-darkgrey;
+  background-color: $c-cream;
   z-index: 9998;
 
 
   ul.text, ul.icons {
-    width: 120px;
+    width: 140px;
     margin: 0 auto;
     margin-top: 10px;
 
@@ -176,7 +144,12 @@ h6 {
     padding: 25px 0 0 0;
     text-align: center;
     margin: auto;
-    color: $c-slate;
+    
+    h6 {
+      font-family: $ff-head;
+      font-weight: 400;
+      color: $c-pepper;
+    }
 
 
     &:after {
@@ -184,7 +157,7 @@ h6 {
       display: block;
       width: 50px;
       padding: 25px 0 0 0;
-      border-bottom: 1px solid $c-midgrey;
+      border-bottom: 1px solid lighten($c-pepper, 15%);
       margin: auto;
     }
 
@@ -194,10 +167,10 @@ h6 {
 
     a {
       text-decoration: none;
-      color: $c-midnight;
+      color: $c-blueberry;
     }
 
-    &:hover {
+    &:hover, a:focus {
      @include opacity(0.6);
     }
 
@@ -221,18 +194,18 @@ h6 {
 //
 //---------------------
 
-header {
+.header {
   width: 100%;
   height: 68px;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: $c-darkgrey;
+  background-color: $c-pepper;
   z-index: 9999;
   font-size: 24px;
-  color: $c-slate;
+  color: $c-white;
   font-family: $ff-head;
-  font-weight: 200;
+  font-weight: 300;
   font-style: italic;
 }
 
@@ -266,11 +239,11 @@ header {
 
   a {
     text-decoration: none;
-    color: #909090;
+    color: $c-white;
   }
 
   a:hover {
-    color: $c-inputgrey;
+    color: $c-pumpkin;
   }
 }
 
@@ -283,7 +256,7 @@ header {
 .global-container {
   position: relative;
   width: auto;
-  margin-left: 200px;
+  margin-left: 175px;
   margin-top: 68px;
   text-align: center;
 }
@@ -297,11 +270,12 @@ header {
 .container {
   width: 100%;
   text-align: left;
-  margin: 0 auto 0 auto;
-  // padding-left: 200px;
+  margin: 0 auto;
+  padding: 0;
 
   &.read-recipe-page {
     max-width: 809px;
+    padding-bottom: 50px;
   }
 
   &.create-recipe-page {
@@ -311,7 +285,8 @@ header {
 
 .content {
   position: relative;
-  top: 101px;
+  top: 80px;
+  padding-bottom: 50px;
 }
 
 .full-width-photo {
@@ -330,7 +305,7 @@ form  {
     margin: 0;
     padding-right: 25px;
     font-family: $ff-head;
-    color: $c-darkestgrey;
+    color: $c-pepper;
     font-size: 15px;
     font-weight: 200;
     display: inline-block;
@@ -345,32 +320,33 @@ form  {
 .recipe-details {
   max-width: 702px;
   width: 90%;
-  margin: 0 auto; 
+  margin: 0 auto;
+  padding: 0 0 50px 0;
   text-align: center;
 }
   
 .summary {
   max-width: 700px;
   @include border-radius(5px);
-  border: 1px solid #cccccc;
+  border: 1px solid darken($c-cream, 20%);
   margin-bottom: 36px;
   text-align: left;
 }
 
 .ingredients {
   max-width: 700px;
-  background-color: $c-lightgrey;
-  border: 1px solid $c-darkgrey;
   margin-bottom: 36px;
+  background-color: none;
+  border: 1px solid darken($c-cream, 20%);
   @include border-radius(5px);
   text-align: left;
+  z-index: 1000;
 }
 
 .steps {
   max-width: 700px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  border: none;
+  padding: 0 0 40px 0;
+  margin: 0px 0 0 0;
   text-align: left;
 }
 
@@ -389,7 +365,7 @@ form  {
 }
 
 .my-recipes-row, .public-recipes-row, .popular-recipes-row, .favorite-recipes-row, .my-pantry-row {
-  // background-color: $c-slate;
+  // background-color: $c-pepper;
   width: 100%;
   text-align: left;
   height: 90%;
@@ -401,15 +377,21 @@ form  {
   display: inline-block;
   margin-right: 4.2857143%;
   text-align: center;
-  // border: 1px solid darken(blue, 20%);
+  
+  h6 {
+    font-family: $ff-head;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
 }
 
 .grid-item {
   width: 100%;
   height: 190px;
+  @include border-radius($border-radius);
   margin-bottom: 5px;
   display: block;
-  background-color: blue;
+  background-color: $c-pepper;
 }
 
 .view-all {
@@ -417,7 +399,7 @@ form  {
   float: right;
   margin: 0;
   margin-top: -67px;
-  background-color: white;
+  background-color: $c-cream;
   padding-left: 10px;
 
   h6 {
@@ -444,7 +426,7 @@ form  {
   max-height: 403px;
   height: 30%;
   padding: 0;
-  background-color: $c-darkgrey;
+  background-color: $c-pepper;
   margin: 26px auto 32px auto;
   text-align: center;
   @include border-radius(5px);
@@ -465,7 +447,7 @@ form  {
   text-align: left;
   display: inline-block;
   padding-right: 10px;
-  background-color: #fff;
+  background-color: $c-cream;
 }
 
 hr {
@@ -487,10 +469,15 @@ hr {
 
 .steps-content {
   width: 460px;
-  line-height: 20px;
   padding: 24px 20px 24px 0;
   vertical-align: top;
   display: inline-block;
+
+  p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
 }
 
 //-------------------------
@@ -510,7 +497,7 @@ hr {
   font-size: 18px;
   font-family: $ff-head;
   font-weight: 200;
-  color: $c-inputgrey;
+  color: $input-bg;
   margin-top: -7px;
 }
 
@@ -521,12 +508,12 @@ hr {
 .glance-box {
   width: 154px;
   padding: 16px 0 14px 20px;
-  border-right: 1px solid $c-darkgrey;
+  border-right: 1px solid $c-pepper;
   display: inline-block;
 
   span, small {
     font-size: 32px;
-    color: $c-inputgrey;
+    color: $input-bg;
     font-family: $ff-head;
     font-weight: 200;
     letter-spacing: 1px;
@@ -552,7 +539,7 @@ hr {
 //--------------------------
 
 .recipe-box {
-  background-color: $c-lightgrey;
+  background-color: $c-white;
   @include border-radius(5px 5px 0 0);
 }
 
@@ -584,14 +571,14 @@ hr {
   width: 122px;
   padding: 22px 10px 18px 0;
   text-align: right;
-  border-top: 1px solid $c-darkgrey;
+  border-top: 1px solid lighten($c-pepper, 65%);
   display: inline-block;
-  border-right: 1px solid $c-darkgrey;
-  background-color: $c-lightgrey;
+  border-right: 1px solid lighten($c-pepper, 65%);
+  background-color: $c-white;
+  border-bottom-left-radius: 5px;
 
 
   &:last-child {
-    @include border-radius(0 0 0 5px);
   }
 
   span {
@@ -605,9 +592,9 @@ hr {
 .ingredient-line {
   width: 547px;
   padding: 22px 9px 18px 10px;
-  border-top: 1px solid $c-darkgrey;
+  border-top: 1px solid lighten($c-pepper, 65%);
   display: inline-block;
-  background-color: $c-lightgrey;
+  background-color: $c-white;
 
   span {
     font-size: 24px;
@@ -618,31 +605,42 @@ hr {
 
   &:last-child {
     @include border-radius(0px 0 5px 0px);
+    // border-bottom: 1px solid lighten($c-pepper, 65%);
   }
 }
 
 .steps-content, .notes-content {
   width: 460px;
-  line-height: 20px;
-  padding: 24px 20px 24px 0;
-  vertical-align: top;
+  padding: 0;
+  margin: 15px 0 0 0;
   display: inline-block;
+  vertical-align: top;
   font-family: $ff-head;
-  line-height: 29px;
+  text-align: left;
+  line-height: 1.6;
 
   &.notes-content {
     width: 700px;
+    padding: 0px 0px 0px 0px;
+    margin: 0 0px 100px 0px;
+
+    p {
+      margin: 15px 0px 0 0px;
+      padding: 0;
+    }
   }
 }
 
-table.steps {
-  width: 200px;
-  display: inline-block;
-  float: right;
-  margin-top: 18px;
-  font-family: $ff-head;
+table {
+  
+  &.steps {
+    width: 200px;
+    display: inline-block;
+    margin: 15px 0 0 40px;
+    font-family: $ff-head;
+  }
 
-  td.left {
+  .left {
     width: 80px;
     border-bottom: 1px solid #ccc;
     border-right: 1px solid #ccc;
@@ -651,7 +649,7 @@ table.steps {
     font-weight: bolder;
   }
 
-  td.right {
+  .right {
     width: 140px;
     padding-left: 15px;
     border-bottom: 1px solid #ccc;
@@ -659,18 +657,22 @@ table.steps {
     font-weight: lighter;
   } 
 
-  td.last {
-  border-bottom: none;
+  .last {
+    border-bottom: none;
   }
 }
 
-.btnstart.edit {
+.btnstart.edit a {
   text-align: right;
   float: right;
   font-family: $ff-head;
   font-weight: 400;
-  color: $c-darkestgrey;
+  color: lighten($c-pepper, 50%);
   margin-top: 19px;
+}
+
+.btnstart.edit a:hover {
+  color: $c-pepper;
 }
 
 //--------------------------
@@ -687,13 +689,13 @@ button:hover {
   padding: 15px 0 13px 0;
   width: 31%;
   @include border-radius($border-radius);
-  background-color: $c-lightgrey;
-  @include background(linear-gradient(top,rgb(235,235,235),rgb(210,210,210)));
-  border: 1px solid #a3a3a3;
+  background-color: $c-pumpkin;
+  @include background(linear-gradient(top,$c-pumpkin, darken($c-pumpkin, 10%)));
+  border: 1px solid darken($c-pumpkin, 10%);
   display: inline-block;
   margin: 19px 0 21px 483px;
   font-size: 18px;
-  color: $c-inputgrey;
+  color: $input-bg;
 }
 
 .add-remove-button {
@@ -703,18 +705,18 @@ button:hover {
   padding: 15px 0 15px 0px;
   display: inline-block;
   @include border-radius($border-radius);
-  border: 1px solid $c-darkgrey;
-  background-color: $c-midgrey; /* Old browsers */
-  @include background(linear-gradient(top, $c-white, $c-midgrey));
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='$c-midgrey',GradientType=0 ); /* IE6-9 */
+  border: 1px solid $c-pepper;
+  background-color: $c-pepper; /* Old browsers */
+  @include background(linear-gradient(top, $c-cream, $c-pepper));
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$c-cream', endColorstr='$c-pepper',GradientType=0 ); /* IE6-9 */
   vertical-align: top;
-  color: $c-inputgrey;
+  color: $input-bg;
 
   .ss-plus, .ss-hyphen {
     font-size: 18px;
     line-height: 23px;
     text-align: center;
-    color: $c-inputgrey;
+    color: $input-bg;
     position: relative;
     top: 3px;
     }
@@ -724,12 +726,12 @@ button:hover {
   width: 34.57143%;
   padding: 15px 0 16px 0;
   @include border-radius($border-radius);
-  @include background(linear-gradient(top, rgb(157,157,157), rgb(120,120,120)));
-  background-color: $c-darkestgrey;
-  border: 1px solid #5a5a5a;
+  @include background(linear-gradient(top, $c-spinach, darken($c-spinach, 10%)));
+  background-color: $c-pepper;
+  border: 1px solid darken($c-spinach, 10%);
   font-size: 16px;
   font-weight: normal;
-  color: white;
+  color: $c-cream;
   margin: 34px 0 0px 457px;
   font-size: 18px;
 }
@@ -738,13 +740,13 @@ button:hover {
   width: 24.57143%;
   padding: 17px 0;
   float: right;
-  margin: -4px 0px 50px 18px;
+  margin: 0px 0px 50px 18px;
   @include border-radius($border-radius);
-  @include background(linear-gradient(top, #787878, #9d9d9d));
-  border: 1px solid #5a5a5a;
+  @include background(linear-gradient(top, $c-spinach, darken($c-spinach, 10%)));
+  border: 1px solid darken($c-spinach, 10%);
   font-size: 17px;
   font-weight: 400;
-  color: white;
+  color: $c-cream;
   text-align: center;
 }
 
@@ -762,14 +764,14 @@ button:hover {
     rgba(234,234,234,1) 100%);
   vertical-align: top;
   font-size: 17px;
-  color: $c-inputgrey;
+  color: $input-bg;
 }
 
 .add-photo {
   width: 190px;
   padding: 54px 0;
   float: left;
-  background: $c-darkestgrey;
+  background: lighten($c-pepper, 20%);
   @include border-radius($border-radius);
   text-align: center;
   margin-right: 4.2857143%;
@@ -778,7 +780,7 @@ button:hover {
   .ss-plus {
     font-size: 32px;
     line-height: 54px;
-    color: $c-inputgrey;
+    color: $input-bg;
   }
 }
 
@@ -819,7 +821,7 @@ button:hover {
 
     // avoid click events
     pointer-events: none;
-    color: $c-inputgrey;
+    color: $c-pepper;
   }
 }
 
@@ -848,7 +850,7 @@ button:hover {
 
       // avoid click events
       pointer-events: none;
-      color: $c-inputgrey;
+      color: $c-pepper;
     }
   }
 }
@@ -873,7 +875,7 @@ button:hover {
 
     // avoid click events
     pointer-events: none;
-    color: $c-inputgrey;
+    color: $c-pepper;
   }
 }
 
@@ -884,7 +886,7 @@ button:hover {
 //--------------------------
 
 ::-webkit-input-placeholder {
-  color: $c-inputgrey;
+  color: $input-bg;
 }
 
 input {
@@ -894,7 +896,7 @@ input {
   border: $input-border;
   box-shadow: $input-boxshadow;
   @include box-sizing(border-box);
-  color: $c-inputgrey;
+  color: $input-bg;
   font-size: $input-fontsize;
   padding: 2.571% 0 2.571% 16px;
 
@@ -941,7 +943,7 @@ textarea {
   border-radius: 5px;
   @include box-sizing(border-box);
   margin:  0;
-  color: $c-inputgrey;
+  color: $input-bg;
   font-size: 16px;
 
   &.personal-notes {
@@ -1040,7 +1042,7 @@ input[type="checkbox"] {
     }
 
     .ss-rows {
-      color: $c-white;      
+      color: $c-cream;      
       font-size: 33px;
     }
 
@@ -1139,7 +1141,7 @@ input[type="checkbox"] {
         font-size: 18px;
         line-height: 19px;
         text-align: center;
-        color: $c-inputgrey;
+        color: $input-bg;
         position: relative;
         top: 3px;
         }
@@ -1214,7 +1216,7 @@ input[type="checkbox"] {
 
         // avoid click events
         pointer-events: none;
-        color: $c-inputgrey;
+        color: $input-bg;
       }
     }
 
@@ -1252,7 +1254,7 @@ input[type="checkbox"] {
 
           // avoid click events
           pointer-events: none;
-          color: $c-inputgrey;
+          color: $input-bg;
         }
       }
   }
@@ -1279,7 +1281,7 @@ input[type="checkbox"] {
 
         // avoid click events
         pointer-events: none;
-        color: $c-inputgrey;
+        color: $input-bg;
       }
     }
 

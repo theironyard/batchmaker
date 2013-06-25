@@ -2,9 +2,9 @@
   .content
 
     .big-ass-recipe-title
-      h4 = @recipeName
+      h4 Recipe Title
 
-    .byline = @author
+    .byline Tyler Sloan
 
     .cover-photo
       img src="http://www.wallsonline.net/wp-content/uploads/2012/10/Outer-Space-Stars-Planets-Earth.jpg"
@@ -15,7 +15,7 @@
       .summary
         .glance-box
           .glance-title.labels Recipe Type
-          span = @recipeType
+          span Dessert
         .glance-box
           .glance-title.labels Prep Time
           span 15
@@ -59,41 +59,48 @@
         h6.section-heading Step 1
         hr.step-heading
 
-        p.steps-content The dog and chicken followed each other through the meadow, jumped the fence and into the chicken coupe. The dog and chicken followed each other through the meadow, jumped the fence and into the chicken coupe. Where are the chickens???
+        .steps-content
+          p The dog and chicken followed each other through the meadow, jumped the fence and into the chicken coupe. The dog and chicken followed each other through the meadow, jumped the fence and into the chicken coupe. Where are the chickens???
         
         table.steps
-            tr
-              td.left 1/2 cup
-              td.right Sugar
-            tr
-              td.left 1 cup
-              td.right All purpose flour
-            tr
-              td.left.last 2 tb
-              td.right.last Cinnamon
+          tr
+            td.left 1/2 cup
+            td.right Sugar
+          tr
+            td.left 1 cup
+            td.right All purpose flour
+          tr
+            td.left.last 2 tb
+            td.right.last Cinnamon
 
 
       .steps
         h6.section-heading Step 2
         hr.step-heading
 
-        p.steps-content The dog and chicken followed each other through the meadow, jumped the fence and into the chicken coupe. The dog and chicken followed each other through the meadow, jumped the fence and into the chicken coupe. Where are the chickens???
+        .steps-content
+          p The dog and chicken followed each other through the meadow, jumped the fence and into the chicken coupe. The dog and chicken followed each other through the meadow, jumped the fence and into the chicken coupe. Where are the chickens???
         
         table.steps
-            tr
-              td.left 1/2 cup
-              td.right Sugar
-            tr
-              td.left 1 cup
-              td.right All purpose flour
-            tr
-              td.left.last 2 tb
-              td.right.last Cinnamon    
+          tr
+            td.left 1/2 cup
+            td.right Sugar
+          tr
+            td.left 1 cup
+            td.right All purpose flour
+          tr
+            td.left.last 2 tb
+            td.right.last Cinnamon    
 
+
+      .notes-content
+        
         h6.section-heading Personal Notes
         hr.step-heading
+        
+        p Keffiyeh williamsburg selvage, blog chambray iphone narwhal viral aesthetic tousled. Bushwick thundercats cosby sweater dreamcatcher. Ethical readymade intelligentsia YOLO, viral before they sold out brooklyn narwhal ethnic squid tonx tousled shoreditch leggings. Scenester selvage pug, gentrify jean shorts biodiesel quinoa forage pour-over farm-to-table sustainable gluten-free kogi. Fanny pack mlkshk ugh wayfarers neutra selvage. Farm-to-table mlkshk tumblr yr, salvia.
 
-        p.notes-content Keffiyeh williamsburg selvage, blog chambray iphone narwhal viral aesthetic tousled. Bushwick thundercats cosby sweater dreamcatcher. Ethical readymade intelligentsia YOLO, viral before they sold out brooklyn narwhal ethnic squid tonx tousled shoreditch leggings. Scenester selvage pug, gentrify jean shorts biodiesel quinoa forage pour-over farm-to-table sustainable gluten-free kogi. Fanny pack mlkshk ugh wayfarers neutra selvage. Farm-to-table mlkshk tumblr yr, salvia.
-
+      .
       button.start-button Start
-      .btnstart.edit Edit this recipe
+      .btnstart.edit
+        a Edit this recipe
