@@ -1,8 +1,10 @@
 class RecipesController < ApplicationController
 
   def index
-    @recipes = Recipe.where(:user_id => current_user.id)
-    render :json => @recipes
+    # @recipes = Recipe.where(:user_id => current_user.id)
+    @recipes = Recipe.all
+    # this sucks. move to a bldr template ASAP.
+    render :json => @recipes.to_json(:include => {:steps => {:include => {:ingredient_amounts => {:include => :ingredient}}}})
   end
 
   def show
