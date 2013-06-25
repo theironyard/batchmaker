@@ -17,12 +17,3 @@ Batchmaker::Application.routes.draw do
 
   ActiveAdmin.routes(self)
 end
-
-
-                   #     recipes GET        /recipes(.:format)                        recipes#index
-                   #             POST       /recipes(.:format)                        recipes#create
-                   #  new_recipe GET        /recipes/new(.:format)                    recipes#new
-                   # edit_recipe GET        /recipes/:id/edit(.:format)               recipes#edit
-                   #      recipe GET        /recipes/:id(.:format)                    recipes#show
-                   #             PUT        /recipes/:id(.:format)                    recipes#update
-                   #             DELETE     /recipes/:id(.:format)                    recipes#destroy
