@@ -2,9 +2,6 @@ window.AppView = Backbone.View.extend({
 
   initialize: ->
 
-    # @render()
-    console.log 'Dashboard View is instantiated in AppView'
-
     # creating new instance of Recipes Collection for specific subcateories
     window.publicCollection = new Recipes()
     window.popularCollection = new Recipes()

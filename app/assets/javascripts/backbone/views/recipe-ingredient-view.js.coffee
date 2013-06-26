@@ -5,13 +5,11 @@ window.RecipeIngredientView = Backbone.View.extend ({
     'click .add-remove-button': 'clickAdd'
 
   initialize: ->
-    console.log 'RecipeIngredientView initialized'
     @render()
 
   render: ->
     # inserting ingredient template in its container that's inside the step template
     $('.js-ingredient-container').html JST['backbone/templates/ingredient-template']()
-    console.log 'Rendering ingredient template into ingredient container'
 
   clickAdd: ->
     # none of this is working, leaving it for later

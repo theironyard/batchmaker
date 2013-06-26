@@ -1,7 +1,6 @@
 window.RecipeStepView = Backbone.View.extend ({
 
   initialize: ->
-    console.log 'Initializing RecipeIngredientView'
     @render()
 
   render: ->

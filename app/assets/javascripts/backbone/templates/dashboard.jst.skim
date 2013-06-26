@@ -30,20 +30,20 @@
         small View all
       .ss-navigateright
 
-.recipe-row
-  .favorite-recipes-row
-    h6.section-heading My Favorite Recipes
-    hr
-    .view-all
-      h6
-        small View all
-      .ss-navigateright
+/ .recipe-row
+/   .favorite-recipes-row
+/     h6.section-heading My Favorite Recipes
+/     hr
+/     .view-all
+/       h6
+/         small View all
+/       .ss-navigateright
 
-.recipe-row
-  .my-pantry-row
-    h6.section-heading My Pantry
-    hr
-    .view-all
-      h6
-        small View all
-      .ss-navigateright
+/ .recipe-row
+/   .my-pantry-row
+/     h6.section-heading My Pantry
+/     hr
+/     .view-all
+/       h6
+/         small View all
+/       .ss-navigateright

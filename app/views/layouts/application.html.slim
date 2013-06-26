@@ -28,11 +28,11 @@ body
           a href="#newrecipe"
             .ss-plus.js-create-new-recipe
         li
-          a href="#"
-            .ss-settings
-        li
-          a href="#"
+          a href="#settings"
             .ss-user
+        li
+          a href="users/sign_in"
+            img.logout-icon src="#"
     
 
   .global-sidebar
@@ -48,30 +48,30 @@ body
       li
         a href="#popularrecipes"
           h6 Popular Recipes
-      li
-        a href="#favoriterecipes"
-          h6 My Favorite Recipes
-      li
-        a href="#pantry"
-          h6 My Pantry
+      / li
+      /   a href="#favoriterecipes"
+      /     h6 My Favorite Recipes
+      / li
+      /   a href="#pantry"
+      /     h6 My Pantry
 
     ul.icons
 
       li
-        a href="#"
+        a href="#myrecipes"
           img src="http://f.cl.ly/items/0H2S2Q2b0h0C3a1L1e10/pepper.png"
       li
-        a href="#"
+        a href="#publicrecipes"
           img src="http://f.cl.ly/items/0H2S2Q2b0h0C3a1L1e10/pepper.png"
       li
-        a href="#"
+        a href="#popularrecipes"
           img src="http://f.cl.ly/items/0H2S2Q2b0h0C3a1L1e10/pepper.png"
-      li
-        a href="#"
-          img src="http://f.cl.ly/items/0H2S2Q2b0h0C3a1L1e10/pepper.png"
-      li
-        a href="#"
-          img src="http://f.cl.ly/items/0H2S2Q2b0h0C3a1L1e10/pepper.png"
+      / li
+      /   a href="#"
+      /     img src="http://f.cl.ly/items/0H2S2Q2b0h0C3a1L1e10/pepper.png"
+      / li
+      /   a href="#"
+      /     img src="http://f.cl.ly/items/0H2S2Q2b0h0C3a1L1e10/pepper.png"
 
   div.global-container
     = yield
