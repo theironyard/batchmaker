@@ -9,7 +9,7 @@ window.Recipe = Backbone.Model.extend(
         { ingredients: [] }
       ]
     }
-  ]  # End recipe.add
+  ]  # End recipe defaults
 )
 
 window.Ingredient = Backbone.Model.extend(
