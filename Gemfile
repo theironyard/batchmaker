@@ -36,9 +36,11 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
-gem "slim"
+gem "slim", "1.2.2"
+gem "skim", "0.8.6"
+gem "temple", "0.4.0"
+
 gem "rails-backbone"
-gem "skim"
 
 gem "unicorn", ">= 4.3.1"
 gem "sqlite3"
