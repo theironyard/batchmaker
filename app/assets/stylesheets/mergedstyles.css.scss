@@ -222,8 +222,13 @@ h6 {
   padding: 0;
 }
 
+.logout-icon:hover {
+  opacity: 1;
+}
+
 .logout-icon {
   max-width: 30px;
+  opacity: .3;
 }
 
 .navigation {
@@ -238,7 +243,7 @@ h6 {
 
   li {
     display: inline-block; 
-    padding-left: 44px;
+    padding-left: 38px;
   }
 
   a {

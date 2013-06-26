@@ -7,12 +7,12 @@ window.AppView = Backbone.View.extend({
     window.popularCollection = new Recipes()
     window.favoriteCollection = new Recipes()
     window.recipes = new Recipes()
-    window.ingredients = new Ingredients()
+    # window.ingredients = new Ingredients()
 
     recipes.fetch()
     publicCollection.fetch()
     popularCollection.fetch()
     favoriteCollection.fetch()
-    ingredients.fetch()
+    # ingredients.fetch()
 
 })

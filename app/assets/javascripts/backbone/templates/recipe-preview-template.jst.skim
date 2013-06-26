@@ -61,7 +61,6 @@
         
         p #{{@get('peronsal-notes')}}
 
-      .
       button.start-button Start
       .btnstart.edit
         a Edit this recipe
