@@ -1,4 +1,4 @@
-collection :recipes do |recipe|
+collection @recipes do |recipe|
   attributes :id, :author, :cook_temp, :cook_time, :farenheit, :image, :personal_notes, :prep_time, :public, :name, :category, :yield_amount, :yield_name, :user_id
 
   collection :steps => recipe.steps do |step|
