@@ -2,10 +2,11 @@
   .my-recipes-row
     h6.section-heading My Recipes
     hr
-    .view-all
-      h6
-        small View all
-      .ss-navigateright
+    a href="#myrecipes"
+      .view-all
+        h6
+          small View all
+        .ss-navigateright
 
     a href="#newrecipe"
       .add-photo.dashboard.js-create-new-recipe
@@ -16,19 +17,21 @@
   .public-recipes-row
     h6.section-heading Public Recipes
     hr
-    .view-all
-      h6
-        small View all
-      .ss-navigateright
+    a href="#publicrecipes"
+      .view-all
+        h6
+          small View all
+        .ss-navigateright
 
 .recipe-row
   .popular-recipes-row
     h6.section-heading Popular Recipes
     hr
-    .view-all
-      h6
-        small View all
-      .ss-navigateright
+    a href="#popularrecipes"
+      .view-all
+        h6
+          small View all
+        .ss-navigateright
 
 / .recipe-row
 /   .favorite-recipes-row

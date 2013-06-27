@@ -2,4 +2,4 @@ a href="#recipes/#{{@get('id')}}"
   - console.log 'this = ',@
   .recipe-grid-container
     .grid-item
-    h6 #{{@get('name')}}recipes
+    h6 #{{@get('name')}}
