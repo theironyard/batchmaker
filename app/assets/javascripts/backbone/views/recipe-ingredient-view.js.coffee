@@ -8,11 +8,13 @@ window.RecipeIngredientView = Backbone.View.extend ({
     @render()
 
   render: ->
+    @$el.html JST['backbone/templates/ingredient-template']()
     # inserting ingredient template in its container that's inside the step template
-    $('.js-ingredient-container').html JST['backbone/templates/ingredient-template']()
+    $('.js-ingredient-container').html @el
 
   clickAdd: ->
     console.log 'clickAdd'
-    $('button.js-add-ingredient').clone JST['backbone/templates/ingredient-template']()
+    @$el.append JST['backbone/templates/ingredient-template']()
+    @$el.find(".chzn-select").chosen()
 
   })

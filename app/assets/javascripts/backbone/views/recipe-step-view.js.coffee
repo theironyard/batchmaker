@@ -1,17 +1,19 @@
 window.RecipeStepView = Backbone.View.extend ({
 
   event: 
-    'click .add-step-button': 'DuplicateStep'
+    'click .js-add-step': 'DuplicateStep'
+
   initialize: ->
     @render()
-
-  render: ->
-    # placing recipe step template in a container and instantiating ingredient view
-    $('.js-recipe-step-container').html JST['backbone/templates/recipe-step-template']()
     new RecipeIngredientView()
 
+  render: ->
+    @$el.html JST['backbone/templates/recipe-step-template']()
+    # placing recipe step template in a container and instantiating ingredient view
+    $('.js-recipe-step-container').html @el
+
   DuplicateStep: ->
-    console.log 'fuck'
-    $('.js-recipe-step-container').append JST['backbone/templates/recipe-step-template']()
+    console.log 'duplicate step function'
+    @$el.append JST['backbone/templates/recipe-step-template']()
 
 })

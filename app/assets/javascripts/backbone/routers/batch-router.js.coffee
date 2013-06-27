@@ -1,4 +1,4 @@
-BatchRouter = Backbone.Router.extend({
+window.BatchRouter = Backbone.Router.extend({
   
   # my app view is the header and sidebar
   # dashboard is first view called making it index.html
@@ -30,8 +30,22 @@ BatchRouter = Backbone.Router.extend({
   showMyRecipes: ->
     new MyRecipesView()
 
-  showOneRecipe: ->
-    new RecipePreview()
+  showOneRecipe: (id)->
+    # If we have already fetched the recipe, cool
+    if recipe = fetchedRecipes.get(id)
+      console.log 'first part of the if'
+      # just pass the model into the view
+      new RecipePreview(model: recipe)
+      
+    # if we don't have it in fetchModels, let's
+    # grab it and add it to the collection and then 
+    # pass it into the view.
+    else
+      console.log 'second part of if'
+      recipe = new Recipe(id: id)
+      recipe.fetch success: (recipe) ->
+        fetchedRecipes.add(recipe)
+        new RecipePreview(model: recipe)
 
   showPublicRecipes: ->
     new PublicRecipesView()
@@ -47,5 +61,4 @@ BatchRouter = Backbone.Router.extend({
 
 });
 
-# new instance of TestRouter
-batchRouter = new BatchRouter();
+

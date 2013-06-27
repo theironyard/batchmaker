@@ -1,5 +1,10 @@
 window.Recipe = Backbone.Model.extend(
 
+  # Tell the model how to append its own id
+  url: -> "/recipes/#{this.id}"
+
+  paramRoot: 'recipe'
+
   initialize: ->
 
   defaults: [        
