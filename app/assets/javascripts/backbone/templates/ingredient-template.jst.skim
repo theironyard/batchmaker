@@ -13,5 +13,5 @@ input.smaller placeholder="#"
 
     input.medium placeholder="breads flour"
     
-    button.add-remove-button 
+    button.js-add-ingredient.add-remove-button
       .ss-plus

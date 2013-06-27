@@ -1,8 +1,8 @@
 window.RecipeIngredientView = Backbone.View.extend ({
 
   events:
-    # not working yet. need this button to reate a new blank ingredient view.
-    'click .add-remove-button': 'clickAdd'
+    # not working yet. need this button to create a new blank ingredient view.
+    'click .js-add-ingredient': 'clickAdd'
 
   initialize: ->
     @render()
@@ -12,9 +12,7 @@ window.RecipeIngredientView = Backbone.View.extend ({
     $('.js-ingredient-container').html JST['backbone/templates/ingredient-template']()
 
   clickAdd: ->
-    # none of this is working, leaving it for later
-    # $('.js-ingredient-container').append JST['backbone/templtes/ingredient-template']()
-    # $('.add-remove-button ').toggleClass('.ss-hyphen')
-    # console.log 'you clicked plus button'
+    console.log 'clickAdd'
+    $('button.js-add-ingredient').clone JST['backbone/templates/ingredient-template']()
 
   })
