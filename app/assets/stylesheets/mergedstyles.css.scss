@@ -786,6 +786,11 @@ button:hover {
   margin-right: 4.2857143%;
   vertical-align: top;
 
+  &.dashboard {
+    float: none;
+    display: inline-block;
+  }
+
   .ss-plus {
     font-size: 32px;
     line-height: 54px;

@@ -7,6 +7,7 @@ BatchRouter = Backbone.Router.extend({
     # 'dashboard' : 'dashboard'
     ''          : 'dashboard'
     'recipes'   : 'recipes'
+    'recipes/:id'   : 'showOneRecipe'
     'newrecipe' : 'newrecipe'
     'myrecipes' : 'showMyRecipes'
     'publicrecipes' : 'showPublicRecipes'
@@ -20,7 +21,7 @@ BatchRouter = Backbone.Router.extend({
   dashboard: ->
     new DashboardView()
 
-  recipes: (recipeName)->
+  recipes: (id)->
     new RecipePreview()
   
   newrecipe: -> 
@@ -28,6 +29,9 @@ BatchRouter = Backbone.Router.extend({
 
   showMyRecipes: ->
     new MyRecipesView()
+
+  showOneRecipe: ->
+    new RecipePreview()
 
   showPublicRecipes: ->
     new PublicRecipesView()
