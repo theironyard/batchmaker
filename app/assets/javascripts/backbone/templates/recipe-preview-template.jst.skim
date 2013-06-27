@@ -1,13 +1,13 @@
 .container.read-recipe-page
   .content
 
+    - console.log 'preview template before a .get'
     .big-ass-recipe-title
-      h4 Recipe Title
-
-    .byline Tyler Sloan
-
+      h4 #{{@get('name')}}
+      - console.log 'preview template after the first .get'
+    .byline #{{@get('author')}}
     .cover-photo
-      img src="http://www.wallsonline.net/wp-content/uploads/2012/10/Outer-Space-Stars-Planets-Earth.jpg"
+      img src="#{{@get('image')}}"
 
     .recipe-details
 
