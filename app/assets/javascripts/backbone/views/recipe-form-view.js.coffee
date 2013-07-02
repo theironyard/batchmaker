@@ -12,16 +12,14 @@ window.RecipeForm = Backbone.View.extend ({
     #   new RecipeStepView(step)
 
   render: ->
-    
-    console.log "RecipeForm instantiated. Just the main info at top."
+
     # clearing the dashboard out of global container
     $('.global-container').html ''
     
     # inserting recipe info template in global container
     # recipe info template has the rest of the recipe form inside of it
     $('.global-container').html recipeInfoTemplate()
-    
-    console.log 'RecipeInfoView and RecipeStepView are called from RecipeForm'
+
     # running this template here because its whole job is to host recipe set template
     recipeInfoTemplate()
     # instantiating step view to call in the step template which hosts ingredient view.

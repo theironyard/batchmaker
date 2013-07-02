@@ -6,6 +6,8 @@ gem 'rails', '3.2.12'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 
+# JSON Templater
+gem 'bldr'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -34,9 +36,11 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
-gem "slim"
+gem "slim", "1.2.2"
+gem "skim", "0.8.6"
+gem "temple", "0.4.0"
+
 gem "rails-backbone"
-gem "skim"
 
 gem "unicorn", ">= 4.3.1"
 gem "sqlite3"

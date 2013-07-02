@@ -1,13 +1,13 @@
 .container.read-recipe-page
   .content
 
+    - console.log 'preview template before a .get'
     .big-ass-recipe-title
-      h4 Recipe Title
-
-    .byline Tyler Sloan
-
+      h4 #{{@get('name')}}
+      - console.log 'preview template after the first .get'
+    .byline #{{@get('author')}}
     .cover-photo
-      img src="http://www.wallsonline.net/wp-content/uploads/2012/10/Outer-Space-Stars-Planets-Earth.jpg"
+      img src="#{{@get('image')}}"
 
     .recipe-details
 
@@ -15,44 +15,31 @@
       .summary
         .glance-box
           .glance-title.labels Recipe Type
-          span Dessert
+          span #{{@get('category')}}
         .glance-box
           .glance-title.labels Prep Time
-          span 15
+          span #{{@get('prep_time')}}
           small min
         .glance-box
           .glance-title.labels Cook Time
-          span 20
+          span #{{@get('cook_time')}}
           small min
         .glance-box
           .glance-title.labels Cook Temp
-          span 350&deg;
+          span #{{@get('cook_temp')}}&deg;
           small F
 
       / Ingredients 
       .ingredients
         .recipe-box
           .recipe-title
-            span 12 cookies
+            span #{{@get('yield_amount')}} #{{@get('yield_name')}}
             button.adjust.ss-write  Adjust
 
         .ingredient-panel
-          span 1/2 cup
+          span #{{@get('amount')}} #{{@get('unit')}}
         .ingredient-line
-          span Sugar
-        .ingredient-panel
-          span 1 cup
-        .ingredient-line
-          span All purpose flour
-        .ingredient-panel
-          span 2 tb
-        .ingredient-line
-          span Cinnamon
-        .ingredient-panel
-          span 1/2 t
-        .ingredient-line
-          span Baking powder
-
+          span #{{@get('ingredient')}}
 
       / Steps
       .steps
@@ -60,47 +47,20 @@
         hr.step-heading
 
         .steps-content
-          p The dog and chicken followed each other through the meadow, jumped the fence and into the chicken coupe. The dog and chicken followed each other through the meadow, jumped the fence and into the chicken coupe. Where are the chickens???
+          p #{{@get('directions')}}
         
         table.steps
           tr
-            td.left 1/2 cup
-            td.right Sugar
-          tr
-            td.left 1 cup
-            td.right All purpose flour
-          tr
-            td.left.last 2 tb
-            td.right.last Cinnamon
-
-
-      .steps
-        h6.section-heading Step 2
-        hr.step-heading
-
-        .steps-content
-          p The dog and chicken followed each other through the meadow, jumped the fence and into the chicken coupe. The dog and chicken followed each other through the meadow, jumped the fence and into the chicken coupe. Where are the chickens???
-        
-        table.steps
-          tr
-            td.left 1/2 cup
-            td.right Sugar
-          tr
-            td.left 1 cup
-            td.right All purpose flour
-          tr
-            td.left.last 2 tb
-            td.right.last Cinnamon    
-
+            td.left #{{@get('amount')}} #{{@get('unit')}}
+            td.right #{{@get('ingredient')}}
 
       .notes-content
         
         h6.section-heading Personal Notes
         hr.step-heading
         
-        p Keffiyeh williamsburg selvage, blog chambray iphone narwhal viral aesthetic tousled. Bushwick thundercats cosby sweater dreamcatcher. Ethical readymade intelligentsia YOLO, viral before they sold out brooklyn narwhal ethnic squid tonx tousled shoreditch leggings. Scenester selvage pug, gentrify jean shorts biodiesel quinoa forage pour-over farm-to-table sustainable gluten-free kogi. Fanny pack mlkshk ugh wayfarers neutra selvage. Farm-to-table mlkshk tumblr yr, salvia.
+        p #{{@get('peronsal-notes')}}
 
-      .
       button.start-button Start
       .btnstart.edit
         a Edit this recipe

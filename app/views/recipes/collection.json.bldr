@@ -1,0 +1,15 @@
+collection @recipes do |recipe|
+  attributes :id, :author, :cook_temp, :cook_time, :farenheit, :image, :personal_notes, :prep_time, :public, :name, :category, :yield_amount, :yield_name, :user_id
+
+  collection :steps => recipe.steps do |step|
+     attribute :directions
+
+     collection :ingredient_amounts => step.ingredient_amounts do |ingredient_amount|
+        attribute :unit
+        attribute :amount
+        attribute (:name) do
+          ingredient_amount.ingredient.name
+        end
+     end
+  end
+end

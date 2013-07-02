@@ -4,4 +4,4 @@ hr.step-heading
 .js-ingredient-container
 
 textarea.directions placeholder="What directions go with this step?"
-button.add-step-button Add another step
+button.js-add-step.add-step-button Add another step
