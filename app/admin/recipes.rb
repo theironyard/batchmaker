@@ -11,7 +11,6 @@ ActiveAdmin.register Recipe do
       f.input :personal_notes
       f.input :prep_time
       f.input :public
-      f.input :name
       f.input :category
       f.input :yield_amount
       f.input :yield_name

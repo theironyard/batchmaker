@@ -1,6 +1,11 @@
 javascript:
   $(function(){
+    // create the AppView, which creates all the collections.
     appView = new AppView()
+
+    // new instance of BatchRouter
+    batchRouter = new BatchRouter();
+    
     // Start Backbone.history - MUST do this
     Backbone.history.start({});
   })

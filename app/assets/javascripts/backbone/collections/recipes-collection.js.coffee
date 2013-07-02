@@ -3,7 +3,7 @@ window.Recipes = Backbone.Collection.extend(
   url: '/recipes'
 )
 
-window.Ingredients = Backbone.Collection.extend(
-  model: Ingredient
-  url: '/ingredients'
-)
+# window.Ingredients = Backbone.Collection.extend(
+#   model: Ingredient
+#   url: '/ingredients'
+# )

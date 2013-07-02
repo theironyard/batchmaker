@@ -1,7 +1,11 @@
 window.Recipe = Backbone.Model.extend(
 
+  # Tell the model how to append its own id
+  url: -> "/recipes/#{this.id}"
+
+  paramRoot: 'recipe'
+
   initialize: ->
-    console.log "Recipe model console log"
 
   defaults: [        
     {
@@ -10,13 +14,12 @@ window.Recipe = Backbone.Model.extend(
         { ingredients: [] }
       ]
     }
-  ]  # End recipe.add
+  ]  # End recipe defaults
 )
 
 window.Ingredient = Backbone.Model.extend(
 
   initialize: ->
-    console.log "Ingedient model console log"
   
 )
 

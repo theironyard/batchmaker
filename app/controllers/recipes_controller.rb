@@ -3,19 +3,18 @@ class RecipesController < ApplicationController
   def index
     # @recipes = Recipe.where(:user_id => current_user.id)
     @recipes = Recipe.all
-    # this sucks. move to a bldr template ASAP.
-    render :json => @recipes.to_json(:include => {:steps => {:include => {:ingredient_amounts => {:include => :ingredient}}}})
+    render "collection", :layout => false
   end
 
   def show
-    @recipe = Recipe.new(params[:id])
-    render :json => @recipe
+    @recipe = Recipe.find(params[:id])
+    render "show", :layout => false
   end
 
   def create
     @recipe = Recipe.new(params[:recipe])
     if @recipe.save
-      render :json => @recipe
+      render "show", :layout => false
     end
   end
 
@@ -30,7 +29,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
     @recipe[:name] = params[:recipe][:name]
     if @recipe.save
-      render :json => @recipe
+      render "show", :layout => false
     end
   end
 
@@ -38,14 +37,14 @@ class RecipesController < ApplicationController
 
   def public
     @recipes = Recipe.where(:public => true)
-    render :json => @recipes
+    render "collection", :layout => false
   end
 
   # Favorites
 
   def favorites
     @recipes = Recipe.where(:favorite => true)
-    render :json => @recipes
+    render "collection", :layout => false
   end
 
 end
