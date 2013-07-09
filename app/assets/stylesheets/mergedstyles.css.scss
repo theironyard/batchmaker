@@ -382,6 +382,30 @@ form  {
 //
 //---------------------
 
+.search-bar {
+  -webkit-appearance: none;
+  width: 80%;
+  max-width: 862px;
+  margin: 2% auto 0 auto;
+  padding-right: 10px;
+}
+
+.search-button {
+  display: inline-block;
+  width: 10%;
+  max-width: 200px;
+  padding: 2.85%;
+  margin: 0;
+  background-color: $c-pepper;
+  font-family: $ff-head;
+  color: $c-cream;
+  font-size: $input-fontsize;
+}
+
+.search-bar:afters {
+  content: "Hello";
+}
+
 .recipe-row {
   width: 90%;
   max-width: 1062px;
@@ -934,7 +958,8 @@ input {
   border: none;
   box-shadow: none;
   @include box-sizing(border-box);
-  color: $input-bg;
+  color: $c-pepper;
+  font-family: $ff-head;
   font-size: $input-fontsize;
   padding: 2.571% 0 2.571% 16px;
 

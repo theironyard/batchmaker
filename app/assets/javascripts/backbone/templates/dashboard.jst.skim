@@ -1,3 +1,7 @@
+input.search-bar type="search" placeholder="Search for any recipe"
+a href="#"
+  div.search-button Search
+
 .recipe-row
   .my-recipes-row
     h6.section-heading My Recipes
