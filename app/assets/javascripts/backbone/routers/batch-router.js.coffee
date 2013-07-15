@@ -3,17 +3,17 @@ window.BatchRouter = Backbone.Router.extend({
   # my app view is the header and sidebar
   # dashboard is first view called making it index.html
   routes:
-    # ''          : 'showSignUpSignInPage'
-    # 'dashboard' : 'dashboard'
-    ''          : 'dashboard'
-    'recipes'   : 'recipes'
-    'recipes/:id'   : 'showOneRecipe'
-    'newrecipe' : 'newrecipe'
-    'myrecipes' : 'showMyRecipes'
-    'publicrecipes' : 'showPublicRecipes'
-    'popularrecipes' : 'showPopularRecipes'
+    '/users/sign_in'  : 'showSignUpSignInPage'
+    # 'dashboard'     : 'dashboard'
+    ''                : 'dashboard'
+    'recipes'         : 'recipes'
+    'recipes/:id'     : 'showOneRecipe'
+    'newrecipe'       : 'newrecipe'
+    'myrecipes'       : 'showMyRecipes'
+    'publicrecipes'   : 'showPublicRecipes'
+    'popularrecipes'  : 'showPopularRecipes'
     'favoriterecipes' : 'showFavoriteRecipes'
-    'pantry' : 'showPantry'
+    'pantry'          : 'showPantry'
 
   showSignUpSignInPage: ->
     new SignUpSignInView()
