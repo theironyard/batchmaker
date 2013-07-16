@@ -33,7 +33,10 @@
         .recipe-box
           .recipe-title
             span #{{@get('yield_amount')}} #{{@get('yield_name')}}
-            button.adjust.ss-write  Adjust
+            button.adjust.ss-write.js-adjust-recipe  Adjust
+            button.adjust.ss-check.js-save  Save
+            .yield-slider
+            input type="range" class="js-recipe-slider" name="border-width" min="0" max="50" value="12"
 
         .ingredient-panel
           span #{{@get('amount')}} #{{@get('unit')}}
