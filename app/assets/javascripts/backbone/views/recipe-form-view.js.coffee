@@ -1,5 +1,5 @@
 window.RecipeForm = Backbone.View.extend ({
-
+  
   initialize: ->
 
     window.recipeInfoTemplate = JST["backbone/templates/recipe-info-template"]

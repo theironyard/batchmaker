@@ -1,6 +1,7 @@
 window.RecipePreview = Backbone.View.extend({
 
-  # events:
+  events: 
+    'click .js-adjust-yield' : 'adjustYield'
 
   initialize: ->
     @render()
@@ -12,5 +13,9 @@ window.RecipePreview = Backbone.View.extend({
     console.log 'recipe preview'
     # inserting the recipe preview in global container
     $('.global-container').html JST['backbone/templates/recipe-preview-template'](this.model)
+
+  adjustYield: ->
+    $('.js-adjust-yield').click() 
+
 
   })

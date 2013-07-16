@@ -4,6 +4,7 @@
     h6.section-heading Basic Info
     hr
 
+    input type="file" name="add-photo"
     .add-photo
       .ss-plus
       h6 Add Photo
@@ -11,9 +12,9 @@
     input.xlarge placeholder="Recipe Name"
     input.xlarge placeholder="By"
     form
-      input type="checkbox" 
+      input type="radio" 
         p Make it Public 
-      input type="checkbox"
+      input type="radio"
         p Keep it Private 
     
     .recipe-type-dropdown
