@@ -11,6 +11,7 @@ window.BatchRouter = Backbone.Router.extend({
     'newrecipe'       : 'newrecipe'
     'myrecipes'       : 'showMyRecipes'
     'publicrecipes'   : 'showPublicRecipes'
+    'step'            : 'showFullscreenRecipeStep'
     'popularrecipes'  : 'showPopularRecipes'
     'favoriterecipes' : 'showFavoriteRecipes'
     'pantry'          : 'showPantry'
@@ -49,6 +50,9 @@ window.BatchRouter = Backbone.Router.extend({
 
   showPublicRecipes: ->
     new PublicRecipesView()
+
+  showFullscreenRecipeStep: ->
+    new FullscreenRecipeStepView()
 
   showPopularRecipes: ->
     new PopularRecipesView()

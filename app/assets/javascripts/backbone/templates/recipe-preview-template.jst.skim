@@ -63,6 +63,7 @@
         
         p #{{@get('peronsal-notes')}}
 
-      button.start-button Start
+      button.start-button.js-start-cooking Start
       .btnstart.edit
-        a Edit this recipe
+        a href="#"
+          | Edit this recipe
