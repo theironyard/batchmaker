@@ -34,7 +34,6 @@ window.BatchRouter = Backbone.Router.extend({
   showOneRecipe: (id)->
     # If we have already fetched the recipe, cool
     if recipe = fetchedRecipes.get(id)
-      console.log 'first part of the if'
       # just pass the model into the view
       new RecipePreview(model: recipe)
       
@@ -42,7 +41,6 @@ window.BatchRouter = Backbone.Router.extend({
     # grab it and add it to the collection and then 
     # pass it into the view.
     else
-      console.log 'second part of if'
       recipe = new Recipe(id: id)
       recipe.fetch success: (recipe) ->
         fetchedRecipes.add(recipe)

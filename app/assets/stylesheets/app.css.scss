@@ -478,12 +478,11 @@ form  {
   max-width: 809px;
   width: 90%;
   max-height: 403px;
-  height: 30%;
+  height: auto;
   padding: 0;
-  background-color: $c-pepper;
   margin: 26px auto 32px auto;
   text-align: center;
-  // @include border-radius(5px);
+  border: 1px solid white;
   overflow: hidden;
 
   img {
@@ -611,7 +610,7 @@ hr {
   }
 }
 
-.recipe-title {
+.recipe-title, .yield-amount {
   display: inline-block;
   margin: 10px 0 0 0;
   padding: 0;
@@ -620,6 +619,7 @@ hr {
   font-family: $ff-head;
   text-align: left;
 }
+
 
 //--------------------------
 //
