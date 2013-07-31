@@ -32,16 +32,27 @@
       .ingredients
         .recipe-box
           .recipe-title
-            span #{{@get('yield_amount')}} #{{@get('yield_name')}}
-            button.adjust.ss-write.js-adjust-recipe  Adjust
-            button.adjust.ss-check.js-save  Save
-            .yield-slider
+            #{{@get('yield_amount')}} #{{@get('yield_name')}}
+          button.adjust.ss-write.js-adjust-recipe  Adjust
+          button.adjust.ss-check.js-save  Save
+          .yield-slider
+            / p -
             input type="range" class="js-recipe-slider" name="border-width" min="0" max="50" value="12"
+            / p +
 
-        .ingredient-panel
-          span #{{@get('amount')}} #{{@get('unit')}}
-        .ingredient-line
-          span #{{@get('ingredient')}}
+        .ingredient-list
+          ul.ingredient-amounts
+            / li #{{@get('amount')}} #{{@get('unit')}}
+            li 1/2 Cup
+            li 1 Cup
+            li 2 Tbsp
+            li 1/2 Tsp
+          ul.ingredient-names
+            / li #{{@get('ingredient')}}
+            li Sugar
+            li All-Purpose Flour
+            li Cinnamon
+            li Backing Powder
 
       / Steps
       .steps
@@ -49,6 +60,7 @@
         hr.step-heading
 
         .steps-content
+          / p #{{@get('directions')}}
           p #{{@get('directions')}}
         
         table.steps

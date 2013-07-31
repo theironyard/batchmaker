@@ -1,42 +1,29 @@
-window.RecipePreview = Backbone.View.extend({
-
-  events: 
-    'click .js-adjust-yield' : 'adjustYield',
+window.RecipePreview = Backbone.View.extend
+  
+  events:
+    'click .js-adjust-recipe' : 'adjustYield',
     'click .js-start-cooking': 'clickStart'
 
   initialize: ->
     @render()
+    # $(".js-save").hide()
+    # $(".js-recipe-slider").hide()
     
   render: ->
     $('.global-container').html JST['backbone/templates/recipe-preview-template'](this.model)
 
-  adjustYield: ->      
+  adjustYield: ->  
+    console.log "clicked adjust button"    
     # Making avariable for the value the slider is atcurrently
-    value = $(this).val()
+    # value = $(this).val()
     
     # shows value + px in previous element, which is the span inside .yield-slider
-    $(this).prev().html 'value + " cookies"'
+    # $(this).prev().html 'value + " cookies"'
 
-    $(".js-save").hide()
-    $(".js-recipe-slider").hide()
-
-  showAdjustmentTools: ->
-    $(".js-adjust").show()
-    $(".js-save").hide()
-    $(".js-recipe-slider").hide()
-    $(".js-adjust").click ->
-      $(".js-recipe-slider").show()
-      $(".js-save").show()
-      $(".js-adjust").hide()
-
-  hideAdjustmentTools: ->
-    $(".js-save").click ->
-      $(".js-recipe-slider").hide()
-      $(".js-save").hide()
-      $(".js-adjust").show()
+    @$el(".js-save").show().html
+    @$el(".js-recipe-slider").show().html
+    @$el(".js-adjust-recipe").hide()
 
   clickStart: ->
     console.log 'Clicked js-start-cooking'
     new FullscreenRecipeStepView()
-
-  })
