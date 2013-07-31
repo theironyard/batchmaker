@@ -1,77 +1,76 @@
-doctype html
 html
-head
-  title Batchmaker
-  meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"
-  = stylesheet_link_tag    "application", :media => "all"
-  = javascript_include_tag "application"
-  = csrf_meta_tags
+  head
+    title Batchmaker
+    meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
 
-body
+  body
 
-    
-  .header
+      
+    .header
 
-    .mobile-nav
-      .ss-rows
+      .mobile-nav
+        .ss-rows
 
-    .salutation The kitchen is yours, Chef!
+      .salutation The kitchen is yours, Chef!
 
-    .logo
-      h4
-        a href="#" BatchMaker
+      .logo
+        h4
+          a href="#" BatchMaker
 
-    .navigation
+      .navigation
 
-      ul
+        ul
+          li
+            a href="#newrecipe"
+              .ss-plus.js-create-new-recipe
+          li
+            a href="#settings"
+              .ss-user
+          li
+            a href="users/sign_in"
+              .ss-logout.logout
+
+    .global-sidebar
+
+      ul.text
+
         li
-          a href="#newrecipe"
-            .ss-plus.js-create-new-recipe
+          a href="#myrecipes"
+            h6 My Recipes
         li
-          a href="#settings"
-            .ss-user
+          a href="#publicrecipes"
+            h6 Public Recipes
         li
-          a href="users/sign_in"
-            .ss-logout.logout
+          a href="#popularrecipes"
+            h6 Popular Recipes
+        / li
+        /   a href="#favoriterecipes"
+        /     h6 My Favorite Recipes
+        / li
+        /   a href="#pantry"
+        /     h6 My Pantry
 
-  .global-sidebar
+      ul.icons
 
-    ul.text
+        li
+          a href="#myrecipes"
+            img src="http://f.cl.ly/items/0H2S2Q2b0h0C3a1L1e10/pepper.png"
+        li
+          a href="#publicrecipes"
+            img src="http://f.cl.ly/items/0H2S2Q2b0h0C3a1L1e10/pepper.png"
+        li
+          a href="#popularrecipes"
+            img src="http://f.cl.ly/items/0H2S2Q2b0h0C3a1L1e10/pepper.png"
+        / li
+        /   a href="#"
+        /     img src="http://f.cl.ly/items/0H2S2Q2b0h0C3a1L1e10/pepper.png"
+        / li
+        /   a href="#"
+        /     img src="http://f.cl.ly/items/0H2S2Q2b0h0C3a1L1e10/pepper.png"
 
-      li
-        a href="#myrecipes"
-          h6 My Recipes
-      li
-        a href="#publicrecipes"
-          h6 Public Recipes
-      li
-        a href="#popularrecipes"
-          h6 Popular Recipes
-      / li
-      /   a href="#favoriterecipes"
-      /     h6 My Favorite Recipes
-      / li
-      /   a href="#pantry"
-      /     h6 My Pantry
-
-    ul.icons
-
-      li
-        a href="#myrecipes"
-          img src="http://f.cl.ly/items/0H2S2Q2b0h0C3a1L1e10/pepper.png"
-      li
-        a href="#publicrecipes"
-          img src="http://f.cl.ly/items/0H2S2Q2b0h0C3a1L1e10/pepper.png"
-      li
-        a href="#popularrecipes"
-          img src="http://f.cl.ly/items/0H2S2Q2b0h0C3a1L1e10/pepper.png"
-      / li
-      /   a href="#"
-      /     img src="http://f.cl.ly/items/0H2S2Q2b0h0C3a1L1e10/pepper.png"
-      / li
-      /   a href="#"
-      /     img src="http://f.cl.ly/items/0H2S2Q2b0h0C3a1L1e10/pepper.png"
-
-  div.global-container
-    = yield
+    div.global-container
+      = yield
 

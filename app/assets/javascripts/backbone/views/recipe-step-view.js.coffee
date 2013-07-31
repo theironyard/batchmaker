@@ -1,6 +1,6 @@
 window.RecipeStepView = Backbone.View.extend ({
 
-  event: 
+  events: 
     'click .js-add-step': 'DuplicateStep'
 
   initialize: ->
@@ -15,5 +15,7 @@ window.RecipeStepView = Backbone.View.extend ({
   DuplicateStep: ->
     console.log 'duplicate step function'
     @$el.append JST['backbone/templates/recipe-step-template']()
+    new RecipeIngredientView()
+    @$el.find(".chzn-select").chosen()
 
 })

@@ -32,7 +32,7 @@ $ff-body: 'Noticia Text',Georgia,'New Times Roman',serif;
 
 $border-radius: 0px;
 
-$input-bg: lighten($c-cream, 5%);
+$input-bg: white;
 $input-boxshadow: inset 0px 1px 2px rgba(0,0,0,.3);
 $input-border: 0px;
 $input-height: 50px;
@@ -128,22 +128,23 @@ h6 {
 .global-sidebar {
   position: fixed;
   width: 200px;
-  top: 68px;
+  top: 0px;
   bottom: 0;
-  background-color: $c-cream;
-  z-index: 9998;
+  // background-color: $c-cream;
+  // border-right: 1px solid lighten($c-pepper, 75%);
+  z-index: 0;
 
 
   ul.text, ul.icons {
-    width: 140px;
+    width: 170px;
     margin: 0 auto;
-    margin-top: 10px;
+    margin-top: 73px;
 
   li {
     list-style: none;
-    padding: 25px 0 0 0;
+    padding: 25px 20px 0 0;
     text-align: center;
-    margin: auto;
+    margin: 0 0 0 10px;
     
     h6 {
       font-family: $ff-head;
@@ -197,9 +198,11 @@ h6 {
 .header {
   width: 100%;
   height: 68px;
-  position: fixed;
-  top: 0;
-  left: 0;
+  margin: 0;
+  padding: 0;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
   background-color: $c-blueberry;
   z-index: 9999;
   font-size: 24px;
@@ -211,14 +214,13 @@ h6 {
 
 .salutation {
   margin: 0;
-  margin-top:20px;
-  padding-left: 34px;
+  padding: 21px 0 0 34px;
 }
 
 .logo {
   text-align: center;
   margin: 0 auto;
-  margin-top: -35px;
+  margin-top: -39px;
   padding: 0;
 
   a, a:visited {
@@ -247,7 +249,7 @@ h6 {
 .navigation {
   text-align: right;
   padding-right: 37px;
-  margin-top: -50px;
+  margin-top: -46px;
 
   ul {
     list-style: none;
@@ -283,7 +285,7 @@ h6 {
   position: relative;
   width: auto;
   margin-left: 13%;
-  margin-top: 68px;
+  margin-top: 0px;
   text-align: center;
 }
 
@@ -306,12 +308,13 @@ h6 {
 
   &.create-recipe-page {
     max-width: 700px;
+    margin-top: 37px;
   }
 }
 
 .content {
   position: relative;
-  top: 80px;
+  margin-top: 46px;
   padding-bottom: 50px;
 }
 
@@ -361,11 +364,12 @@ form  {
 
 .ingredients {
   max-width: 700px;
-  margin-bottom: 36px;
-  background-color: none;
+  margin: 0 0 36px 0;
+  padding: 10px;
+  background-color: $c-white;
   border: 1px solid darken($c-cream, 20%);
-  // @include border-radius(5px);
   text-align: left;
+  @include box-sizing(border-box);
   z-index: 1000;
 }
 
@@ -382,6 +386,30 @@ form  {
 //
 //---------------------
 
+.search-bar {
+  -webkit-appearance: none;
+  width: 80%;
+  max-width: 862px;
+  margin: 2% auto 0 auto;
+  padding-right: 10px;
+}
+
+.search-button {
+  display: inline-block;
+  width: 10%;
+  max-width: 200px;
+  padding: 2.85%;
+  margin: 0;
+  background-color: $c-pepper;
+  font-family: $ff-head;
+  color: $c-cream;
+  font-size: $input-fontsize;
+}
+
+.search-bar:afters {
+  content: "Hello";
+}
+
 .recipe-row {
   width: 90%;
   max-width: 1062px;
@@ -394,7 +422,6 @@ form  {
   // background-color: $c-pepper;
   width: 100%;
   text-align: left;
-  height: 90%;
 }
 
 .recipe-grid-container {
@@ -524,8 +551,8 @@ hr {
   font-size: 18px;
   font-family: $ff-head;
   font-weight: 200;
-  color: $input-bg;
-  margin-top: -7px;
+  color: $c-pepper;
+  line-height: 1;
 }
 
 /* ----------------------------------- */
@@ -535,12 +562,12 @@ hr {
 .glance-box {
   width: 154px;
   padding: 16px 0 14px 20px;
-  border-right: 1px solid $c-pepper;
+  border-right: 1px solid darken($c-cream, 20%);
   display: inline-block;
 
   span, small {
     font-size: 32px;
-    color: $input-bg;
+    color: $c-pepper;
     font-family: $ff-head;
     font-weight: 200;
     letter-spacing: 1px;
@@ -566,26 +593,32 @@ hr {
 //--------------------------
 
 .recipe-box {
-  background-color: $c-white;
-  // @include border-radius(5px 5px 0 0);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.yield-slider {
+  width: 100%;
+  margin: 25px 0 22px 0;
+  padding: 0;
+
+  p {
+    display: inline-block;
+    font-size: 10px;
+    line-height: 0;
+    width: 1%;
+  }
 }
 
 .recipe-title {
+  display: inline-block;
+  margin: 10px 0 0 0;
+  padding: 0;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: $ff-head;
   text-align: left;
-  padding: 18px 0 18px 20px;
-  
-  span {
-    font-size: 24px;
-    font-weight: 400;
-    font-family: $ff-head;
-    padding: 0;
-  }
-  
-  button.adjust {
-    float: right;
-    margin-top: -10px;
-    margin-right: 10px;
-  }
 }
 
 //--------------------------
@@ -594,53 +627,102 @@ hr {
 //
 //--------------------------
 
-.ingredient-panel {
-  width: 122px;
-  padding: 22px 10px 18px 0;
-  text-align: right;
-  border-top: 1px solid lighten($c-pepper, 65%);
+.recipe-details {
+
+  ul {
+    display: inline-block;
+    
+    &.ingredient-amounts {
+      width: 20%;
+      padding: 10px 0 10px 0;
+      border-right: 1px solid lighten($c-pepper, 65%);
+      text-align: right;
+
+      li {
+        padding-right: 16px;
+      }
+    }
+
+    &.ingredient-names {
+      width: 79.8%;
+      margin: 0;
+      padding: 10px 0 10px 0;
+      text-align: left;
+
+      li {
+        padding-left: 16px;
+      }
+    }
+
+    li {
+      margin: 0;
+      padding: 0;
+      font: {
+        size: 24px;
+        weight: 200;
+        family: $ff-head;
+      }
+      line-height: 2.2;
+      border-bottom: 1px solid lighten($c-pepper, 65%);
+    }
+
+    li:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.ingredient-list {
   display: inline-block;
-  border-right: 1px solid lighten($c-pepper, 65%);
-  background-color: $c-white;
-  border-bottom-left-radius: 5px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 1px solid lighten($c-pepper, 65%);
+  background-color: whitesmoke;
+  // border-bottom-left-radius: 5px;
+  
+}
 
-
-  &:last-child {
-  }
-
-  span {
-    font-size: 24px;
-    font-weight: 400;
-    font-family: $ff-head;
-    padding: 0;
-  }
-}  
-
-.ingredient-line {
-  width: 547px;
-  padding: 22px 9px 18px 10px;
-  border-top: 1px solid lighten($c-pepper, 65%);
+.step-ingredients {
   display: inline-block;
-  background-color: $c-white;
+  width: 240px;
+  margin: 0 0 0 20px;
+  padding: 10px;
+  @include box-sizing(border-box);
 
-  span {
-    font-size: 24px;
-    font-weight: 200;
-    font-family: $ff-head;
-    padding: 0;
-  }
+  ul {
+    display: inline-block;
 
-  &:last-child {
-    // @include border-radius(0px 0 5px 0px);
-    // border-bottom: 1px solid lighten($c-pepper, 65%);
+    &.ingredient-amounts {
+      width: 37%;
+      
+      li {
+        font: {
+          weight: 400;
+        }
+      }
+    }
+
+    &.ingredient-names {
+      width: 61.8%;
+    }
+
+    li {
+      font: {
+        size: 15px;
+        weight: 200;
+        family: $ff-head;
+      }
+      line-height: 2.2;
+    }
   }
 }
 
 .steps-content, .notes-content {
-  width: 460px;
+  display: inline-block;
+  width: 440px;
   padding: 0;
   margin: 15px 0 0 0;
-  display: inline-block;
   vertical-align: top;
   font-family: $ff-head;
   text-align: left;
@@ -689,16 +771,17 @@ table {
   }
 }
 
-.btnstart.edit a {
-  text-align: right;
+.btnstart.edit a, .btnstart.edit a:visited {
   float: right;
+  margin-top: 19px;
   font-family: $ff-head;
   font-weight: 400;
   color: lighten($c-pepper, 50%);
-  margin-top: 19px;
+  text-decoration: none;
+  text-align: right;
 }
 
-.btnstart.edit a:hover {
+.btnstart.edit a:hover, .btnstart.edit a:focus {
   color: $c-pepper;
 }
 
@@ -774,17 +857,14 @@ button:hover {
 }
 
 .adjust {
+  float: right;
   width: 110px;
   height: 44px;
   margin: 0;
   padding: 0;
   display: inline-block;
-  // border-radius: 4px;
-  border: 1px solid #bfbfbf;
-  background: linear-gradient(to bottom, 
-    rgba(30,87,153,1) 0%,
-    rgba(242,242,242,1) 0%,
-    rgba(234,234,234,1) 100%);
+  border: 1px solid darken($input-bg, 40%);
+  background: $c-pepper;
   vertical-align: top;
   font-size: 17px;
   color: $input-bg;
@@ -800,6 +880,7 @@ button:hover {
   text-align: center;
   margin-right: 4.2857143%;
   vertical-align: top;
+  z-index: 1200;
 
   &.dashboard {
     float: none;
@@ -855,10 +936,10 @@ button:hover {
     top: 24px;
     right: 38px;
     z-index: 100;
+    color: lighten($c-pepper,30%);
 
     // avoid click events
     pointer-events: none;
-    color: $c-pepper;
   }
 }
 
@@ -884,10 +965,10 @@ button:hover {
       top: 23px;
       right: 22px;
       z-index: 100;
+      color: lighten($c-pepper,30%);
 
       // avoid click events
       pointer-events: none;
-      color: $c-pepper;
     }
   }
 }
@@ -909,10 +990,10 @@ button:hover {
     top: 24px;
     right: 31px;
     z-index: 100;
+    color: lighten($c-pepper,30%);
 
     // avoid click events
     pointer-events: none;
-    color: $c-pepper;
   }
 }
 
@@ -928,13 +1009,14 @@ button:hover {
 
 input {
   display: inline-block;
-  background-color: rgba(255,255,255,.5);
+  background-color: $c-white;
   border-radius: $border-radius;
   outline: 1px solid darken($c-cream, 15%);
   border: none;
   box-shadow: none;
   @include box-sizing(border-box);
-  color: $input-bg;
+  color: $c-pepper;
+  font-family: $ff-head;
   font-size: $input-fontsize;
   padding: 2.571% 0 2.571% 16px;
 
@@ -978,6 +1060,42 @@ input {
   }
 }
 
+input[type="file"] {
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 66px;
+  left: 0px;
+  width: 190px;
+  height: 190px;
+  overflow: hidden;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 3px;
+  margin: 10px 0;
+  padding: 0;
+  background-color: $c-pepper;
+  @include border-radius(1px);
+  outline: none;
+  border: none;
+  z-index: 999;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+   -webkit-appearance: none;
+  position: relative;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background-color: $c-pepper;
+  box-shadow: 0 0 5px lighten($c-pepper, 35%);
+  border: 2px solid $c-white;
+  z-index: 9999;
+}
+
 textarea {
   -webkit-appearance: none;
   width: 100%;
@@ -1003,9 +1121,10 @@ textarea {
   }
 }
 
-input[type="checkbox"] {
-  padding: 0px;
+input[type="radio"] {
   margin: 0 10px 0 0;
+  padding: 0px;
+  outline: none;
 }
 
 /* #Media Queries
@@ -1273,7 +1392,6 @@ input[type="checkbox"] {
 
         // avoid click events
         pointer-events: none;
-        color: $input-bg;
       }
     }
 
