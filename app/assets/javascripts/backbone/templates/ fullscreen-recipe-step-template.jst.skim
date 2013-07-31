@@ -1,0 +1,20 @@
+.fullscreen-container
+
+  .recipe-step-container
+    .ss-navigateleft
+    .step-heading Step 1 of 3
+
+    p Kogi typewrite sriracha hoodie messenger bag. Meh kale chips selfies, flannel semiotics 3 wolf moon sriracha salvia fixie mlkshk church-key american apparel. Hashtag virl +1 tattooed before they sold out. Churck-key forage fap cray.
+
+    table.step-ingredients
+      tr
+        td.amount 1/2 cup
+        td.ingredient Sugar
+      tr
+        td.amount 1 cup
+        td.ingredient All purpose flour
+      tr
+        td.amount.last 2 tb
+        td.ingredient.last Cinnamon
+
+    .ss-navigateright
