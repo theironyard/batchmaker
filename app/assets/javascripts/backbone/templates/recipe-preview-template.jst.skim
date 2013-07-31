@@ -4,7 +4,7 @@
     .big-ass-recipe-title
       h4 #{{@get('name')}}
 
-    .byline #{{@get('author')}}
+    .byline By #{{@get('author')}}
     .cover-photo
       img src="#{{@get('image')}}"
 
@@ -61,19 +61,29 @@
 
         .steps-content
           / p #{{@get('directions')}}
-          p #{{@get('directions')}}
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         
-        table.steps
-          tr
-            td.left #{{@get('amount')}} #{{@get('unit')}}
-            td.right #{{@get('ingredient')}}
+        .step-ingredients
+          ul.ingredient-amounts
+            / li #{{@get('amount')}} #{{@get('unit')}}
+            li 1/2 Cup
+            li 1 Cup
+            li 2 Tbsp
+          ul.ingredient-names
+            / li #{{@get('ingredient')}}
+            li Sugar
+            li All-Purpose Flour
+            li Cinnamon
 
       .notes-content
         
         h6.section-heading Personal Notes
         hr.step-heading
         
-        p #{{@get('peronsal-notes')}}
+        / p #{{@get('peronsal-notes')}}
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation umco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reenderit in voluate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
       button.start-button.js-start-cooking Start
       .btnstart.edit
