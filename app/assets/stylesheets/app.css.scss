@@ -409,6 +409,21 @@ form  {
     width: 14.3%;
     max-width: none;
   }
+
+  .grid-or-row {
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  .ss-grid, .ss-rows {
+    display: inline-block;
+    margin-right: 20px;
+    color: lighten($c-pepper, 65%);
+  }
+
+  .active {
+      color: $c-pepper;
+    }
 }
 
 //----------------------
@@ -452,10 +467,11 @@ form  {
 }
 
 .recipe-grid-container {
+  display: inline-block;
   width: 190px;
   height: 220px;
-  display: inline-block;
   margin-right: 4.2857143%;
+  margin-bottom: 4.2857143%;
   text-align: center;
   
   h6 {
@@ -467,12 +483,20 @@ form  {
 }
 
 .grid-item {
+  display: block;
   width: 100%;
   height: 190px;
   @include border-radius($border-radius);
   margin-bottom: 5px;
-  display: block;
   background-color: $c-spinach;
+  border: 2px solid white;
+  overflow: hidden;
+
+  img {
+    max-width: 380px;
+    width: auto;
+    min-height: 100%;
+  }
 }
 
 .view-all {

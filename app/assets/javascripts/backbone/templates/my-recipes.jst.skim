@@ -5,3 +5,7 @@
 
   a href="#"
     div.search-button Search
+
+  .grid-or-row
+    .ss-grid
+    .ss-rows
