@@ -380,6 +380,37 @@ form  {
   text-align: left;
 }
 
+.all-recipe-grid {
+  width: 85%;
+  max-width: 1060px;
+  margin: 25px auto;
+  padding: 0;
+  text-align: left;
+
+  h3 {
+    padding-bottom: 35px;
+    font-family: 'Noticia Text',Georgia,'New Times Roman',serif;
+    font-size: 42px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  hr {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .search-bar {
+    max-width: none;
+    margin-bottom: 2%;
+  }
+  
+  .search-button {
+    width: 14.3%;
+    max-width: none;
+  }
+}
+
 //----------------------
 //
 // Dashboard
@@ -391,7 +422,6 @@ form  {
   width: 80%;
   max-width: 862px;
   margin: 2% auto 0 auto;
-  padding-right: 10px;
 }
 
 .search-button {
@@ -404,10 +434,7 @@ form  {
   font-family: $ff-head;
   color: $c-cream;
   font-size: $input-fontsize;
-}
-
-.search-bar:afters {
-  content: "Hello";
+  text-align: center;
 }
 
 .recipe-row {

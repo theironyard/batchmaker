@@ -1,0 +1,7 @@
+.all-recipe-grid
+  h3 Public Recipes
+  hr
+  input.search-bar type="search" placeholder="Search for any recipe"
+
+  a href="#"
+    div.search-button Search

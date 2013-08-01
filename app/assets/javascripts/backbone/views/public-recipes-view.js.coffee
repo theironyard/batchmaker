@@ -1,12 +1,11 @@
-window.PublicRecipesView = Backbone.View.extend({
+window.PublicRecipesView = Backbone.View.extend
 
   initialize: ->
     @render()
 
   render: ->
     $('.global-container').html ''
+    $('.global-container').html JST['backbone/templates/public-recipes']()
 
     publicCollection.each (recipe, index) ->
-      $('.global-container').append JST['backbone/templates/recipes/grid-item'](recipe.attributes)
-
-  })
+      $('.all-recipe-grid').append JST['backbone/templates/recipes/all-recipes-grid'](recipe)

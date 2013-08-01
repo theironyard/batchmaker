@@ -32,6 +32,12 @@ window.BatchRouter = Backbone.Router.extend({
   showMyRecipes: ->
     new MyRecipesView()
 
+  showPublicRecipes: ->
+    new PublicRecipesView()
+    
+  showPopularRecipes: ->
+    new PopularRecipesView()
+
   showOneRecipe: (id)->
     # If we have already fetched the recipe, cool
     if recipe = fetchedRecipes.get(id)
@@ -47,14 +53,8 @@ window.BatchRouter = Backbone.Router.extend({
         fetchedRecipes.add(recipe)
         new RecipePreview(model: recipe)
 
-  showPublicRecipes: ->
-    new PublicRecipesView()
-
   showFullscreenRecipeStep: ->
     new FullscreenRecipeStepView()
-
-  showPopularRecipes: ->
-    new PopularRecipesView()
 
   search: ->
     

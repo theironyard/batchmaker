@@ -1,12 +1,11 @@
-window.PopularRecipesView = Backbone.View.extend({
+window.PopularRecipesView = Backbone.View.extend
 
   initialize: ->
     @render()
 
   render: ->
     $('.global-container').html ''
+    $('.global-container').html JST['backbone/templates/popular-recipes']()
 
     popularCollection.each (recipe, index) ->
-      $('.global-container').append JST['backbone/templates/recipes/grid-item'](recipe.attributes)
-
-  })
+      $('.all-recipe-grid').append JST['backbone/templates/recipes/all-recipes-grid'](recipe)
