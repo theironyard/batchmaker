@@ -6,6 +6,7 @@ $ ->
     events:
       'click .js-adjust-recipe' : 'adjustYield'
       'click .js-save'          : 'saveYield'
+      'click .js-edit'          : 'editRecipe'
       'click .js-start-cooking' : 'clickStart'
 
     initialize: ->
@@ -40,3 +41,7 @@ $ ->
     clickStart: ->
       console.log 'Clicked js-start-cooking'
       new FullscreenRecipeStepView()
+
+    editRecipe: ->
+      console.log 'clicked editRecipe'
+      new RecipeForm()

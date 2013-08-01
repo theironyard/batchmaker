@@ -5,8 +5,8 @@ window.FullscreenRecipeStepView = Backbone.View.extend({
     @render()
 
   render: ->
+    $('.global-container').html
+    $('.fullscreen-container').append JST['backbone/templates/fullscreen-recipe-step-template'](this.model)
     console.log 'FullscreenRecipeStep rendered'
-    $('.global-container').html ''
-    ('.fullscreen-container').html JST['backbone/templates/fullscreen-recipe-step-template']()
 
 })

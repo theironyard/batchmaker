@@ -11,10 +11,11 @@ window.BatchRouter = Backbone.Router.extend({
     'newrecipe'       : 'newrecipe'
     'myrecipes'       : 'showMyRecipes'
     'publicrecipes'   : 'showPublicRecipes'
-    'step'            : 'showFullscreenRecipeStep'
     'popularrecipes'  : 'showPopularRecipes'
-    'favoriterecipes' : 'showFavoriteRecipes'
-    'pantry'          : 'showPantry'
+    'step/:id'        : 'showFullscreenRecipeStep'
+    'search/:query'   : 'search'
+    # 'favoriterecipes' : 'showFavoriteRecipes'
+    # 'pantry'          : 'showPantry'
 
   showSignUpSignInPage: ->
     new SignUpSignInView()
@@ -55,11 +56,8 @@ window.BatchRouter = Backbone.Router.extend({
   showPopularRecipes: ->
     new PopularRecipesView()
 
-  showFavoriteRecipes: ->
-    new FavoriteRecipesView()
-
-  showPantry: ->
-    new PantryView()
+  search: ->
+    
 
 });
 
