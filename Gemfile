@@ -46,6 +46,7 @@ gem "skim", "0.8.6"
 gem "temple", "0.4.0"
 
 gem "rails-backbone"
+gem "backbone-support"
 
 gem "unicorn", ">= 4.3.1"
 gem "sqlite3"

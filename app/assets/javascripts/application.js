@@ -17,5 +17,6 @@
 //= require backbone
 //= require backbone_rails_sync
 //= require backbone_datalink
+//= require backbone-support
 //= require backbone/batchmaker
 //= require_tree .
