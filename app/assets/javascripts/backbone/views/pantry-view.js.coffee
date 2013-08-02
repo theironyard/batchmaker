@@ -1,4 +1,4 @@
-window.PantryView = Backbone.View.extend({
+window.PantryView = Support.CompositeView.extend({
 
   initialize: ->
     @render()

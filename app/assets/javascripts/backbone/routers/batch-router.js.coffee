@@ -1,4 +1,7 @@
-window.BatchRouter = Backbone.Router.extend({
+class window.BatchRouter extends Support.SwappingRouter
+
+  initialize: ->
+    @el = $('.global-container')
   
   # my app view is the header and sidebar
   # dashboard is first view called making it index.html
@@ -18,47 +21,43 @@ window.BatchRouter = Backbone.Router.extend({
     # 'pantry'          : 'showPantry'
 
   showSignUpSignInPage: ->
-    new SignUpSignInView()
+    @swap new SignUpSignInView()
   
   dashboard: ->
-    new DashboardView()
+    @swap new DashboardView()
 
   recipes: (id)->
-    new RecipePreview()
+    @swap new RecipePreview()
   
   newrecipe: -> 
-    new RecipeForm()
+    @swap new RecipeForm()
 
   showMyRecipes: ->
-    new MyRecipesView()
+    @swap new MyRecipesView()
 
   showPublicRecipes: ->
-    new PublicRecipesView()
+    @swap new PublicRecipesView()
     
   showPopularRecipes: ->
-    new PopularRecipesView()
+    @swap new PopularRecipesView()
 
   showOneRecipe: (id)->
     # If we have already fetched the recipe, cool
     if recipe = fetchedRecipes.get(id)
       # just pass the model into the view
-      new RecipePreview(model: recipe)
+      @swap new RecipePreview(model: recipe)
       
     # if we don't have it in fetchModels, let's
     # grab it and add it to the collection and then 
     # pass it into the view.
     else
       recipe = new Recipe(id: id)
-      recipe.fetch success: (recipe) ->
+      recipe.fetch success: (recipe) =>
         fetchedRecipes.add(recipe)
-        new RecipePreview(model: recipe)
+        @swap new RecipePreview(model: recipe)
 
   showFullscreenRecipeStep: ->
-    new FullscreenRecipeStepView()
+    @swap new FullscreenRecipeStepView()
 
   search: ->
-    
-
-});
-
-
+    @

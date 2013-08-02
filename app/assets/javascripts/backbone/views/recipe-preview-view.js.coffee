@@ -1,19 +1,16 @@
-window.RecipePreview = Backbone.View.extend
+window.RecipePreview = Support.CompositeView.extend
 
   events:
     'click .js-adjust-recipe' : 'adjustYield'
     'click .js-save'          : 'saveYield'
     'click .js-edit'          : 'editRecipe'
     'click .js-start-cooking' : 'clickStart'
-
-  initialize: ->
-    @render()
-    $(".js-save").hide()
-    $(".js-recipe-slider").hide()
     
   render: ->
     @$el.html JST['backbone/templates/recipe-preview-template'](this.model)
-    $('.global-container').html @el
+    $(".js-save").hide()
+    $(".js-recipe-slider").hide()
+    @
 
   adjustYield: ->  
     console.log "clicked adjust button"

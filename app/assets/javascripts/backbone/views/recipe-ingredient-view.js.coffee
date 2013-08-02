@@ -1,4 +1,4 @@
-window.RecipeIngredientView = Backbone.View.extend ({
+window.RecipeIngredientView = Support.CompositeView.extend ({
 
   events:
     'click .js-add-ingredient': 'clickAdd'

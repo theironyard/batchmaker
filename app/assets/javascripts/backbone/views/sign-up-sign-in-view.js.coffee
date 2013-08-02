@@ -1,10 +1,8 @@
-window.SignUpSignInView = Backbone.View.extend({
+window.SignUpSignInView = Support.CompositeView.extend
 
   initialize: ->
     SignUpSignInTemplate = JST['backbone/templates/sign-up-sign-in-template']
-    @render()
 
   render: ->
-    $('.global-container').html SignUpSignInTemplate()
-    
-  })
+    @$el.html SignUpSignInTemplate()
+    @    

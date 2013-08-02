@@ -1,4 +1,4 @@
-window.FullscreenRecipeStepView = Backbone.View.extend({
+window.FullscreenRecipeStepView = Support.CompositeView.extend({
 
   initialize: ->
     console.log 'fullscreen initialize'

@@ -1,19 +1,16 @@
-window.PublicRecipesView = Backbone.View.extend
+window.PublicRecipesView = Support.CompositeView.extend
 
   events:
     'click .ss-rows' : 'showListView'
     'click .ss-grid' : 'showGridView'
-  
-  initialize: ->
-    @render()
-    $('.ss-grid').addClass('active')
 
   render: ->
     @$el.html JST['backbone/templates/public-recipes']()
-    $('.global-container').html @el
+    $('.ss-grid').addClass('active')
 
-    publicCollection.each (recipe, index) ->
-      $('.all-recipe-container').append JST['backbone/templates/recipes/all-recipes-grid'](recipe)
+    publicCollection.each (recipe, index) =>
+      @$el.find('.all-recipe-container').append JST['backbone/templates/recipes/all-recipes-grid'](recipe)
+    @
 
   showListView: ->
     $('.ss-grid').removeClass('active')
