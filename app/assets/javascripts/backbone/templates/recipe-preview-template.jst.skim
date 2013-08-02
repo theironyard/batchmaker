@@ -42,7 +42,7 @@
 
         .ingredient-list
           ul.ingredient-amounts
-            li #{{@get('amount')}} #{{@get('unit')}}
+            / li #{{@get('amount')}} #{{@get('unit')}}
             li 1/2 Cup
             li 1 Cup
             li 2 Tbsp

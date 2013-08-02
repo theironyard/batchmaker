@@ -1,4 +1,5 @@
 a href="#recipes/#{{@get('id')}}"
   .recipe-grid-container
     .grid-item
+      img src="#{{@get('image')}}"
     h6 #{{@get('name')}}
