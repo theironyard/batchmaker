@@ -11,7 +11,6 @@ window.MyRecipesView = Backbone.View.extend
   render: ->
     @$el.html JST['backbone/templates/my-recipes']()
     $('.global-container').html @el
-    # $('.all-recipe-grid').html @el
 
     recipes.each (recipe, index) ->
       $('.all-recipe-container').append JST['backbone/templates/recipes/all-recipes-grid'](recipe)
