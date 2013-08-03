@@ -21,7 +21,8 @@
 //---------------------
 
 $c-pepper: #232323;
-$c-blueberry: #254a5d;
+$c-blueberry: #232323;
+// $c-blueberry: #254a5d;
 $c-spinach: #76c7a5;
 $c-cream: rgb(245,245,245);
 $c-pumpkin: #efb968;
@@ -555,12 +556,13 @@ form  {
       padding: 0;
     }
   }
+  
+  .ss-write:hover, .ss-write:focus, .ss-delete:hover, .ss-delete:focus {
+    color: $c-pepper;
+    cursor: pointer;
+  }
 }
 
-.ss-write:hover, .ss-write:focus, .ss-delete:hover, .ss-delete:focus {
-  color: $c-pepper;
-  cursor: pointer;
-}
 
 
 .view-all {
@@ -905,6 +907,10 @@ table {
 // Buttons
 //
 //--------------------------
+
+button {
+  cursor: pointer;
+}
 
 button:hover {
   @include opacity(0.9);
