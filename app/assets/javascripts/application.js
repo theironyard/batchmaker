@@ -13,9 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require chosen.jquery
-//= require underscore
-//= require backbone
+//= require underscore-1.4.3
+//= require backbone-0.9.10
 //= require backbone_rails_sync
 //= require backbone_datalink
+//= require backbone-support
 //= require backbone/batchmaker
 //= require_tree .

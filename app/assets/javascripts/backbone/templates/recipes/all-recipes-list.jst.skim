@@ -1,0 +1,11 @@
+.list-item
+  a href="#recipes/#{{@get('id')}}"
+    img src="#{{@get('image')}}"
+  .list-item-info
+    h6 #{{@get('name')}}
+    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  .list-item-command
+    .ss-write
+      p Edit
+    .ss-delete
+      p Delete
