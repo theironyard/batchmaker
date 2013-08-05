@@ -6,8 +6,6 @@ window.RecipePreview = Support.CompositeView.extend
     'click .js-edit'          : 'editRecipe'
     'click .js-start-cooking' : 'clickStart'
   
-  initialize: ->
-    
   render: ->
     @$el.html JST['backbone/templates/recipe-preview-template'](this.model)
     @$(".js-save").hide()
