@@ -6,7 +6,11 @@
 #= require_tree ./routers
 
 window.Batchmaker =
+  # construtors
   Models: {}
   Collections: {}
   Routers: {}
   Views: {}
+
+  # instances
+  collections: {}
