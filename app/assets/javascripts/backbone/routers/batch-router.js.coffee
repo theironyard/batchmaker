@@ -7,14 +7,12 @@ class window.BatchRouter extends Support.SwappingRouter
   # dashboard is first view called making it index.html
   routes:
     '/users/sign_in'  : 'showSignUpSignInPage'
-    # 'dashboard'     : 'dashboard'
     ''                : 'dashboard'
-    'recipes'         : 'recipes'
+    'recipes/new'     : 'newRecipe'
+    'recipes/public'  : 'showPublic'
+    'recipes/popular' : 'showPopular'
+    'recipes/mine'    : 'showMine'
     'recipes/:id'     : 'showOneRecipe'
-    'newrecipe'       : 'newrecipe'
-    'myrecipes'       : 'showMyRecipes'
-    'publicrecipes'   : 'showPublicRecipes'
-    'popularrecipes'  : 'showPopularRecipes'
     'step/:id'        : 'showFullscreenRecipeStep'
     'search/:query'   : 'search'
     # 'favoriterecipes' : 'showFavoriteRecipes'
@@ -25,21 +23,24 @@ class window.BatchRouter extends Support.SwappingRouter
   
   dashboard: ->
     @swap new DashboardView()
-
-  recipes: (id)->
-    @swap new RecipePreview()
   
-  newrecipe: -> 
+  newRecipe: -> 
     @swap new RecipeForm()
 
-  showMyRecipes: ->
-    @swap new MyRecipesView()
+  showPublic: ->
+    @swap new RecipeCategoryView
+      collection: Batchmaker.collections.publicCollection
+      categoryName: 'Public Recipes'
 
-  showPublicRecipes: ->
-    @swap new PublicRecipesView()
-    
-  showPopularRecipes: ->
-    @swap new PopularRecipesView()
+  showPopular: ->
+    @swap new RecipeCategoryView
+      collection: Batchmaker.collections.popularCollection
+      categoryName: 'Popular Recipes'
+
+  showMine: ->
+    @swap new RecipeCategoryView
+      collection: Batchmaker.collections.recipes
+      categoryName: 'My Recipes'
 
   showOneRecipe: (id)->
     # If we have already fetched the recipe, cool

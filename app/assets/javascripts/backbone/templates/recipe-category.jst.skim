@@ -1,5 +1,5 @@
 .all-recipe-container
-  h3 Public Recipes
+  h3 #{@categoryName}
   hr
   input.search-bar type="search" placeholder="Search for any recipe"
 
@@ -7,5 +7,5 @@
     div.search-button Search
 
   .grid-or-row
-    .ss-grid
-    .ss-rows
+    .ss-grid.js-recipe-grid
+    .ss-rows.js-recipe-list
