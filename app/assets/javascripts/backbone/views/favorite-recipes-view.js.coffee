@@ -1,4 +1,4 @@
-window.FavoriteRecipesView = Backbone.View.extend({
+window.FavoriteRecipesView = Support.CompositeView.extend({
 
   initialize: ->
     @render()

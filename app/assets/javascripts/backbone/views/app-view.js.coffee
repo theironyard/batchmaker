@@ -3,17 +3,17 @@ window.AppView = Backbone.View.extend({
   initialize: ->
 
     # creating new instance of Recipes Collection for specific subcateories
-    window.recipes = new Recipes()
-    window.fetchedRecipes = new Recipes()
-    window.publicCollection = new Recipes()
-    window.popularCollection = new Recipes()
-    window.favoriteCollection = new Recipes()
+    Batchmaker.collections.recipes = new Recipes()
+    Batchmaker.collections.fetchedRecipes = new Recipes()
+    Batchmaker.collections.publicCollection = new Recipes()
+    Batchmaker.collections.popularCollection = new Recipes()
+    Batchmaker.collections.favoriteCollection = new Recipes()
     # window.ingredients = new Ingredients()
 
-    recipes.fetch()
-    publicCollection.fetch()
-    popularCollection.fetch()
-    favoriteCollection.fetch()
+    Batchmaker.collections.recipes.fetch()
+    Batchmaker.collections.publicCollection.fetch()
+    Batchmaker.collections.popularCollection.fetch()
+    Batchmaker.collections.favoriteCollection.fetch()
     # ingredients.fetch()
 
 })

@@ -1,68 +1,64 @@
-window.BatchRouter = Backbone.Router.extend({
+class window.BatchRouter extends Support.SwappingRouter
+
+  initialize: ->
+    @el = $('.global-container')
   
   # my app view is the header and sidebar
   # dashboard is first view called making it index.html
   routes:
     '/users/sign_in'  : 'showSignUpSignInPage'
-    # 'dashboard'     : 'dashboard'
     ''                : 'dashboard'
-    'recipes'         : 'recipes'
+    'recipes/new'     : 'newRecipe'
+    'recipes/public'  : 'showPublic'
+    'recipes/popular' : 'showPopular'
+    'recipes/mine'    : 'showMine'
     'recipes/:id'     : 'showOneRecipe'
-    'newrecipe'       : 'newrecipe'
-    'myrecipes'       : 'showMyRecipes'
-    'publicrecipes'   : 'showPublicRecipes'
-    'step'            : 'showFullscreenRecipeStep'
-    'popularrecipes'  : 'showPopularRecipes'
-    'favoriterecipes' : 'showFavoriteRecipes'
-    'pantry'          : 'showPantry'
+    'step/:id'        : 'showFullscreenRecipeStep'
+    'search/:query'   : 'search'
+    # 'favoriterecipes' : 'showFavoriteRecipes'
+    # 'pantry'          : 'showPantry'
 
   showSignUpSignInPage: ->
-    new SignUpSignInView()
+    @swap new SignUpSignInView()
   
   dashboard: ->
-    new DashboardView()
-
-  recipes: (id)->
-    new RecipePreview()
+    @swap new DashboardView()
   
-  newrecipe: -> 
-    new RecipeForm()
+  newRecipe: -> 
+    @swap new RecipeForm()
 
-  showMyRecipes: ->
-    new MyRecipesView()
+  showPublic: ->
+    @swap new RecipeCategoryView
+      collection: Batchmaker.collections.publicCollection
+      categoryName: 'Public Recipes'
+
+  showPopular: ->
+    @swap new RecipeCategoryView
+      collection: Batchmaker.collections.popularCollection
+      categoryName: 'Popular Recipes'
+
+  showMine: ->
+    @swap new RecipeCategoryView
+      collection: Batchmaker.collections.recipes
+      categoryName: 'My Recipes'
 
   showOneRecipe: (id)->
     # If we have already fetched the recipe, cool
     if recipe = fetchedRecipes.get(id)
-      console.log 'first part of the if'
       # just pass the model into the view
-      new RecipePreview(model: recipe)
+      @swap new RecipePreview(model: recipe)
       
     # if we don't have it in fetchModels, let's
     # grab it and add it to the collection and then 
     # pass it into the view.
     else
-      console.log 'second part of if'
       recipe = new Recipe(id: id)
-      recipe.fetch success: (recipe) ->
+      recipe.fetch success: (recipe) =>
         fetchedRecipes.add(recipe)
-        new RecipePreview(model: recipe)
-
-  showPublicRecipes: ->
-    new PublicRecipesView()
+        @swap new RecipePreview(model: recipe)
 
   showFullscreenRecipeStep: ->
-    new FullscreenRecipeStepView()
+    @swap new FullscreenRecipeStepView()
 
-  showPopularRecipes: ->
-    new PopularRecipesView()
-
-  showFavoriteRecipes: ->
-    new FavoriteRecipesView()
-
-  showPantry: ->
-    new PantryView()
-
-});
-
-
+  search: ->
+    @

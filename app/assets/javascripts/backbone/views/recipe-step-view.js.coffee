@@ -1,4 +1,4 @@
-window.RecipeStepView = Backbone.View.extend ({
+window.RecipeStepView = Support.CompositeView.extend ({
 
   events: 
     'click .js-add-step': 'DuplicateStep'

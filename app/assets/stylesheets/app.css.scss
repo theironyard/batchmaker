@@ -21,7 +21,8 @@
 //---------------------
 
 $c-pepper: #232323;
-$c-blueberry: #254a5d;
+$c-blueberry: #232323;
+// $c-blueberry: #254a5d;
 $c-spinach: #76c7a5;
 $c-cream: rgb(245,245,245);
 $c-pumpkin: #efb968;
@@ -380,6 +381,63 @@ form  {
   text-align: left;
 }
 
+.all-recipe-container {
+  width: 85%;
+  max-width: 1060px;
+  margin: 25px auto;
+  padding: 0;
+  text-align: left;
+
+  h3 {
+    padding-bottom: 35px;
+    font-family: 'Noticia Text',Georgia,'New Times Roman',serif;
+    font-size: 42px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  hr {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .search-bar {
+    max-width: none;
+    margin-bottom: 2%;
+  }
+  
+  .search-button {
+    width: 14.3%;
+    max-width: none;
+  }
+
+  .grid-or-row {
+    display: block;
+    width: 62px;
+    margin-bottom: 15px;
+    padding: 15px 0 10px 15px;
+    background-color: white;
+  }
+  
+  .ss-grid, .ss-rows {
+    display: inline-block;
+    margin-right: 15px;
+    color: lighten($c-pepper, 65%);
+  }
+
+  .ss-grid:hover, .ss-rows:hover, .ss-grid:focus, .ss-rows:focus {
+    cursor: pointer;
+  }
+
+  .active {
+      color: $c-pepper;
+    }
+}
+
+.all-recipe-container :last-child {
+  border-bottom: none;
+}
+
 //----------------------
 //
 // Dashboard
@@ -391,7 +449,6 @@ form  {
   width: 80%;
   max-width: 862px;
   margin: 2% auto 0 auto;
-  padding-right: 10px;
 }
 
 .search-button {
@@ -404,10 +461,7 @@ form  {
   font-family: $ff-head;
   color: $c-cream;
   font-size: $input-fontsize;
-}
-
-.search-bar:afters {
-  content: "Hello";
+  text-align: center;
 }
 
 .recipe-row {
@@ -425,10 +479,11 @@ form  {
 }
 
 .recipe-grid-container {
+  display: inline-block;
   width: 190px;
   height: 220px;
-  display: inline-block;
   margin-right: 4.2857143%;
+  margin-bottom: 4.2857143%;
   text-align: center;
   
   h6 {
@@ -440,13 +495,75 @@ form  {
 }
 
 .grid-item {
+  display: block;
   width: 100%;
   height: 190px;
   @include border-radius($border-radius);
   margin-bottom: 5px;
-  display: block;
   background-color: $c-spinach;
+  border: 2px solid white;
+  overflow: hidden;
+
+  img {
+    max-width: 190px;
+  }
 }
+
+.list-item {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0px auto;
+  padding: 25px 0;
+  border-bottom: 1px solid white;
+
+  img {
+    float: left;
+    max-width: 60px;
+    vertical-align: top;
+  }
+}
+
+.list-item-info {
+  display: inline-block;
+  width: 60%;
+  margin: -5px 0 0 20px;
+
+  h6 {
+    display: block;
+    vertical-align: top;
+    margin: 0px 0 5px 0;
+  }
+
+  p {
+    margin: 0px 0px 0 0;
+    padding: 0;
+    display: block;
+  }
+}
+
+.list-item-command {
+  float: right;
+  margin-top: 28px;
+  color: lighten($c-pepper, 65%);
+
+  .ss-write, .ss-delete {
+    display: inline-block;
+    margin: 0 5px 0 15px;
+
+    p {
+      margin: 0 0 0 5px;
+      padding: 0;
+    }
+  }
+  
+  .ss-write:hover, .ss-write:focus, .ss-delete:hover, .ss-delete:focus {
+    color: $c-pepper;
+    cursor: pointer;
+  }
+}
+
+
 
 .view-all {
   width: 85px;
@@ -478,12 +595,11 @@ form  {
   max-width: 809px;
   width: 90%;
   max-height: 403px;
-  height: 30%;
+  height: auto;
   padding: 0;
-  background-color: $c-pepper;
   margin: 26px auto 32px auto;
   text-align: center;
-  // @include border-radius(5px);
+  border: 1px solid white;
   overflow: hidden;
 
   img {
@@ -611,7 +727,7 @@ hr {
   }
 }
 
-.recipe-title {
+.recipe-title, .yield-amount {
   display: inline-block;
   margin: 10px 0 0 0;
   padding: 0;
@@ -620,6 +736,7 @@ hr {
   font-family: $ff-head;
   text-align: left;
 }
+
 
 //--------------------------
 //
@@ -790,6 +907,10 @@ table {
 // Buttons
 //
 //--------------------------
+
+button {
+  cursor: pointer;
+}
 
 button:hover {
   @include opacity(0.9);

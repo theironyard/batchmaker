@@ -1,7 +1,6 @@
-window.RecipeIngredientView = Backbone.View.extend ({
+window.RecipeIngredientView = Support.CompositeView.extend ({
 
   events:
-    # not working yet. need this button to create a new blank ingredient view.
     'click .js-add-ingredient': 'clickAdd'
 
   initialize: ->
@@ -9,7 +8,6 @@ window.RecipeIngredientView = Backbone.View.extend ({
 
   render: ->
     @$el.html JST['backbone/templates/ingredient-template']()
-    # inserting ingredient template in its container that's inside the step template
     $('.js-ingredient-container').html @el
 
   clickAdd: ->
