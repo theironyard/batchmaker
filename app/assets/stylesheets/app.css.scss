@@ -136,7 +136,7 @@ h6 {
   z-index: 0;
 
 
-  ul.text, ul.icons {
+  ul {
     width: 170px;
     margin: 0 auto;
     margin-top: 73px;
@@ -176,16 +176,6 @@ h6 {
      @include opacity(0.6);
     }
 
-    }
-  }
-
-  ul.icons {
-    width: 68px;
-  
-    img {
-      text-align: center;
-      margin: 0 auto;
-      padding: 0;
     }
   }
 }
@@ -1256,9 +1246,10 @@ input[type="radio"] {
  
   
   @media only screen and (min-width: 960px) {
-    ul.icons {
-      display: none;
-      margin: 0 auto;
+    ul {
+      img {
+        display: none;
+      }
     }
 
     .mobile-nav {
@@ -1274,22 +1265,30 @@ input[type="radio"] {
 
     .global-sidebar {
       width: 68px;
+      
+      ul {
+        width: 100%;
+        text-align: center;
+
+        li {
+          margin: 0 auto;
+          padding: 0;
+        }
+
+        h6 {
+          display: none;
+        }
+        
+        img {
+          display: visible;
+          width: 75%;
+          padding-top: 24px;
+        }
+      }
     }
 
     .mobile-nav {
       display: none;
-    }
-
-    ul.text {
-      display: none;
-    }
-
-    ul.icons {
-      display: visible;
-
-      img {
-        width: 50%;
-      }
     }
 
     .container {
