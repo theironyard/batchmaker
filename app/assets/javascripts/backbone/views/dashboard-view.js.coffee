@@ -21,8 +21,3 @@ window.DashboardView = Support.CompositeView.extend
       @$el.find('.favorite-recipes-row').append JST['backbone/templates/recipes/grid-item'](recipe)
   
     @
-
-  viewRecipeCategory: ->
-    @swap new RecipeCategoryView
-      collection: Batchmaker.collections.publicCollection
-      categoryName: 'Public Recipes'
