@@ -1,4 +1,4 @@
-window.RecipeIngredientView = Support.CompositeView.extend ({
+window.RecipeIngredientView = Support.CompositeView.extend
 
   events:
     'click .js-add-ingredient': 'clickAdd'
@@ -7,12 +7,10 @@ window.RecipeIngredientView = Support.CompositeView.extend ({
     @render()
 
   render: ->
-    @$el.html JST['backbone/templates/ingredient-template']()
     $('.js-ingredient-container').html @el
+    @$el.html JST['backbone/templates/ingredient-template']()
 
   clickAdd: ->
     console.log 'clickAdd'
     @$el.append JST['backbone/templates/ingredient-template']()
     @$el.find(".chzn-select").chosen()
-
-  })

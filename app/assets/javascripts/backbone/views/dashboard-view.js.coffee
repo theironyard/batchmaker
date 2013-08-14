@@ -1,7 +1,4 @@
 window.DashboardView = Support.CompositeView.extend
-  
-  events: 
-    'click .view-all' : 'viewRecipeCategory'
 
   render: ->
     @$el.html JST['backbone/templates/dashboard']()

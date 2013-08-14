@@ -1045,6 +1045,8 @@ button:hover {
   display: inline-block;
   position: relative;
   margin-right: 1.857143%;
+  top: -1px;
+  outline: 1px #cfcfcf solid;
 
   .chzn-container {
     width: 222px !important;    
@@ -1070,8 +1072,8 @@ button:hover {
   .temp-unit-dropdown {
     position: absolute;
     right: 2px;
-    top: -55px;
-    line-height: .8;
+    top: -59px;
+    line-height: 1;
 
     .chzn-container {
       width: 63px !important;
@@ -1099,6 +1101,7 @@ button:hover {
   position: relative;
   margin-right: 1.857143%;
   top: 1px;
+  outline: 1px #cfcfcf solid;
 
   .chzn-container {
     width: 124px !important;
