@@ -44,7 +44,7 @@ class window.BatchRouter extends Support.SwappingRouter
 
   showOneRecipe: (id)->
     # If we have already fetched the recipe, cool
-    if recipe = fetchedRecipes.get(id)
+    if recipe = Batchmaker.collections.recipes.get(id)
       # just pass the model into the view
       @swap new RecipePreview(model: recipe)
       
@@ -54,7 +54,7 @@ class window.BatchRouter extends Support.SwappingRouter
     else
       recipe = new Recipe(id: id)
       recipe.fetch success: (recipe) =>
-        fetchedRecipes.add(recipe)
+        Batchmaker.collections.recipes.add(recipe)
         @swap new RecipePreview(model: recipe)
 
   showFullscreenRecipeStep: ->

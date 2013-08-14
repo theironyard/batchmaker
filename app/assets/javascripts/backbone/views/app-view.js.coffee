@@ -1,4 +1,4 @@
-window.AppView = Backbone.View.extend({
+window.AppView = Backbone.View.extend
 
   initialize: ->
 
@@ -15,5 +15,3 @@ window.AppView = Backbone.View.extend({
     Batchmaker.collections.popularCollection.fetch()
     Batchmaker.collections.favoriteCollection.fetch()
     # ingredients.fetch()
-
-})
