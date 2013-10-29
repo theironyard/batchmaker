@@ -28,14 +28,16 @@
 
     input.small placeholder="Prep Time"
     input.small.omega placeholder="Cook Time" 
-    input.smedium placeholder="Cook Temp"
-      
-    .temp-unit-wrap
-      .temp-unit-dropdown  
-        .ss-navigatedown
-        select data-placeholder="F&deg;" class="temp-unit chzn-select"
-          option selected="true" value="F" F&deg;
-          option value="C" C&deg;
+    
+    .input-add-on
+      input.smedium#alpha placeholder="Cook Temp"
+        
+      .temp-unit-wrap
+        .temp-unit-dropdown  
+          .ss-navigatedown
+          select data-placeholder="F&deg;" class="temp-unit chzn-select"
+            option selected="true" value="F" F&deg;
+            option value="C" C&deg;
 
     p This recipe will make
     input.smaller placeholder="Amount"
