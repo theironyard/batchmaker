@@ -1,39 +1,39 @@
-input.search-bar type="search" placeholder="Search for any recipe"
-
-a href="#"
-  div.search-button Search
-
-.recipe-row
-  .my-recipes-row
-    h6.section-heading My Recipes
+section.my-recipes-row
+  .section-title
     hr
-    a href="#recipes/mine"
-      .view-all
-        h6
-          small View all
-        .ss-navigateright
-
-    a href="#recipes/new"
-      .add-photo.dashboard.js-create-new-recipe
-        .ss-plus
-        h6 Add a Recipe
-
-.recipe-row
-  .public-recipes-row
-    h6.section-heading Public Recipes
+    p.section-heading My Recipes
+    p.view-all
+      small
+        a href="#myrecipes"
+          | View All
+          span.icon-arrow-right
+  
+section.public-recipes-row
+  .section-title
     hr
-    a href="#recipes/public"
-      .view-all
-        h6
-          small View all
-        .ss-navigateright
+    p.section-heading Public Recipes
+    p.view-all
+      small
+        a href="#publicrecipes"
+          | View All
+          span.icon-arrow-right
 
-.recipe-row
-  .popular-recipes-row
-    h6.section-heading Popular Recipes
+section.popular-recipes-row
+  .section-title
     hr
-    a href="#recipes/popular"
-      .view-all
-        h6
-          small View all
-        .ss-navigateright
+    p.section-heading Popular Recipes
+    p.view-all
+      small
+        a href="#popularrecipes"
+          | View All
+          span.icon-arrow-right
+      
+section.favorite-recipes-row
+  .section-title
+    hr
+    p.section-heading Favorite Recipes
+    p.view-all
+      small
+        a href="#favoriterecipes"
+          | View All
+          span.icon-arrow-right

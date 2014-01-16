@@ -1,21 +1,20 @@
 class window.BatchRouter extends Support.SwappingRouter
 
   initialize: ->
-    @el = $('.global-container')
+    @el = $('.main-container')
   
   # my app view is the header and sidebar
   # dashboard is first view called making it index.html
   routes:
-    '/users/sign_in'  : 'showSignUpSignInPage'
     ''                : 'dashboard'
     'recipes/new'     : 'newRecipe'
     'recipes/public'  : 'showPublic'
     'recipes/popular' : 'showPopular'
+    'recipes/favorite' : 'showFavorite'
     'recipes/mine'    : 'showMine'
     'recipes/:id'     : 'showOneRecipe'
     'step/:id'        : 'showFullscreenRecipeStep'
     'search/:query'   : 'search'
-    # 'favoriterecipes' : 'showFavoriteRecipes'
     # 'pantry'          : 'showPantry'
 
   showSignUpSignInPage: ->
@@ -36,6 +35,11 @@ class window.BatchRouter extends Support.SwappingRouter
     @swap new RecipeCategoryView
       collection: Batchmaker.collections.popularCollection
       categoryName: 'Popular Recipes'
+
+  showFavorite: ->
+    @swap new RecipeCategoryView
+      collection: Batchmaker.collections.favoriteCollection
+      categoryName: 'Favorite Recipes'
 
   showMine: ->
     @swap new RecipeCategoryView
@@ -60,5 +64,5 @@ class window.BatchRouter extends Support.SwappingRouter
   showFullscreenRecipeStep: ->
     @swap new FullscreenRecipeStepView()
 
-  search: ->
-    @
+  # search: ->
+  #   @

@@ -1,20 +1,30 @@
-.fullscreen-container
-
+.fullscreen
   .recipe-step-container
-    .ss-navigateleft
-    .step-heading Step 1 of 3
-
-    p Kogi typewrite sriracha hoodie messenger bag. Meh kale chips selfies, flannel semiotics 3 wolf moon sriracha salvia fixie mlkshk church-key american apparel. Hashtag virl +1 tattooed before they sold out. Churck-key forage fap cray.
-
-    table.step-ingredients
-      tr
-        td.amount 1/2 cup
-        td.ingredient Sugar
-      tr
-        td.amount 1 cup
-        td.ingredient All purpose flour
-      tr
-        td.amount.last 2 tb
-        td.ingredient.last Cinnamon
-
-    .ss-navigateright
+    / span.float.left.icon-arrow-left
+    / span.float.right.icon-arrow-right
+    .wmuSlider
+      .wmuSliderWrapper
+        article#step-1.step
+          h3 Step 1 of 2
+          p.direction One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought. It wasn't a dream. His room, a proper human.
+          .ingredients
+            ul.amount
+              li 1/2 cup
+              li 1 cup
+              li 2 tbsp
+            ul.ingredient
+              li Sugar
+              li Flour
+              li Cinnamon
+        article#step-2.step
+          h3 Step 2 of 2
+          p.direction One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him.
+          .ingredients
+            ul.amount
+              li 2 cup
+              li 3 tbsp
+              li 1 dash
+            ul.ingredient
+              li Water
+              li Olive Oil
+              li Lemon Zest

@@ -1,12 +1,8 @@
-window.FullscreenRecipeStepView = Support.CompositeView.extend({
+window.FullscreenRecipeStepView = Support.CompositeView.extend
 
-  initialize: ->
-    console.log 'fullscreen initialize'
-    @render()
+	initialize: ->
+		$('.wrapper').html ''
+		@render()
 
-  render: ->
-    $('.global-container').html
-    $('.fullscreen-container').append JST['backbone/templates/fullscreen-recipe-step-template'](this.model)
-    console.log 'FullscreenRecipeStep rendered'
-
-})
+	render: ->
+		$('.wrapper').append JST['backbone/templates/fullscreen-recipe-step-template'](this.model)

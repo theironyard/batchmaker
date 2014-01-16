@@ -1,17 +1,10 @@
-input.smaller placeholder="#" 
-    .unit-type-dropdown
-      .ss-navigatedown
-      select data-placeholder="Unit" class="unit-type chzn-select"
-        option value=""
-        option value="Cup" Cup
-        option value="Teaspoon" Teaspoon
-        option value="Tablespoon" Tablespoon
-        option value="Ounce" Ounce
-        option value="Quart" Quart
-        option value="Pound" Pound
-        option value="Pint" Pint
-
-    input.medium placeholder="breads flour"
-    
-    button.js-add-ingredient.add-remove-button
-      .ss-plus
+input.extra-small placeholder="Amount"
+.unit
+  select.chosen-select.unit
+    option Cups
+    option Teaspoons
+    option Tablespoons
+  
+  input.medium placeholder="Ingredient"
+  button
+    span.icon-plus

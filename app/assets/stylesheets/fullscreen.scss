@@ -1,0 +1,71 @@
+/* _fullscreen.scss */
+
+.fullscreen {
+	@include fixed-stretch;
+	top: 66px;
+	background: $dark-grey;
+}
+
+.recipe-step-container {
+	max-width: 950px;
+	width: 66%;
+	min-height: 100px;
+	margin: 8% auto 0 auto;
+	color: $light-grey;
+
+	// span { font-size: 42px; line-height: 7em; }
+
+	article {
+		width: 730px;
+		// width: 77%;
+		margin: 0 auto;
+		padding: 0;
+
+		h3 { margin-bottom: 17px;}
+	}
+}
+
+.step {
+	.direction, .ingredients { display: inline-block; @include zeroes; vertical-align: top;}
+	.direction {
+		max-width: 420px;
+		width: 57%;
+		margin: 0 5% 0 0;
+	}
+}
+
+.ingredients {
+		max-width: 272px;
+		width: 37%;
+		.ingredients-overview & {
+			width: 100%;
+		}
+		ul {
+			float: left;
+			@include zeroes;
+			vertical-align: top;
+			li {
+				display: block;
+				line-height: 2.5em;
+				border-bottom: 1px solid $light-grey;
+				&:last-child { border-bottom: none; }
+			}
+			&.amount {
+				width: 94px;
+				li {
+					width: 100%;
+					padding: 0 17px 0 0;
+					text-align: right;
+					@include ingredient-table-border-right;
+				}
+			}
+
+			&.ingredient {
+				width: 170px;
+				li {
+					padding: 0 0 0 17px;
+					text-align: left;
+				}
+			}
+		}
+	}

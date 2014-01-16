@@ -1,4 +1,4 @@
-window.AppView = Backbone.View.extend
+window.AppView = Support.CompositeView.extend
 
   initialize: ->
 

@@ -1,0 +1,47 @@
+/* _dashboard.scss */
+@import 'variables';
+
+.section-title {
+	position: relative;
+	margin-bottom: 16px;
+	font: {
+		family: $serif;
+		size: 1.25em;
+	}
+	p {
+		padding: 0 0px 0 8px;
+		background: $background;
+		vertical-align: middle;
+		
+		&.section-heading {
+			padding: 0 8px 0 0px;
+		}
+		
+		&.view-all { float: right; }
+
+		span {
+			margin-left: $icon-margin;
+			font-size: 14px;
+			line-height: 1.8;
+		}
+	}
+
+	hr { 
+		position: absolute;
+		top: 42%;
+		z-index: -1;
+	}
+}
+
+.recipe-box {
+	display: inline-block;
+	width: 180px;
+	height: 180px;
+	margin: 0 29px 29px 0;
+	border-radius: $border-radius;
+	overflow: hidden;
+	background: rgba(0,0,0,.5) url("http://666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.	r92.cf1.rackcdn.com/unsplash_528b276e41166_1.JPG") center top;
+	background-size: cover;
+	&:last-child { margin: 0 0 29px 0; }
+	a { display: block; }
+}

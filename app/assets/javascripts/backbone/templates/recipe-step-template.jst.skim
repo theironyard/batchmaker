@@ -1,5 +1,13 @@
-h6.section-heading.step Step 1
-hr.step-heading
+.step-directions
+	.section-title
+		hr
+		p.section-heading Step 1
+
+		.js-ingredient-container
+	
+	textarea.full-width placeholder="What directions go with this step?"
+
+button class="add-step"Add another step
 
 .js-ingredient-container
 
