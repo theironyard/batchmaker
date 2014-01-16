@@ -1,7 +1,14 @@
-h6.section-heading.step Step 1
-hr.step-heading
-
-.js-ingredient-container
-
-textarea.directions placeholder="What directions go with this step?"
-button.js-add-step.add-step-button Add another step
+.step-directions
+  .section-title
+    hr
+     p.section-heading Step 1
+  input.extra-small placeholder="Amount"
+  .unit
+    select.chosen-select.unit
+      option Cups
+      option Teaspoons
+      option Tablespoons
+    input.medium placeholder="Ingredient"
+    button
+	    span.icon-plus
+  textarea.full-width placeholder="What directions go with this step?"

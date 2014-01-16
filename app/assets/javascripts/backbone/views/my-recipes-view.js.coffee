@@ -4,7 +4,7 @@ window.MyRecipesView = Backbone.View.extend({
     @render()
 
   render: ->
-    $('.global-container').html ''
+    # $('.main-container').html ''
 
     recipes.each (recipe, index) ->
       $('.my-recipes-row').append JST['backbone/templates/recipes/grid-item'](recipe)

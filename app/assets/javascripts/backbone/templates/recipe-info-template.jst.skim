@@ -1,49 +1,45 @@
-.container.create-recipe-page
-  .content
-
-    h6.section-heading Basic Info
-    hr
-
-    .add-photo
-      .ss-plus
-      h6 Add Photo
-
-    input.xlarge placeholder="Recipe Name"
-    input.xlarge placeholder="By"
+.recipe-input-container
+  .secondary-container
+    .section-title
+      hr
+        p.section-heading Basic Info
     form
-      input type="checkbox" 
-        p Make it Public 
-      input type="checkbox"
-        p Keep it Private 
-    
-    .recipe-type-dropdown
-      .ss-navigatedown
-      select data-placeholder="Recipe Type" class="recipe-type chzn-select"
-        option value=""
-        option value="Breakfast" Breakfast
-        option value="Lunch" Lunch
-        option value="Dinner" Dinner
-        option value="Dessert" Dessert
-
-    input.small placeholder="Prep Time"
-    input.small.omega placeholder="Cook Time" 
-    input.smedium placeholder="Cook Temp"
-      
-    .temp-unit-wrap
-      .temp-unit-dropdown  
-        .ss-navigatedown
-        select data-placeholder="F&deg;" class="temp-unit chzn-select"
-          option selected="true" value="F" F&deg;
-          option value="C" C&deg;
-
-    p This recipe will make
-    input.smaller placeholder="Amount"
-    input.large.omega placeholder="cookies, loaves, etc"
+      .basic-info
+        .recipe-identity
+          input type="file"
+            .add-photo.js-add-photo
+              span.icon-plus
+              p Add Photo
+          input placeholder="Recipe Name"
+            input placeholder="By"
+              label
+                input name="privacy" type="radio" value="public" Make it Public
+              label
+                input name="privacy" type="radio" value="private" Keep it Private
+        .recipe-details.clear
+          select.chosen-select.recipe-type
+            option Breakfast
+            option Lunch
+            option Dinner
+            option Snack
+            option Dessert
+          input.small placeholder="Prep Time"
+            input.small placeholder="Cook Time"
+              .temperature
+                input.small placeholder="Cook Temp"
+                  select.chosen-select.temperature
+                    option F
+                    option C
+              .yield-details
+                label This recipe will make
+                input.extra-small placeholder="Amount"
+                input.large placeholder="cookies, lovaes, etc."
 
     .js-recipe-step-container
 
-    h6.section-heading.p-notes Personal Notes
-    hr.personal-notes
-
-    textarea.personal-notes
-    button.save-button Save this recipe!
+    .step-directions.clear
+      .section-title
+        hr
+        p.section-heading Personal Notes
+      textarea.full-width.clear placeholder=""
+    button.save-recipe Save this recipe!

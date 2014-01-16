@@ -1,5 +1,3 @@
-a href="#recipes/#{{@get('id')}}"
-  - console.log 'this = ',@
-  .recipe-grid-container
-    .grid-item
-    h6 #{{@get('name')}}
+.recipe-box
+	img src="#{{@get('image')}}"
+	a href="#recipes/#{{@get('id')}}"

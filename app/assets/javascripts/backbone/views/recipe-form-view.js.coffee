@@ -14,11 +14,11 @@ window.RecipeForm = Backbone.View.extend ({
   render: ->
 
     # clearing the dashboard out of global container
-    $('.global-container').html ''
+    $('.main-container').html ''
     
     # inserting recipe info template in global container
     # recipe info template has the rest of the recipe form inside of it
-    $('.global-container').html recipeInfoTemplate()
+    $('.main-container').html recipeInfoTemplate()
 
     # running this template here because its whole job is to host recipe set template
     recipeInfoTemplate()

@@ -4,9 +4,9 @@ window.FavoriteRecipesView = Backbone.View.extend({
     @render()
 
   render: ->
-    $('.global-container').html ''
+    $('.main-container').html ''
 
     favoriteCollection.each (recipe, index) ->
-      $('.global-container').append JST['backbone/templates/recipes/grid-item'](recipe.attributes)
+      $('.main-container').append JST['backbone/templates/recipes/grid-item'](recipe.attributes)
 
   })

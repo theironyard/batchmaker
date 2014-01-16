@@ -1,0 +1,144 @@
+/* _recipe-preview.scss */
+
+@import 'variables';
+
+.recipe-preview-container,
+.recipe-input-container {
+	max-width: 755px;
+	width: 90%;
+	margin: 0 auto 4em auto;
+}
+
+.recipe-preview-header {
+	text-align: center;
+	max-width: 100%;
+	width: auto;
+	max-height: 600px;
+	margin: 0 auto;
+	overflow: hidden;
+	
+	h1 {
+		font: {
+			weight: lighter;
+		}
+	}
+
+	img {
+		max-width: 100%;
+		width: 100%;
+		height: auto;
+		margin: 30px auto 15px auto;
+		@include border-radius;
+	}
+}
+
+.secondary-container {
+	padding: 0 50px;
+}
+
+.round-corners {
+	width: 100%;
+	margin: 15px auto;
+	border: 1px solid $light-grey;
+	@include border-radius;
+}
+
+.overview {
+	height: 78px;
+	span {
+		float: left;
+		width: 25%;
+		height: 100%;
+		padding: 17px 0 0 17px;
+		border-right: 1px solid $light-grey;
+		&:last-child { border-right: none; }
+	}
+	small {
+		color: $light-grey;
+		font-size: .75em;
+	}
+	p {
+		color: $dark-grey;
+		font: {
+			size: 1.5em;
+			font-weight: bolder;
+		}
+		line-height: 1;
+	}
+}
+
+.ingredient-overview {
+	padding: 19px 0;
+	height: auto;
+	@include linear-gradient(darken($background-secondary,5%), $background-tertiary);
+
+	h4 {
+		display: inline-block;
+		padding: 0 21px 19px 21px;
+		line-height: 1;
+	}
+
+	.ingredients {
+		width: 100%;
+		max-width: 100%;
+
+		ul {
+			float: none;
+			display: inline-block;
+			background: $background-tertiary;
+			border-top: 2px solid $light-grey;
+			li { 
+				line-height: 3.5em;
+				&:last-child {
+					border-bottom: 1px solid $light-grey;
+				}
+			}
+			&.amount {
+				float: left;
+				width: 124px;
+				font: {
+					weight: bolder;
+				}
+			}
+			&.ingredient {
+				width: 529px;
+			}
+		}
+	}
+}
+
+.recipe-steps {
+	margin: 0 auto 4em auto;
+	
+	section {
+		margin: 15px auto;
+		&:first-child { margin-top: 40px; }
+	}
+	
+	.section-title {
+		margin-bottom: 20px;
+		p { padding: 0 8px 0 0; }
+	}
+
+	.direction, .ingredients { display: inline-block; vertical-align: top; }
+
+	.direction {
+		width: 400px;
+		margin: 0 35px 20px 0;
+	}
+
+	.ingredients {
+		width: 215px;
+		ul {
+			&.amount { width: 85px; }
+			&.ingredient { width: 130px; }
+		}
+	}
+}
+
+.start {
+	text-align: right;
+	a { line-height: 3.6; }
+	.link { margin-left: 10px; line-height: .7;}
+}
+

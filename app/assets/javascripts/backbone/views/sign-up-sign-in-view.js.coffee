@@ -5,6 +5,6 @@ window.SignUpSignInView = Backbone.View.extend({
     @render()
 
   render: ->
-    $('.global-container').html SignUpSignInTemplate()
+    $('.main-container').html SignUpSignInTemplate()
     
   })

@@ -7,71 +7,40 @@ head
   = javascript_include_tag "application"
   = csrf_meta_tags
 
-body
-
+body  
+  header
+    p
+      em The kitchen is yours, Chef!
     
-  .header
-
-    .mobile-nav
-      .ss-rows
-
-    .salutation The kitchen is yours, Chef!
-
-    .logo
-      h4
-        a href="#" BatchMaker
-
-    .navigation
-
+    h1.logo
+      a href="" BatchMaker
+    nav
       ul
         li
           a href="#newrecipe"
-            .ss-plus.js-create-new-recipe
+            span.icon-plus  
         li
           a href="#settings"
-            .ss-user
+            span.icon-settings
         li
-          a href="users/sign_in"
-            .ss-logout.logout
+          a href="#users"
+            span.icon-profile
 
-  .global-sidebar
+  .wrapper  
+    aside
+      ul
+        li
+          a href="#myrecipes" My Recipes
+        hr
+        li
+          a href="#publicrecipes" Public Recipes
+        hr
+        li
+          a href="#popularrecipes" Popular Recipes
+        hr
+        li
+          a href="#favoriterecipes" Favorite Recipes
 
-    ul.text
-
-      li
-        a href="#myrecipes"
-          h6 My Recipes
-      li
-        a href="#publicrecipes"
-          h6 Public Recipes
-      li
-        a href="#popularrecipes"
-          h6 Popular Recipes
-      / li
-      /   a href="#favoriterecipes"
-      /     h6 My Favorite Recipes
-      / li
-      /   a href="#pantry"
-      /     h6 My Pantry
-
-    ul.icons
-
-      li
-        a href="#myrecipes"
-          img src="http://f.cl.ly/items/0H2S2Q2b0h0C3a1L1e10/pepper.png"
-      li
-        a href="#publicrecipes"
-          img src="http://f.cl.ly/items/0H2S2Q2b0h0C3a1L1e10/pepper.png"
-      li
-        a href="#popularrecipes"
-          img src="http://f.cl.ly/items/0H2S2Q2b0h0C3a1L1e10/pepper.png"
-      / li
-      /   a href="#"
-      /     img src="http://f.cl.ly/items/0H2S2Q2b0h0C3a1L1e10/pepper.png"
-      / li
-      /   a href="#"
-      /     img src="http://f.cl.ly/items/0H2S2Q2b0h0C3a1L1e10/pepper.png"
-
-  div.global-container
+  .main-container
     = yield
 

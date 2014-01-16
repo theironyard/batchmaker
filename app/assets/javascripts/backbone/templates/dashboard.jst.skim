@@ -1,52 +1,35 @@
-.recipe-row
-  .my-recipes-row
-    h6.section-heading My Recipes
+section.my-recipes-row
+  .section-title
     hr
-    a href="#myrecipes"
-      .view-all
-        h6
-          small View all
-        .ss-navigateright
-
-    a href="#newrecipe"
-      .add-photo.dashboard.js-create-new-recipe
-        .ss-plus
-        h6 Add a Recipe
-
-.recipe-row
-  .public-recipes-row
-    h6.section-heading Public Recipes
+    p.section-heading My Recipes
+    p.right
+      a href="#myrecipes"
+        small View All
+        span.icon-arrow-right
+  
+section.public-recipes-row
+  .section-title
     hr
-    a href="#publicrecipes"
-      .view-all
-        h6
-          small View all
-        .ss-navigateright
+    p.section-heading Public Recipes
+    p.right
+      a href="#publicrecipes"
+        small View All
+        span.icon-arrow-right
 
-.recipe-row
-  .popular-recipes-row
-    h6.section-heading Popular Recipes
+section.popular-recipes-row
+  .section-title
     hr
-    a href="#popularrecipes"
-      .view-all
-        h6
-          small View all
-        .ss-navigateright
-
-/ .recipe-row
-/   .favorite-recipes-row
-/     h6.section-heading My Favorite Recipes
-/     hr
-/     .view-all
-/       h6
-/         small View all
-/       .ss-navigateright
-
-/ .recipe-row
-/   .my-pantry-row
-/     h6.section-heading My Pantry
-/     hr
-/     .view-all
-/       h6
-/         small View all
-/       .ss-navigateright
+    p.section-heading Popular Recipes
+    p.right
+      a href="#popularrecipes"
+        small View All
+        span.icon-arrow-right
+      
+section.favorite-recipes-row
+  .section-title
+    hr
+    p.section-heading Favorite Recipes
+    p.right
+      a href="favoriterecipes"
+        small View All
+        span.icon-arrow-right

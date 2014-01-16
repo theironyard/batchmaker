@@ -1,0 +1,71 @@
+$background: #fff;
+$background-secondary: #f3f3f3;
+$background-tertiary: #f9f9f9;
+$white: #fff;
+
+$brand-color-1: #c5c5c5;
+$brand-color-2: #e0e0e0;
+$light-grey: #979797;
+$dark-grey: #484848;
+
+$sans-serif: "Helvetica Neue";
+$serif: Georgia;
+
+$main-text: #595959;
+$button-bg-color: #f2f2f2;
+
+$border-radius: 3px;
+$icon-margin: 8px;
+
+@mixin box-sizing {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@mixin transition {
+	-webkit-transition: 150ms all ease-in-out;
+	-moz-transition: 150ms all ease-in-out;
+	transition: 150ms all ease-in-out;
+}
+
+@mixin fixed-stretch {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+@mixin zeroes {
+	margin: 0;
+	padding: 0;
+}
+
+@mixin border-radius {
+	-webkit-border-radius: 3px;
+		 -moz-border-radius: 3px;
+			    border-radius: 3px; 
+}
+
+@mixin border-normal($color) {
+	border: 1px solid $color;
+}
+@mixin ingredient-table-border-top {
+	border-top: 1px solid $light-grey;
+}
+
+@mixin ingredient-table-border-right {
+	border-right: 1px solid $light-grey;
+}
+
+@mixin linear-gradient($top, $bottom) {
+	background: $top;
+	background: -moz-linear-gradient(top,  $top 0%, $bottom 80%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(80%,$bottom));
+	background: -webkit-linear-gradient(top,  $top 0%,$bottom 80%);
+	background: -o-linear-gradient(top,  $top 0%,$bottom 80%);
+	background: -ms-linear-gradient(top,  $top 0%,$bottom 80%);
+	background: linear-gradient(to bottom,  $top 0%,$bottom 80%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$top', endColorstr='$bottom',GradientType=0 );
+}

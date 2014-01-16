@@ -1,0 +1,34 @@
+/* _slider.scss */
+
+.wmuSlider, .wmuGallery { margin-bottom: 20px; }
+.wmuSlider {
+  position: relative;
+  overflow: hidden;
+  width: 950px;
+  margin: 0 auto;
+  padding: 0 110px;
+  height: auto;
+}
+.wmuSlider .wmuSliderWrapper { width: 100%; }
+.wmuSlider .wmuSliderWrapper article {
+  position: relative;
+  overflow: hidden;
+}
+.wmuSliderPrev, .wmuSliderNext {
+  position: absolute;
+  width: 110px;
+  height: 100%;
+  text-indent: -9999px;
+  top: 0%;
+  z-index: 2;
+}
+.wmuSliderPrev {
+  background: #484848 url('../images/arrow-left.svg') no-repeat left 50%;
+  background-size: 42px auto;
+  left: 0;
+}
+.wmuSliderNext {
+  background: #484848 url('../images/arrow-right.svg') no-repeat right 50%;
+  background-size: 42px auto;
+  right: 0;
+}
