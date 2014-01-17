@@ -7,7 +7,7 @@ window.RecipeForm = Support.CompositeView.extend
     # inserting recipe info template in main container
     # recipe info template has the rest of the recipe form inside of it
     new RecipeStepView()
-    $('.main-container').html JST["backbone/templates/recipe-info-template"]
+    @$el.html JST["backbone/templates/recipe-info-template"]
 
     JST["backbone/templates/recipe-info-template"]()
     # instantiating step view to call in the step template which hosts ingredient view.

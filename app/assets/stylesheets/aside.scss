@@ -1,15 +1,17 @@
 /* _aside.scss */
+@import 'variables';
 
 aside {
 	position: fixed;
 	width: 190px;
 	height: 100%;
 	padding-top: 65px;
-	background: $brand-color-2;
+	background: $brand-color-2 url(/app/assets/images/chef-hat.svg) no-repeat center 15px;
+	background-size: 20px auto; 
 	box-shadow: 0px -700px 0 #E0E0E0;
 	text-align: center;
 	font-family: $serif;
-	z-index: -1;
+	z-index: 50;
 
 	hr {
 		width: 45px;

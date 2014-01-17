@@ -1,10 +1,14 @@
+form.flex-container.search
+  input.nine type="search" placeholder="Search for any recipe"
+  input.fifteen type="button" value="Search"
+
 section.my-recipes-row
   .section-title
     hr
     p.section-heading My Recipes
     p.view-all
       small
-        a href="#myrecipes"
+        a href="/#recipes/mine"
           | View All
           span.icon-arrow-right
   
@@ -14,7 +18,7 @@ section.public-recipes-row
     p.section-heading Public Recipes
     p.view-all
       small
-        a href="#publicrecipes"
+        a href="/#recipes/public"
           | View All
           span.icon-arrow-right
 
@@ -24,7 +28,7 @@ section.popular-recipes-row
     p.section-heading Popular Recipes
     p.view-all
       small
-        a href="#popularrecipes"
+        a href="/#recipes/popular"
           | View All
           span.icon-arrow-right
       
@@ -34,6 +38,6 @@ section.favorite-recipes-row
     p.section-heading Favorite Recipes
     p.view-all
       small
-        a href="#favoriterecipes"
+        a href="/#recipes/favorite"
           | View All
           span.icon-arrow-right

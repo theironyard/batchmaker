@@ -1,32 +1,32 @@
 .recipe-preview-container
   
   .recipe-preview-header
-    h1 Baked Spaghetti
-    p by Allison
-    img src="http://666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_527c34b93ae39_1.JPG" 
+    h1 #{{@get('name')}}
+    p by #{{@get('author')}}
+    img src="#{{@get('image')}}"
   
   .secondary-container
 
     .round-corners.overview
       span 
         small Recipe Type
-        p Entree
+        p #{{@get('category')}}
       
       span 
         small Prep Time
-        p 20 min
+        p #{{@get('prep_time')}}
       
       span 
         small Cook Time
-        p 30 min
+        p #{{@get('cook_time')}}
       
       span 
         small Cook Temp
         p
-          | 400&deg; F
+          | #{{@get('cook_temp')}}&deg; F
       
     .round-corners.ingredient-overview
-      h4 6 Servings
+      h4 #{{@get('yield_amount')}} #{{@get('yield_name')}}
       button id="js-adjust-ingredients"
         span.icon-pencil Adjust
       button id="js-save-ingredients"
@@ -36,12 +36,12 @@
       .ingredients
         
         ul.amount
-          li 1/2 cup 
+          li #{{@get('amount')}}
           li 1 cup 
           li 2 tbsp 
         
         ul class="ingredient" 
-          li Sugar 
+          li #{{@get('unit')}}
           li Flour 
           li Cinnamon
 
@@ -52,43 +52,25 @@
           hr 
           p class="section-heading" Step 1
 
-        p.direction One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought. It wasn't a dream. His room, a proper human.
+        p.direction #{{@get('directions')}}
         
         .ingredients
           
           ul class="amount" 
-            li 1/2 cup 
+            li #{{@get('amount')}}
             li 1 cup 
             li 2 tbsp
           ul class="ingredient" 
-            li Sugar 
+            li #{{@get('unit')}}
             li Flour 
             li Cinnamon
-
-      section  
-        .section-title
-          hr 
-          p class="section-heading" Step 2
-
-        p.direction One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him.
-        
-        .ingredients
-          
-          ul.amount
-            li 2 cup 
-            li 3 tbsp 
-            li 1 dash 
-          ul.ingredient
-            li Water 
-            li Olive Oil 
-            li Lemon Zest 
 
       section.personal-notes
         .section-title
           hr 
           p.section-heading Personal Notes
 
-        p One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought. It wasn't a dream. His room, a proper human.
+        p #{{@get('peronsal-notes')}}
 
     .start
       a href="#0" Edit this recipe

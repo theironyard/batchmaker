@@ -17,6 +17,19 @@ $button-bg-color: #f2f2f2;
 $border-radius: 3px;
 $icon-margin: 8px;
 
+@mixin flex-container {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-content: space-around;
+  align-content: space-around;
+}
+
 @mixin box-sizing {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -42,10 +55,10 @@ $icon-margin: 8px;
 	padding: 0;
 }
 
-@mixin border-radius {
-	-webkit-border-radius: 3px;
-		 -moz-border-radius: 3px;
-			    border-radius: 3px; 
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+		 -moz-border-radius: $radius;
+			    border-radius: $radius; 
 }
 
 @mixin border-normal($color) {
