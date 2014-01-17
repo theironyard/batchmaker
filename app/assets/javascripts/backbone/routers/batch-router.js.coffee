@@ -22,7 +22,7 @@ class window.BatchRouter extends Support.SwappingRouter
   
   dashboard: ->
     @swap new DashboardView
-      collection: Batchmaker.collections.recipes
+      collection: Batchmaker.collections
   
   newRecipe: -> 
     @swap new RecipeForm()
