@@ -1,6 +1,11 @@
 window.DashboardView = Support.CompositeView.extend
 
+  initialize: ->
+    @render()
+
   render: ->
+    $('.main-container').html ''
+    
     $('.main-container').html JST['backbone/templates/dashboard']()
 
     # Loops through appropriate instance of Recipe Collection

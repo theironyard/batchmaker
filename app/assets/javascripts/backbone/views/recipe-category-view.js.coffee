@@ -8,9 +8,10 @@ window.RecipeCategoryView = Support.CompositeView.extend
     @categoryName = options.categoryName
 
   render: (option = "list") ->
-    @$(".js-recipe-#{option}").addClass('active')
-
     @$el.html JST['backbone/templates/recipe-category']( categoryName: @categoryName )
+    $(".js-recipe-#{option}").on "click", ->
+      $(this).toggleClass "active"
+
     @collection.each (recipe, index) =>
       @$el.find('.all-recipe-container').append JST["backbone/templates/recipes/all-recipes-#{option}"](recipe)
     @
