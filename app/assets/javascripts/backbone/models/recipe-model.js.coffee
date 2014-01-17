@@ -6,10 +6,21 @@ window.Recipe = Backbone.Model.extend(
   paramRoot: 'recipe'
 
   initialize: ->
+  # initialize what to look like data-wise
 
   defaults: [        
-    {
-      public: true
+    { 
+      author: '',
+      cook_temp: '',
+      cook_time: '',
+      farenheit: '',
+      prep_time: '',
+      name: '',
+      category: '',
+      yield_amount: '',
+      yield_name: '',
+      user_id: '',
+      public: true,
       steps: [ 
         { ingredients: [] }
       ]

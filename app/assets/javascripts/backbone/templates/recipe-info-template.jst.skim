@@ -7,40 +7,40 @@
     form
       .basic-info
         .recipe-identity
-          input type="file"
+          input.image type="file"
           .add-photo.js-add-photo
             span.icon-plus
             p Add Photo
-          input placeholder="Recipe Name"
-          input placeholder="By"
+          input data-name="name" placeholder="Recipe Name"
+          input data-name="author" placeholder="By"
           
           label
-            input name="privacy" type="radio" value="public"
+            input data-name="public" name="privacy" type="radio" value="public"
             | Make it Public
           label
-            input name="privacy" type="radio" value="private"
+            input data-name="private" name="privacy" type="radio" value="private"
             | Keep it Private
         
         .recipe-details.clear
-          select.chosen-select.recipe-type
+          select.chosen-select.recipe-type data-name="category"
             option Breakfast
             option Lunch
             option Dinner
             option Snack
             option Dessert
           
-          input.small placeholder="Prep Time"
-          input.small placeholder="Cook Time"
+          input.small data-name="prep_time" placeholder="Prep Time"
+          input.small data-name="cook_time" placeholder="Cook Time"
           .temperature
-            input.small placeholder="Cook Temp"
-            select.chosen-select.temperature
+            input.small data-name="cook_temp" placeholder="Cook Temp"
+            select.chosen-select.temperature data-name="farenheit"
               option F
               option C
           
           .yield-details
             label This recipe will make
-            input.extra-small placeholder="Amount"
-            input.large placeholder="cookies, lovaes, etc."
+            input.extra-small data-name="yield_amount" placeholder="Amount"
+            input.large data-name="yield_name" placeholder="cookies, lovaes, etc."
 
 
           .js-recipe-step-container
