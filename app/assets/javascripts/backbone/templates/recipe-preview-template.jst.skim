@@ -27,11 +27,11 @@
       
     .round-corners.ingredient-overview
       h4 #{{@get('yield_amount')}} #{{@get('yield_name')}}
-      button id="js-adjust-ingredients"
+      button.js-adjust-ingredients
         span.icon-pencil Adjust
-      button id="js-save-ingredients"
+      button.js-save-ingredients
         span.icon-checkmark Save
-      input type="range" name="yield" min="1" max="10" 
+      input.js-recipe-slider type="range" name="yield" min="1" max="10" 
 
       .ingredients
         
@@ -70,8 +70,9 @@
           hr 
           p.section-heading Personal Notes
 
-        p #{{@get('peronsal-notes')}}
+        p #{{@get('personal_notes')}}
 
     .start
       a href="#0" Edit this recipe
+      .delete-recipe Delete this recipe
       a.link.action href="#0" Start

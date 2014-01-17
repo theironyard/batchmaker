@@ -2,10 +2,11 @@
   a href="#recipes/#{{@get('id')}}"
     img src="#{{@get('image')}}"
   .list-item-info
-    h6 #{{@get('name')}}
-    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    h6
+      a href="#recipes/#{{@get('id')}}" #{{@get('name')}}
+    p #{{@get('personal_notes')}}
   .list-item-command
-    span.icon-pencil
+    span.icon-pencil.edit-recipe
       p Edit
-    span.icon-minus
+    span.icon-minus.delete-recipe
       p Delete

@@ -1,10 +1,16 @@
 window.RecipePreview = Support.CompositeView.extend
 
+  initialize: ->
+    @recipe = new Recipe()
+    @render()
+    console.log @recipe
+  
   events:
-    'click .js-adjust-recipe' : 'adjustYield'
-    'click .js-save'          : 'saveYield'
-    'click .js-edit'          : 'editRecipe'
-    'click .js-start-cooking' : 'clickStart'
+    'click .js-adjust-ingredients' : 'adjustYield',
+    'click .js-save-ingredients'   : 'saveYield',
+    'click .js-edit'               : 'editRecipe',
+    'click .js-start-cooking'      : 'clickStart',
+    'click .delete-recipe'         : 'deleteRecipe'
   
   render: ->
     @$el.html JST['backbone/templates/recipe-preview-template'](this.model)
@@ -13,23 +19,23 @@ window.RecipePreview = Support.CompositeView.extend
     @
 
   adjustYield: ->
-    $(".js-save").show().html
+    $(".js-save-ingredients").show().html
     $(".js-recipe-slider").show()
-    $(".js-adjust-recipe").hide()
+    $(".js-adjust-ingredients").hide()
 
     $('.js-recipe-slider').change ->
-      console.log $('.js-recipe-slider').val()
+    console.log $('.js-recipe-slider').val()
 
-      newValue = $('.js-recipe-slider').val()
-      $('.recipe-title').html( newValue )
+    newValue = $('.js-recipe-slider').val()
+    $('.recipe-title').html( newValue )
 
       # if newValue == 1
       #   $('.yield-amount').pop()
 
   saveYield: ->
-    $(".js-save").hide().html
+    $(".js-save-ingredients").hide().html
     $(".js-recipe-slider").hide()
-    $(".js-adjust-recipe").show()
+    $(".js-adjust-ingredients").show()
 
   clickStart: ->
     console.log 'Clicked js-start-cooking'
@@ -38,3 +44,12 @@ window.RecipePreview = Support.CompositeView.extend
   editRecipe: ->
     console.log 'clicked editRecipe'
     new RecipeForm()
+
+  deleteRecipe: ->
+    console.log 'delete clicked'
+
+    @recipe.destroy success: (recipe, response) ->
+      "you deleted it"
+
+    @$el.html ''
+    new DashboardView()

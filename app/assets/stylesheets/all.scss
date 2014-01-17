@@ -352,7 +352,8 @@ hr {
   display: block;
   width: 100%;
   height: auto;
-  margin: 0px auto;
+  min-height: 80px;
+  margin: 0px auto 50px auto;
   padding: 25px 0;
   border-bottom: 1px solid white;
 
@@ -398,6 +399,8 @@ hr {
     }
   }
 }
+
+.js-save-ingredients, .js-recipe-slider { display: none; }
 
 // @import 'header';
 // @import 'aside';

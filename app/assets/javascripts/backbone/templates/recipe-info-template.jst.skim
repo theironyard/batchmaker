@@ -7,7 +7,7 @@
     form
       .basic-info
         .recipe-identity
-          input.image type="file"
+          input data-name="image" type="file"
           .add-photo.js-add-photo
             span.icon-plus
             p Add Photo
@@ -49,6 +49,6 @@
             .section-title
               hr
               p.section-heading Personal Notes
-            textarea.full-width.clear placeholder=""
+            textarea.full-width.clear data-name="personal_notes" placeholder=""
 
           button.save-recipe Save this recipe!

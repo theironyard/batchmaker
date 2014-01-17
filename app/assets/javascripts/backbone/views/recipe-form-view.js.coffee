@@ -25,8 +25,22 @@ window.RecipeForm = Support.CompositeView.extend
   updateEvent: (evt) ->
     target = $(evt.currentTarget)
     @recipe[target.data('name')] = target.val()
-    console.log @recipe
 
   saveRecipe: ->
     console.log 'save clicked'
-    @recipe.save()
+    console.log @recipe
+    @recipe.save ({ 
+      name: @recipe.name,
+      image: @recipe.image,
+      author: @recipe.author,
+      cook_temp: @recipe.cook_temp,
+      cook_time: @recipe.cook_time,
+      farenheit: @recipe.farenheit,
+      prep_time: @recipe.prep_time,
+      category: @recipe.category,
+      yield_amount: @recipe.yield_amount,
+      yield_name: @recipe.yield_name,
+      personal_notes: @recipe.personal_notes,
+      user_id: @recipe.user_id,
+      public: @recipe.public
+    })
