@@ -21,7 +21,8 @@ class window.BatchRouter extends Support.SwappingRouter
     @swap new SignUpSignInView()
   
   dashboard: ->
-    @swap new DashboardView()
+    @swap new DashboardView
+      collection: Batchmaker.collections.recipes
   
   newRecipe: -> 
     @swap new RecipeForm()

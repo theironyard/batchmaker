@@ -10,6 +10,7 @@ window.DashboardView = Support.CompositeView.extend
 
     # Loops through appropriate instance of Recipe Collection
     # and gets name and appends it to specified div and applies appropriate JST
+    console.log @collection
     @collection.recipes.each (recipe, index) =>
       $('.main-container').find('.my-recipes-row').append JST['backbone/templates/recipes/grid-item'](recipe)
     
