@@ -6,16 +6,16 @@ class window.BatchRouter extends Support.SwappingRouter
   # my app view is the header and sidebar
   # dashboard is first view called making it index.html
   routes:
-    ''                : 'dashboard'
-    'recipes/new'     : 'newRecipe'
-    'recipes/public'  : 'showPublic'
-    'recipes/popular' : 'showPopular'
+    ''                 : 'dashboard'
+    'recipes/new'      : 'newRecipe'
+    'recipes/public'   : 'showPublic'
+    'recipes/popular'  : 'showPopular'
     'recipes/favorite' : 'showFavorite'
-    'recipes/mine'    : 'showMine'
-    'recipes/:id'     : 'showOneRecipe'
-    'step/:id'        : 'showFullscreenRecipeStep'
-    'search/:query'   : 'search'
-    # 'pantry'          : 'showPantry'
+    'recipes/mine'     : 'showMine'
+    'recipes/:id'      : 'showOneRecipe'
+    'step/:id'         : 'showFullscreenRecipeStep'
+    'search/:query'    : 'search'
+    # 'pantry'         : 'showPantry'
 
   showSignUpSignInPage: ->
     @swap new SignUpSignInView()

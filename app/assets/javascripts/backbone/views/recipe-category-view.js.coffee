@@ -1,7 +1,7 @@
 window.RecipeCategoryView = Support.CompositeView.extend
   
   events:
-    'click .js-recipe-rows' : 'showListView',
+    'click .js-recipe-list' : 'showListView',
     'click .js-recipe-grid' : 'showGridView',
     'click .delete-recipe'  : 'deleteRecipe'
 
@@ -13,11 +13,10 @@ window.RecipeCategoryView = Support.CompositeView.extend
 
   render: (option = "list") ->
     @$el.html JST['backbone/templates/recipe-category']( categoryName: @categoryName )
-    $(".js-recipe-#{option}").on "click", ->
-      $(this).toggleClass "active"
-
     @collection.each (recipe, index) =>
       @$el.find('.all-recipe-container').append JST["backbone/templates/recipes/all-recipes-#{option}"](recipe)
+    $(".js-recipe-#{option}").toggleClass "active"
+
     
     @
 

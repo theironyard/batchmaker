@@ -8,5 +8,5 @@
   .list-item-command
     span.icon-pencil.edit-recipe
       p Edit
-    span.icon-minus.delete-recipe
+    span.icon-close.delete-recipe
       p Delete

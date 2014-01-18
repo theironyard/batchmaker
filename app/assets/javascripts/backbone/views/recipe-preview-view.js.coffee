@@ -48,8 +48,8 @@ window.RecipePreview = Support.CompositeView.extend
   deleteRecipe: ->
     console.log 'delete clicked'
 
-    @recipe.destroy success: (recipe, response) ->
+    this.model.destroy success: (recipe, response) ->
       "you deleted it"
 
     @$el.html ''
-    new DashboardView()
+    new AppView()

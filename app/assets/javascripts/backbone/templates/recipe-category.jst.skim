@@ -5,7 +5,6 @@
   form.flex-container.search
     input.nine type="search" placeholder="Search for any recipe in #{@categoryName}"
     input.fifteen type="button" value="Search"
-
   .layout
-    span.icon-checkmark.js-recipe-grid
-    span.icon-checkmark.js-recipe-list
+    span.icon-grid-view.js-recipe-grid
+    span.icon-menu2.js-recipe-list

@@ -1,3 +1,5 @@
-.recipe-box
-	a href="#recipes/#{{@get('id')}}"
-		img src="#{{@get('image')}}"
+.recipe-container
+	.recipe-box
+		a href="#recipes/#{{@get('id')}}"
+			img src="#{{@get('image')}}"
+	p #{{@get('name')}}

@@ -10,7 +10,7 @@ section.my-recipes-row
       small
         a href="/#recipes/mine"
           | View All
-          span.icon-arrow-right
+          span.icon-arrow-right2
   
 section.public-recipes-row
   .section-title
@@ -20,7 +20,7 @@ section.public-recipes-row
       small
         a href="/#recipes/public"
           | View All
-          span.icon-arrow-right
+          span.icon-arrow-right2
 
 section.popular-recipes-row
   .section-title
@@ -30,7 +30,7 @@ section.popular-recipes-row
       small
         a href="/#recipes/popular"
           | View All
-          span.icon-arrow-right
+          span.icon-arrow-right2
       
 section.favorite-recipes-row
   .section-title
@@ -40,4 +40,4 @@ section.favorite-recipes-row
       small
         a href="/#recipes/favorite"
           | View All
-          span.icon-arrow-right
+          span.icon-arrow-right2

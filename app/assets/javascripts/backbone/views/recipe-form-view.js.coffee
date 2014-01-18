@@ -18,7 +18,7 @@ window.RecipeForm = Support.CompositeView.extend
     # instantiating step view to call in the step template which hosts ingredient view.
     
     # calling the chosen plugin down here to ensure the page doesn't quit loading before the plugin gets working
-    @$el.find(".chzn-select").chosen()
+    @$el.find("select").chosen()
 
     @
 

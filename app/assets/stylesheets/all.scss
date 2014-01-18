@@ -151,7 +151,7 @@ label {
 
 form {
 	&.search {
-		margin-bottom: 40px;
+		margin-bottom: 20px;
 
 		.all-recipe-container & {
 			margin-top: 40px;
@@ -159,6 +159,7 @@ form {
 
 		input {
 			&[type="search"] {
+				padding-left: 5px;
 				-webkit-border-top-right-radius: 0;
 				border-top-right-radius: 0;
 				-webkit-border-bottom-right-radius: 0;
@@ -185,13 +186,14 @@ form {
 input, textarea {
 	display: inline-block;
 	width: 451px;
+	height: 50px;
 	margin: 0 0 10px 0;
 	padding: 0 0 0 15px;
 	background: lighten($brand-color-2,10%);
 	font: {
 		size: 1em;
 	}
-	line-height: 3.5;
+	line-height: 1;
 	border: none;
 	@include border-radius(3px);
 	box-shadow: inset 0 0 3px rgba(0,0,0,.2);
@@ -331,16 +333,25 @@ hr {
 
   .layout {
     display: block;
-    width: 62px;
-    margin-bottom: 15px;
-    padding: 15px 0 10px 15px;
-    background-color: white;
+    width: 50px;
+    margin: 0 0 15px auto;
+    padding: 9px 0;
+    text-align: center;
+    border: 3px solid $dark-grey;
   }
   
-  .ss-grid, .ss-rows {
+  span {
     display: inline-block;
-    margin-right: 15px;
-    color: lighten($brand-color-2, 65%);
+    font-size: 12px;
+    color: $dark-grey;
+
+    &:first-child { margin-right: 3px; }
+
+    &.icon-menu2 {
+    	font-size: 17px;
+    	vertical-align: bottom;
+    	line-height: 0.8;
+    }
   }
 
   .active {
@@ -353,9 +364,10 @@ hr {
   width: 100%;
   height: auto;
   min-height: 80px;
-  margin: 0px auto 50px auto;
+  margin: 0px auto 30px auto;
   padding: 25px 0;
-  border-bottom: 1px solid white;
+  border-bottom: 1px dotted lighten($light-grey, 25%);
+  &:last-child { border-bottom: none; }
 
   img {
     float: left;
